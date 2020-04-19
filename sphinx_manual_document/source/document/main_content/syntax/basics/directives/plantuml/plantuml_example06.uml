@@ -1,0 +1,69 @@
+@startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 9
+skinparam circledCharacterFontSize 8
+skinparam classAttributeIconSize 0
+hide empty members
+
+abstract class AbstractClass {
+- privateField
++ publicField
+# protectedField
+~ packagePrivateField
+- privateMethod()
++ publicMethod()
+# protectedMethod()
+~ packagePrivateMethod()
+ }
+
+class Dummy {
+{static} staticID
+{abstract} void methods()
+ }
+
+class Flight {
+ flightNumber : Integer
+ departureTime : Date
+ }
+
+package "Classic Collections" {
+
+ abstract class AbstractList
+ abstract AbstractCollection
+ interface List
+ interface Collection
+
+ List <|-- AbstractList
+ Collection <|-- AbstractCollection
+
+ Collection <|- List
+ AbstractCollection <|- AbstractList
+ AbstractList <|-- ArrayList
+
+ class ArrayList {
+   Object[] elementData
+   size()
+    }
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+
+class Student {
+Name
+}
+Student "0..*" -- "1..*" Course
+(Student, Course) .. Enrollment
+
+class Enrollment {
+drop()
+cancel()
+}
+
+@enduml

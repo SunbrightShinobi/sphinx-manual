@@ -1,0 +1,40 @@
+@startuml
+actor "Main Database" as DB << Application >>
+
+note left of DB
+  This actor
+  has a "name with spaces",
+  an alias
+  and a stereotype
+end note
+
+actor User << Human >>
+actor SpecialisedUser
+actor Administrator
+
+User <|--- SpecialisedUser
+User <|--- Administrator
+
+usecase (Use the application) as (Use) << Main >>
+usecase (Configure the application) as (Config)
+Use ..> Config : <<includes>>
+
+User --> Use
+DB --> Use
+
+Administrator --> Config
+
+note "This note applies to\nboth actors." as MyNote
+MyNote .. Administrator
+MyNote .. SpecialisedUser
+
+'  this is a text comment and won't be displayed
+AnotherActor ---> (AnotherUseCase)
+
+'  to increase the length of the edges, just add extras dashes, like this:
+ThirdActor ----> (LowerCase)
+
+'  The direction of the edge can also be reversed, like this:
+(UpperCase) <---- FourthActor
+
+@enduml

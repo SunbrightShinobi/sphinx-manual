@@ -1,0 +1,16 @@
+@startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 0
+skinparam circledCharacterFontSize 0
+skinparam classAttributeIconSize 0
+hide empty members
+
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+
+@enduml

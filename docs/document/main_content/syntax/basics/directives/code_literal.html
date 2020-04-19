@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3.3.4. Code or Literal Directives &mdash; Sphinx Manual Git: sphinx-manual - docs-cleanup  [ 52a53ab3780 ] documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="1.3.3.5. Specialized Directives" href="specialized.html" />
+    <link rel="prev" title="1.3.3.3. Tables Directives" href="table.html" />
+    <link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Sphinx Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="specialized.html">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../common_docs/appendices/acronym_list.html">1. Acronym List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Sphinx Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a> &raquo;</li>
+        
+          <li><a href="../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a> &raquo;</li>
+        
+          <li><a href="contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a> &raquo;</li>
+        
+      <li><span class="section-number">1.3.3.4. </span>Code or Literal Directives</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/document/main_content/syntax/basics/directives/code_literal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-or-literal-directives">
+<h1><span class="section-number">1.3.3.4. </span>Code or Literal Directives<a class="headerlink" href="#code-or-literal-directives" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your whitespace placement is key in RestructuredText. Take note of the examples of ensuring after a <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">#.</span></code> the next character starts on the next tab line. So 3 or 2 spaces respectively. This will make your code-block render inline with text of list.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You must have only (1) space between <code class="docutils literal notranslate"><span class="pre">..</span></code> and <code class="docutils literal notranslate"><span class="pre">code-block::</span></code> or another other role called in this manner. Do not tab between.</p>
+</div>
+<ul>
+<li><p>This is a role to document a python code object:</p>
+<ul>
+<li><p>Syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. py:function:: enumerate(sequence[, start=0])
+
+    Return an iterator that yields tuples of an index and an item of the  *sequence*. (And so on.)
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<dl class="py function">
+<dt id="enumerate">
+<code class="sig-name descname">enumerate</code><span class="sig-paren">(</span><em class="sig-param">sequence</em><span class="optional">[</span>, <em class="sig-param">start=0</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#enumerate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iterator that yields tuples of an index and an item of the  <em>sequence</em>. (And so on.)</p>
+</dd></dl>
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>This is a role used to display a boxed code-block section for code with an optional caption and optional line numbers.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since Cisco IOS/ASA/IOS-XE does not support a line continuation character, the latex generator will insert space and next line character into PDF. You will have to bring the code block to indent with main document level to have a copy/paste ready code block. Usually happens with ASA firewall rules.</p>
+<p>Or if in landscape and its still too long, you will need to have regular command lines for copy paste and use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">raw::</span> <span class="pre">latex</span></code> then <code class="docutils literal notranslate"><span class="pre">/begin{scriptsize}</span></code> and <code class="docutils literal notranslate"><span class="pre">/end{scriptsize}</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can include variables from your yaml or contexts by using {{ variable }} in the code block and the value will be rendered. You must have at beginning of rst file <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">jinja::</span></code> and contents tabbed under.</p>
+</div>
+<ul>
+<li><p>Syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">{lexer}</span></code> Use <a class="reference internal" href="../lexers.html#lexers-rst"><span class="std std-ref">Lexers for RST</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> Add Line numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lineno-start:</span> <span class="pre">{integer}</span></code> Integer of where to start</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">{string}</span></code> Display name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span> <span class="pre">{string}</span></code> Name for <code class="docutils literal notranslate"><span class="pre">ref</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">{integer}</span></code></p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. code-block:: python
+    :linenos:
+    :caption: Code Block
+    :name: code_block
+    :emphasize-lines: 1
+
+    code line 1 *variable*
+    code line 2 **cannot bold**
+    You can also include variables like {{ release }}
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<div class="literal-block-wrapper docutils container" id="code-block">
+<div class="code-block-caption"><span class="caption-number">Code 1.1 </span><span class="caption-text">Code Block</span><a class="headerlink" href="#code-block" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="n">code</span> <span class="n">line</span> <span class="mi">1</span> <span class="o">*</span><span class="n">variable</span><span class="o">*</span>
+</span><span class="n">code</span> <span class="n">line</span> <span class="mi">2</span> <span class="o">**</span><span class="n">cannot</span> <span class="n">bold</span><span class="o">**</span>
+<span class="n">You</span> <span class="n">can</span> <span class="n">also</span> <span class="n">include</span> <span class="n">variables</span> <span class="n">like</span> 
+</pre></div>
+</td></tr></table></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul>
+<li><p>This is used to where a large code blocks or literal are needed <strong>with</strong> markup inside.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When rendered in PDF, it does not have a box around it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to do inline markup with italics right after a bold. For example a unknown file name in a command. You will need to use escape character <code class="docutils literal notranslate"><span class="pre">\</span></code> then a space between them.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can include variables from your yaml or contexts by using {{ variable }} in the parsed-literal block and the value will be rendered. You must have at beginnging of rst file <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">jinja::</span></code> and the contents tabbed under.</p>
+</div>
+<ul>
+<li><p>Syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span> <span class="pre">{string}</span></code> Name for <code class="docutils literal notranslate"><span class="pre">ref</span></code></p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. parsed-literal::
+    :name: parsed_literal
+
+    code line 1 *variable*
+    code line 2 **can bold**
+    You can also include variables like {{ release }}
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<pre class="literal-block" id="parsed-literal">code line 1 <em>variable</em>
+code line 2 <strong>can bold</strong>
+You can also include variables like {{ release }}</pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>This is how you include a plain-text based file to render.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">include::</span> <span class="pre">filename</span></code> role but with the features of the <em>literalinclude</em> role there isn’t much benefit for it.</p>
+</div>
+<ul>
+<li><p>Syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">text</span></code> - Text caption</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span> <span class="pre">text</span></code> - Text name to use for <code class="docutils literal notranslate"><span class="pre">:ref:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dedent:</span> <span class="pre">4</span></code> - Removes leading indentation characters from file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:language:</span> <span class="pre">{lexer}</span></code> - Use <a class="reference internal" href="../lexers.html#lexers-rst"><span class="std std-ref">Lexers for RST</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">1,3-6</span></code> Emphasis’s called out lines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> - Turns on Line Numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:encoding:</span> <span class="pre">utf-8-sig</span></code> - Encoding of file. default: <cite>utf-8-sig</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:pyobject:</span> <span class="pre">class.function</span></code> - Only include the object/class from file if a py file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lines:</span> <span class="pre">1-10</span></code> - Limits rendered output to listed line numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:diff:</span> <span class="pre">filename2</span></code> - diffs with listed filename compared to included filename</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. literalinclude:: /scripts/examples/install.ps1
+    :caption: install.ps1
+    :name: install.ps1
+    :language: none
+    :emphasize-lines: 1-2
+    :linenos:
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<div class="literal-block-wrapper docutils container" id="install-ps1">
+<div class="code-block-caption"><span class="caption-number">Code 1.2 </span><span class="caption-text">install.ps1</span><a class="headerlink" href="#install-ps1" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll">param(
+</span><span class="hll">[parameter(Mandatory=$false)][string]$user = $env:UserName.ToLower(),
+</span>[parameter(Mandatory=$true)][string]$email = &quot;username@domain.com&quot;
+)
+
+Start-Transcript -path C:\TEMP\install-wsl.log -append
+
+# Set distro name
+$wslDistro = (Get-ChildItem -Path .\Alpine*.exe).Name
+$distroName = $wslDistro.Split(&#39;.&#39;)[0]
+$wslPath = &quot;C:\Users\$user\.wsl\$distroName&quot;
+$TargetFile = &quot;$wslPath\$wslDistro&quot;
+$ShortcutFile = &quot;C:\Users\$user\Desktop\$distroName WSL.lnk&quot;
+
+# Uninstall previous WSL distro if present
+If (Test-Path $wslPath) {
+    Write-Host -ForegroundColor Yellow (&quot;`nUninstalling previous Windows Subsystem for Linux (WSL), $distroName Linux&quot;)
+    Start-Process $wslPath\$wslDistro -ArgumentList &quot;clean&quot; -NoNewWindow -Wait
+    Get-ChildItem -Path $wslPath -Recurse | Remove-Item -force -recurse
+    Remove-Item -Force $wslPath
+    Remove-Item -Force $ShortcutFile
+    Write-Host -ForegroundColor Yellow (&quot;`nPrevious Windows Subsystem for Linux (WSL), $distroName Linux FOUND and REMOVED.&quot;)
+}
+Else {
+    Write-Host -ForegroundColor Yellow (&quot;`nPrevious Windows Subsystem for Linux (WSL), $distroName Linux NOT found.&quot;)
+}
+
+# Install WSL Distro
+Write-Host -ForegroundColor Yellow (&quot;`nInstalling Windows Subsystem for Linux (WSL), $distroName Linux to $wslPath&quot;)
+Invoke-Command -ScriptBlock { Copy-Item -Recurse -Path .\ -Destination $args[0] -Force } -ArgumentList $wslPath
+
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;install&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run cd /usr/share/texmf-dist/tex/latex/acrotex; sudo latex acrotex.ins&quot; -NoNewWindow -Wait # would like to add this to makefile
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo mktexlsr&quot; -NoNewWindow -Wait # would like to add this to makefile
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system core.autocrlf false&quot;  -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system core.symlinks false&quot;  -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system rebase.autosquash true&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system lfs.activitytimeout 0&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system credential.helper &#39;cache --timeout 30000&#39;&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run sudo git config --system color.diff false&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run git lfs install&quot;  -NoNewWindow -Wait
+Write-Host -ForegroundColor Green (&quot;`nInstallation of Windows Subsystem for Linux (WSL), $distroName Linux is complete&quot;)
+
+# Configure user for WSL Distro
+Write-Host -ForegroundColor Yellow (&quot;`nConfiguring user:$user for Windows Subsystem for Linux (WSL), $distroName Linux&quot;)
+Write-Host -ForegroundColor Yellow (&quot;`nSet password for $user when prompted&quot;)
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run adduser $user --shell bash --uid 1000&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run echo &#39;$user ALL=(ALL) ALL&#39; &gt;&gt; /etc/sudoers&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;config --default-uid 1000&quot; -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run echo export PLANTUML=/usr/local/plantuml.jar &gt;&gt; ~/.bash_profile&quot;  -NoNewWindow -Wait # would like to add this to makefile
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run echo neofetch &gt;&gt; ~/.bash_profile&quot;  -NoNewWindow -Wait # would like to add this to makefile
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run echo from pprint import pprint &gt;&gt; ~/.pyrc&quot;  -NoNewWindow -Wait # would like to add this to makefile
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run git config --global http.sslVerify false&quot;  -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run git config --global user.name $user&quot;  -NoNewWindow -Wait
+Start-Process $wslPath\$wslDistro -ArgumentList &quot;run git config --global user.email &#39;$email&#39;&quot;  -NoNewWindow -Wait
+
+# Create desktop shortcut for user
+$WScriptShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
+$Shortcut.TargetPath = $TargetFile
+$Shortcut.Save()
+
+# Cleanup
+Remove-Item -Force $wslPath\rootfs.tar.gz
+Remove-Item -Force $wslPath\addWSLfeature.ps1
+Remove-Item -Force $wslPath\install.ps1
+
+Write-Host -ForegroundColor Green (&quot;`nUser Configuration of user:$user for Windows Subsystem for Linux (WSL), $distroName Linux is complete&quot;)
+
+Stop-Transcript
+</pre></div>
+</td></tr></table></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="specialized.html" class="btn btn-neutral float-right" title="1.3.3.5. Specialized Directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="table.html" class="btn btn-neutral float-left" title="1.3.3.3. Tables Directives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Josh Johnson @binarylandscapes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+@startuml
+
+[*] --> MyState
+MyState --> CompositeState
+MyState --> AnotherCompositeState
+MyState --> WrongState
+
+CompositeState --> CompositeState : \ this is a loop
+AnotherCompositeState --> [*]
+CompositeState --> [*]
+
+MyState : this is a string
+MyState : this is another string
+
+state CompositeState {
+
+[*] --> StateA : begin something
+StateA --> StateB : from A to B
+StateB --> StateA : from B back to A
+StateB --> [*] : end it
+
+CompositeState : yet another string
+}
+
+state AnotherCompositeState {
+
+[*] --> ConcurrentStateA
+ConcurrentStateA --> ConcurrentStateA
+
+--
+
+[*] --> ConcurrentStateB
+ConcurrentStateB --> ConcurrentStateC
+ConcurrentStateC --> ConcurrentStateB
+}
+
+note left of WrongState
+  This state
+  is a dead-end
+  and shouldn't
+  exist.
+end note
+
+@enduml

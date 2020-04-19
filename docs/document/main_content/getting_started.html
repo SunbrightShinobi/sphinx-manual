@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.4. Getting Started with Sphinx from template &mdash; Sphinx Manual Git: sphinx-manual - docs-cleanup  [ 52a53ab3780 ] documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. Acronym List" href="../../common_docs/appendices/acronym_list.html" />
+    <link rel="prev" title="1.3.4. Linking" href="syntax/basics/linking.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sphinx Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax/contents.html">1.3. RestructedText &amp; Sphinx Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../common_docs/appendices/acronym_list.html">1. Acronym List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sphinx Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html"><span class="section-number">1. </span>Sphinx Manual</a> &raquo;</li>
+        
+      <li><span class="section-number">1.4. </span>Getting Started with Sphinx from template</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/document/main_content/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-with-sphinx-from-template">
+<h1><span class="section-number">1.4. </span>Getting Started with Sphinx from template<a class="headerlink" href="#getting-started-with-sphinx-from-template" title="Permalink to this headline">¶</a></h1>
+<p>First we need to setup a copy of the template document to use. If you are not working in a CM enviroment that already has one in the repository and just want to work from local desktop then just copy the entire default template folder from you baseline environment included with Cygwin installer, with the command below:</p>
+<p><code class="samp docutils literal notranslate"><span class="pre">cp</span> <span class="pre">/baseline_sphinx_env/template_document_default</span> <span class="pre">/baseline_sphinx_env/</span><em><span class="pre">new_document_name</span></em></code></p>
+<p>Otherwise ask your team where you should copy the preconfigured template from in your CM repository.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In SVN you would branch the folder keeping it inside the folder structure of the needed common style, configuration files and scripts to a new name of your assigned CM document number.</p></li>
+<li><p>In Git you would make a copy of folder keeping it inside the folder structure of the needed common style, configuration files and scripts and rename the folder to your assigned CM document number.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you ever need to update your document to changes included in template, simply just use <strong class="program">Beyond Compare</strong> to compare the template folder against your document folder and see when files are different and if chnages are required. Usually most files are particular to each document except things like <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+</div>
+<p>Once you have your folder copied and renamed to a assigned document number or short description title.</p>
+<ol class="arabic">
+<li><p>Edit <code class="file docutils literal notranslate"><span class="pre">/links</span></code> for any additional needed links or remove non-needed ones. Remeber its based on the soft link being put in <code class="file docutils literal notranslate"><span class="pre">/source</span></code></p></li>
+<li><p>Edit the following parameters in <code class="file docutils literal notranslate"><span class="pre">/source/conf.py</span></code>:</p>
+<ol class="arabic">
+<li><p><strong>project</strong> - <kbd class="kbd docutils literal notranslate">Document Short Title</kbd> ex: Sphinx Manual</p></li>
+<li><p>If you do not have the folder named as a assigned CM number then update <strong>documentnumber</strong> as well. Otherwise this autopopulates based on folder name of document.</p></li>
+<li><p>Update <strong>document_rev</strong> if needed</p></li>
+<li><p>Update Classification, Logo and Style of document. The following section of configuration copies the required files to build your document. Uncomment the lines of your desired section. Leave the rest commented out using <code class="docutils literal notranslate"><span class="pre">#</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>########## Sphinx NGGN (U) #####################################################
+classification = &quot;UNCLASSIFIED&quot;
+latex_additional_files = [&#39;./latex_templates/sphinx/_procedure.sty&#39;,
+                          &#39;./latex_templates/sphinx/titlelogo.png&#39;,
+                          #&#39;common/templates/iftex.sty&#39;,
+                         ]
+</pre></div>
+</div>
+</li>
+<li><p>Update <strong>version* and **release</strong> if not using higher folder structure to define those values.</p></li>
+<li><p>If using yaml files from <code class="file docutils literal notranslate"><span class="pre">../configuration_files</span></code> then update <strong>contexts</strong> per the comment. There can be multiple contexts.</p></li>
+</ol>
+</li>
+<li><p>That is all that is required to build until you get more familar. The rest of the items will show up in a TBD table to let you know to go edit them.</p></li>
+<li><p>Now ensure your <strong class="program">Cygwin</strong> is running and you are inside your document folder. Perform either of the following steps depending on desired result:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">make livehtml</kbd> - Makes a livehtml build with a running web server at <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> that auto rebuilds upon detecting a change to any files of document.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">make html</kbd> - Makes a html build folder structure that can be uploaded to a web server. Output is located in <code class="file docutils literal notranslate"><span class="pre">./build/html</span></code></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">make latexpdf</kbd> - Makes a text file build then runs it through latex to make a pdf. Output is located in <code class="file docutils literal notranslate"><span class="pre">./build/latex</span></code> of document folder.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">make clean livehtml</kbd>, <kbd class="kbd docutils literal notranslate">make clean html</kbd> or <kbd class="kbd docutils literal notranslate">make clean latexpdf</kbd> does same as above items but prior to build generation it deletes the <code class="file docutils literal notranslate"><span class="pre">build</span></code> folder</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>HTML builds are usually pretty good about overcoming errors and still building for you see what has happend. Latex not so much… Usually you will just have your build stop with a ? prompt. <kbd class="kbd docutils literal notranslate">CTRL+D</kbd> cancels out of build and take note of line number at error and open the text file with a text editor to find that line and determine next steps.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../common_docs/appendices/acronym_list.html" class="btn btn-neutral float-right" title="1. Acronym List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="syntax/basics/linking.html" class="btn btn-neutral float-left" title="1.3.4. Linking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Josh Johnson @binarylandscapes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

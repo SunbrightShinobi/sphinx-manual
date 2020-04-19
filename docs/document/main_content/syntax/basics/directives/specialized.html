@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3.3.5. Specialized Directives &mdash; Sphinx Manual Git: sphinx-manual - docs-cleanup  [ 52a53ab3780 ] documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="1.3.3.6. Latex Directives" href="latexpdf.html" />
+    <link rel="prev" title="1.3.3.4. Code or Literal Directives" href="code_literal.html" />
+    <link href="../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Sphinx Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code_literal.html">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../common_docs/appendices/acronym_list.html">1. Acronym List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Sphinx Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a> &raquo;</li>
+        
+          <li><a href="../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a> &raquo;</li>
+        
+          <li><a href="contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a> &raquo;</li>
+        
+      <li><span class="section-number">1.3.3.5. </span>Specialized Directives</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/document/main_content/syntax/basics/directives/specialized.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="specialized-directives">
+<h1><span class="section-number">1.3.3.5. </span>Specialized Directives<a class="headerlink" href="#specialized-directives" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>This is a directive that identifies the author of the current section. The argument should include the author’s name such that it can be used for presentation and email address. The domain name portion of the address should be lower case.</p>
+<p>By default, this markup isn’t reflected in the output in any way (it helps keep track of contributions), but you can set the configuration value <code class="docutils literal notranslate"><span class="pre">show_authors</span></code> to True to make them produce a paragraph in the output.</p>
+<ul class="simple">
+<li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">sectionauthor::</span> <span class="pre">Last,</span> <span class="pre">First</span> <span class="pre">&lt;username&#64;domain.com&gt;</span></code></p></li>
+<li><p>Rendered: N/A</p></li>
+</ul>
+</li>
+<li><p>This directive is the codeauthor directive, which can appear multiple times, names the authors of the described code, just like <code class="docutils literal notranslate"><span class="pre">sectionauthor</span></code> names the author(s) of a piece of documentation. It too only produces output if the <code class="docutils literal notranslate"><span class="pre">show_authors</span></code> configuration value is True.</p>
+<ul class="simple">
+<li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">codeauthor::</span> <span class="pre">Last,</span> <span class="pre">First</span> <span class="pre">&lt;username&#64;domain.com&gt;</span></code></p></li>
+<li><p>Rendered: N/A</p></li>
+</ul>
+</li>
+<li><p>The glossary directive is for defining terms and is used in <code class="file docutils literal notranslate"><span class="pre">/source/common_docs/acronym_list.rst</span></code> (Example taken from there)</p>
+<ul>
+<li><p>Syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. glossary::
+
+    ACI
+        Application Centric Infrastructure (Cisco product)
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>:term:`ACI` (To just display the term and link it)
+
+:term:`Application Centric Infrastructure&lt;ACI&gt;` (To just display the term with Alternate text and link it)
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<p><a class="reference internal" href="../../../../../common_docs/appendices/acronym_list.html#term-ACI"><span class="xref std std-term">ACI</span></a></p>
+<p>or</p>
+<p><a class="reference internal" href="../../../../../common_docs/appendices/acronym_list.html#term-ACI"><span class="xref std std-term">Application Centric Infrastructure</span></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>The math directive for displayed math (math takes whole line). This also supports multiple equations, labeling the equation and then referencing with auto-numbering it inline with text.</p>
+<ul>
+<li><p>Syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. math::
+    :label: equation01
+
+    (a + b)^2 = a^2 + 2ab + b^2
+
+    (a - b)^2 = a^2 - 2ab + b^2
+
+Look at the cool equation :eq:`equation01`
+</pre></div>
+</div>
+</li>
+<li><p>Rendered:</p>
+<div class="math" id="equation-equation01">
+<p><span class="eqno">(1.1)<a class="headerlink" href="#equation-equation01" title="Permalink to this equation">¶</a></span><img src="../../../../../_images/math/b78f846f3a106f8ce08ad131ecca41ae5ac3fff6.png" alt="(a + b)^2 = a^2 + 2ab + b^2
+
+(a - b)^2 = a^2 - 2ab + b^2"/></p>
+</div><p>Look at the cool equation <a class="reference internal" href="#equation-equation01">(1.1)</a></p>
+</li>
+</ul>
+</li>
+<li><p>This directive is for documenting footnotes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also explicitly number the footnotes (<code class="docutils literal notranslate"><span class="pre">[1]_</span></code>) or use auto-numbered footnotes without names (<code class="docutils literal notranslate"><span class="pre">[#]_</span></code>).</p>
+</div>
+<ul>
+<li><p>Syntax:</p>
+<ul>
+<li><p>At text that requires a footnote:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">that</span> <span class="pre">requires</span> <span class="pre">a</span> <span class="pre">footnote</span> <span class="pre">[#]_.</span></code></p>
+</li>
+<li><p>At bottom of page or desired location of footnotes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. rubric:: Footnotes:
+
+.. [#] Text of first footnote.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Rendered:</p>
+<ul>
+<li><p>At text that requires a footnote: Text that requires a footnote <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p></li>
+<li><p>See left bottom of page:</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Text of first footnote.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>This directive is for documenting Citation references.</p>
+<ul>
+<li><p>Syntax:</p>
+<ul>
+<li><p>Citation references, usually at bottom of page</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. [CIT2002] A citation
+    (as often used in journals).
+</pre></div>
+</div>
+</li>
+<li><p>and is called by: <code class="docutils literal notranslate"><span class="pre">[CIT2002]_</span></code></p></li>
+</ul>
+</li>
+<li><p>Rendered:</p>
+<ul>
+<li><p>Citation references, usually at bottom of page</p>
+<dl class="citation">
+<dt class="label" id="cit2002"><span class="brackets"><a class="fn-backref" href="#id3">CIT2002</a></span></dt>
+<dd><p>A citation
+(as often used in journals).</p>
+</dd>
+</dl>
+</li>
+<li><p>an called by: <a class="reference internal" href="#cit2002" id="id3"><span>[CIT2002]</span></a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>This directive is for documenting todo references.</p>
+<ul>
+<li><p>Syntax:</p>
+<ul>
+<li><p>Directive to create a todo list in document that appears as a row of Orange note blocks labeled as Todo with a link and location of all todo’s</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Todo List**
+
+.. todolist::
+</pre></div>
+</div>
+</li>
+<li><p>Directive to mark a todo in document that will appear in list and create a Orange note block labeled as Todo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. todo::
+
+    (TODO: | FIXME: | BUG:) Currently when building latexpdf, todo directive causes issues. and disabled for adding to document during build but does show warnings during builds.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Rendered:</p>
+<ul>
+<li><p>Directive to create a todo list in document that appears as a row of Orange note blocks labeled as Todo with a link and location of all todo’s</p>
+<p><strong>Todo List</strong></p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Add rendered section when I have an example playbook</p>
+</div>
+<p class="todo-source"><a class="reference internal" href="custom.html#id1"><em>original entry</em></a></p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>TODO: Demonstration todo 1</p>
+</div>
+<p class="todo-source"><a class="reference internal" href="#id4"><em>original entry</em></a></p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>FIXME: Demonstration todo 2</p>
+</div>
+<p class="todo-source"><a class="reference internal" href="#id5"><em>original entry</em></a></p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>BUG: Demonstration todo 3</p>
+</div>
+<p class="todo-source"><a class="reference internal" href="#id6"><em>original entry</em></a></p>
+</li>
+<li><p>Directive to mark a todo in document that will appear in list and create a Orange note block labeled as Todo</p>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>TODO: Demonstration todo 1</p>
+</div>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>FIXME: Demonstration todo 2</p>
+</div>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">Todo</p>
+<p>BUG: Demonstration todo 3</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>This directive is used for a concise titled paragraph, within its own box.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">topic::</span></code> role cannot be used within topics or body elements like lists or tables.</p>
+</div>
+<ul>
+<li><p>Syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. topic:: Your Topic Title
+
+    Subsequent indented lines comprise
+    the body of the topic, and are
+    interpreted as body elements.
+</pre></div>
+</div>
+</li>
+<li><p>Rendered (Untabbed due to limitation):</p></li>
+</ul>
+</li>
+</ul>
+<div class="topic">
+<p class="topic-title">Your Example Topic Title</p>
+<p>Subsequent indented lines comprise the body of the topic, and are    interpreted as body elements.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="latexpdf.html" class="btn btn-neutral float-right" title="1.3.3.6. Latex Directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="code_literal.html" class="btn btn-neutral float-left" title="1.3.3.4. Code or Literal Directives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Josh Johnson @binarylandscapes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
