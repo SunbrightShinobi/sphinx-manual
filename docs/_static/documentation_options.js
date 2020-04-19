@@ -1,6 +1,6 @@
 var DOCUMENTATION_OPTIONS = {
     URL_ROOT: document.getElementById("documentation_options").getAttribute('data-url_root'),
-    VERSION: 'Git: sphinx-manual - docs-cleanup  [ 52a53ab3780 ]',
+    VERSION: 'Git: sphinx-manual - master  [ 1485aae3343 ]',
     LANGUAGE: 'None',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
