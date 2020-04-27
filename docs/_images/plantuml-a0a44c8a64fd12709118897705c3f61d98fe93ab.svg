@@ -16,7 +16,7 @@ link MyNote to Administrator--><path d="M552.19,210.72 C556.36,227.81 562.59,253
 link MyNote to SpecialisedUser--><path d="M530.94,210.72 C516.21,227.81 494.19,253.35 475.7,274.82 " fill="none" id="MyNote-SpecialisedUser" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[0841b8b798db7975cf01e6da1d65f0cd]
 link AnotherActor to AnotherUseCase--><path d="M744.5,97.52 C744.5,152.23 744.5,249.21 744.5,292.53 " fill="none" id="AnotherActor-&gt;AnotherUseCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="744.5,297.79,748.5,288.79,744.5,292.79,740.5,288.79,744.5,297.79" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[fa94f3775f57f69cdf4afa5697af73ad]
 link ThirdActor to LowerCase--><path d="M871.5,97.67 C871.5,181.94 871.5,376.14 871.5,437.53 " fill="none" id="ThirdActor-&gt;LowerCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="871.5,442.72,875.5,433.72,871.5,437.72,867.5,433.72,871.5,442.72" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d66fd3f15cbb38b94a6e27352040a4db]
-reverse link UpperCase to FourthActor--><path d="M1003.5,76.9 C1003.5,138.22 1003.5,332.55 1003.5,416.85 " fill="none" id="UpperCase&lt;-FourthActor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1003.5,71.72,999.5,80.72,1003.5,76.72,1007.5,80.72,1003.5,71.72" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7e094460dcd262c30d908bb4d002eef1]
+reverse link UpperCase to FourthActor--><path d="M1003.5,76.9 C1003.5,138.22 1003.5,332.55 1003.5,416.85 " fill="none" id="UpperCase&lt;-FourthActor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1003.5,71.72,999.5,80.72,1003.5,76.72,1007.5,80.72,1003.5,71.72" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[938ddfee318a2589479ad0469b29165c]
 @startuml
 actor "Main Database" as DB << Application >>
 
@@ -55,7 +55,7 @@ ThirdActor - - - -> (LowerCase)
 
 @enduml
 
-PlantUML version 1.2020.06(Sun Apr 05 12:38:32 GMT 2020)
+PlantUML version 1.2020.07(Sun Apr 19 11:42:40 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM

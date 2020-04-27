@@ -22,7 +22,7 @@ link apoint21 to Course--><path d="M387,253.46 C387,264.73 387,338.25 387,368.76
 link apoint21 to Enrollment--><path d="M389.32,251 C400.95,251 412.58,251 424.2,251 " fill="none" id="apoint21-Enrollment" style="stroke: #383838; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[582a5b21e77f91258f1ecc08cba32dfb]
 link AbstractClass to Dummy--><!--MD5=[2c06e96899b8fb645700547fa766daa1]
 link AbstractClass to Flight--><!--MD5=[9e55a7c694bb97ccd97e800e898d1b45]
-link Flight to TimeUnit--><!--MD5=[57c8281b137b94bba6b61e56a9d4e4d5]
+link Flight to TimeUnit--><!--MD5=[e0d18360a62c9ce9a0346bd9563123f7]
 @startuml
 
 skinparam monochrome true
@@ -92,7 +92,7 @@ cancel()
 
 @enduml
 
-PlantUML version 1.2020.06(Sun Apr 05 12:38:32 GMT 2020)
+PlantUML version 1.2020.07(Sun Apr 19 11:42:40 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM

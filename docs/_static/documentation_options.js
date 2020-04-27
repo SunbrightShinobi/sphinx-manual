@@ -1,6 +1,6 @@
 var DOCUMENTATION_OPTIONS = {
     URL_ROOT: document.getElementById("documentation_options").getAttribute('data-url_root'),
-    VERSION: 'Git: sphinx-manual - master  [ 1485aae3343 ]',
+    VERSION: 'Git: sphinx-manual - drawio-integration  [ 99fabf9bc50 ]',
     LANGUAGE: 'None',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
