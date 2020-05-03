@@ -21,10 +21,10 @@ help:
 	ln -s ../../common/sphinx_scripts		./source/common
 	ln -s ../../common/_static				./source/_static
 	ln -s ../../common/_templates			./source/_templates
-	ln -s ../../configs						./source/configs
-	ln -s ../../scripts						./source/scripts
-	ln -s ../../common/docs					./source/common_docs
-	ln -s ../../common/images				./source/images
+	ln -s ../../shared/configs				./source/configs
+	ln -s ../../shared/scripts				./source/scripts
+	ln -s ../../shared/docs					./source/common_docs
+	ln -s ../../shared/images				./source/images
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: clean
@@ -37,24 +37,24 @@ clean:
 
 .PHONY: livehtml
 livehtml:
-	ln -s ../../common/sphinx_scripts	./source/common
-	ln -s ../../common/_static	./source/_static
-	ln -s ../../common/_templates	./source/_templates
-	ln -s ../../configs	./source/configs
-	ln -s ../../scripts	./source/scripts
-	ln -s ../../common/docs	./source/common_docs
-	ln -s ../../common/images	./source/images
+	ln -s ../../common/sphinx_scripts		./source/common
+	ln -s ../../common/_static				./source/_static
+	ln -s ../../common/_templates			./source/_templates
+	ln -s ../../shared/configs				./source/configs
+	ln -s ../../shared/scripts				./source/scripts
+	ln -s ../../shared/docs					./source/common_docs
+	ln -s ../../shared/images				./source/images
 	sphinx-autobuild -b html --poll "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
 .PHONY: github
 github:
-	ln -s ../../common/sphinx_scripts	./source/common
-	ln -s ../../common/_static	./source/_static
-	ln -s ../../common/_templates	./source/_templates
-	ln -s ../../configs	./source/configs
-	ln -s ../../scripts	./source/scripts
-	ln -s ../../common/docs	./source/common_docs
-	ln -s ../../common/images	./source/images
+	ln -s ../../common/sphinx_scripts		./source/common
+	ln -s ../../common/_static				./source/_static
+	ln -s ../../common/_templates			./source/_templates
+	ln -s ../../shared/configs				./source/configs
+	ln -s ../../shared/scripts				./source/scripts
+	ln -s ../../shared/docs					./source/common_docs
+	ln -s ../../shared/images				./source/images
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 	@rm -rf ../docs/*
 	@cp -a build/html/. ../docs
