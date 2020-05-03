@@ -18,13 +18,13 @@ help:
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	ln -s ../../common/sphinx_scripts	./source/common
-	ln -s ../../common/_static	./source/_static
-	ln -s ../../common/_templates	./source/_templates
-	ln -s ../../configs	./source/configs
-	ln -s ../../scripts	./source/scripts
-	ln -s ../../common/docs	./source/common_docs
-	ln -s ../../common/images	./source/images
+	ln -s ../../common/sphinx_scripts		./source/common
+	ln -s ../../common/_static				./source/_static
+	ln -s ../../common/_templates			./source/_templates
+	ln -s ../../configs						./source/configs
+	ln -s ../../scripts						./source/scripts
+	ln -s ../../common/docs					./source/common_docs
+	ln -s ../../common/images				./source/images
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: clean
