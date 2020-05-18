@@ -4,19 +4,27 @@ Linking
 
 *   Link to a website (external of document)
 
-    *   Syntax: ```<https://www.sphinx-doc.org/>`_``
+    #.  See fill URL method
+    
+        *   Syntax: ```<https://www.sphinx-doc.org/>`_``
 
-    *   Rendered: `<https://www.sphinx-doc.org/>`_
+        *   Rendered: `<https://www.sphinx-doc.org/>`_
+
+    #.  Use a Label and hide URL method
+    
+        *   Syntax: ```Sphinx <https://www.sphinx-doc.org/>`_``
+
+        *   Rendered: `Sphinx <https://www.sphinx-doc.org/>`_
 
 *   You can also use the ``.. seealso: {link}``
 
     *   Syntax:
 
-        ``.. seealso: https://www.sphinx-doc.org/``
+        ``.. seealso:: https://www.sphinx-doc.org/``
 
     *   Rendered:
 
-        .. seealso: https://www.sphinx-doc.org/
+        .. seealso:: https://www.sphinx-doc.org/
 
 *   Link to a reST Anchor (internal of document from /source) that generates a hyperlink to anchor with a title (title can be different than section). Remeber to link to other documents outside of ``/source`` use links file to create a link to their ``/source`` in your document ``/source``.
 
