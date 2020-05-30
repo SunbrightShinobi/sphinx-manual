@@ -5,7 +5,7 @@ class Wheel--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688"
 class Person--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688" id="Person" style="stroke: #383838; stroke-width: 1.5;" width="54" x="128" y="109"/><ellipse cx="132" cy="120.9844" fill="#C2C2C2" rx="0" ry="0" style="stroke: #383838; stroke-width: 1.0;"/><path d="M152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 L152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 L152.5,141.4844 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="135" y="125.1387">Person</text><!--MD5=[85884a73f707af3ae230d559cad4fc2c]
 link Driver to Car--><path d="M52.11,20 C77.4,20 117.27,20 139.21,20 " fill="none" id="Driver-Car" style="stroke: #383838; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="38" x="70.25" y="13.0669">drives</text><polygon fill="#000000" points="111.25,7.0664,117.25,10.0664,111.25,13.0664,111.25,7.0664" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[6190aadcc963d15c02367c0199cc5452]
 reverse link Car to Wheel--><path d="M183.99,20 C207.64,20 240.64,20 262.86,20 " fill="none" id="Car&lt;-Wheel" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="170.66,20,176.66,24,182.66,20,176.66,16,170.66,20" style="stroke: #383838; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="188.75" y="13.0669">have 4</text><polygon fill="#000000" points="234.75,7.0664,240.75,10.0664,234.75,13.0664,234.75,7.0664" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[2800f28b8e2a8d078fc1fa2e2aa6715e]
-link Car to Person--><path d="M155,32.36 C155,51.45 155,89.77 155,108.78 " fill="none" id="Car-Person" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#000000" points="167.5,73,170.5,67,173.5,73,167.5,73" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="32" x="156" y="88.0669">owns</text><!--MD5=[b85beb5d0181f437d77cb4270e0c1ed7]
+link Car to Person--><path d="M155,32.36 C155,51.45 155,89.77 155,108.78 " fill="none" id="Car-Person" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#000000" points="167.5,73,170.5,67,173.5,73,167.5,73" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="32" x="156" y="88.0669">owns</text><!--MD5=[add5a07aa421bd966d5966c17accc64c]
 @startuml
 
 skinparam monochrome true
@@ -22,7 +22,7 @@ Car - - Person : < owns
 
 @enduml
 
-PlantUML version 1.2020.07(Sun Apr 19 11:42:40 GMT 2020)
+PlantUML version 1.2020.08(Sun Apr 26 14:08:22 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM

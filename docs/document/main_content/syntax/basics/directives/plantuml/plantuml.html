@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.3.3.9. Sphinx Diagram Directives (PlantUML) &mdash; Sphinx Manual Git: sphinx-manual - drawio-integration  [ 99fabf9bc50 ] documentation</title>
+  <title>1.3.3.9. Sphinx Diagram Directives (PlantUML) &mdash; Sphinx Manual Git: sphinx-manual - core-submod-config (dirty) [ 147b4d6a650 ] documentation</title>
   
 
   
@@ -34,10 +34,11 @@
   
   <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/drawio.css" type="text/css" />
   <link rel="stylesheet" href="../../../../../../_static/drawio_html.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
-    <link rel="next" title="1.3.3.10. Diagrams.Net or drawio Extension" href="../drawio/example.html" />
+    <link rel="next" title="1.3.3.10. Sphinx DrawIO Directives" href="../drawio/contents.html" />
     <link rel="prev" title="1.3.3.8.6. blockdiag Directive - Rack Diagram" href="../blockdiag/rackdiag.html" />
     <link href="../../../../../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -101,7 +102,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../drawio/example.html">1.3.3.10. <strong>Diagrams.Net</strong> or <strong>drawio</strong> Extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../drawio/contents.html">1.3.3.10. Sphinx DrawIO Directives</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../linking.html">1.3.4. Linking</a></li>
@@ -217,9 +218,6 @@
 <tr class="row-even"><td><p><cite>:caption:</cite></p></td>
 <td><p><em>text</em> to label Figure</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>:name:</cite></p></td>
-<td><p><em>text</em> to create hyperlink for sphinx (no spaces)</p></td>
-</tr>
 </tbody>
 </table>
 <ul>
@@ -227,19 +225,21 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. uml::
     :scale: 75
     :align: center
+    :caption: PlantUML Example01
 
     Alice -&gt; Bob: Hi!
     Alice &lt;- Bob: How are you?
 </pre></div>
 </div>
 <p>Rendered</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id2">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-727fefb4e7acc26582a9a933cc37ccfd4c5641c1.svg" type="image/svg+xml" style="width:173px;height:156px;">
 <a href="../../../../../../_images/plantuml-727fefb4e7acc26582a9a933cc37ccfd4c5641c1.png"><img src="../../../../../../_images/plantuml-727fefb4e7acc26582a9a933cc37ccfd4c5641c1.png" alt="Alice -&gt; Bob: Hi!
 Alice &lt;- Bob: How are you?" style="width: 129.0px; height: 116.25px"/></a>
 
 </object></p>
+<p class="caption"><span class="caption-number">Figure 1.8 </span><span class="caption-text">PlantUML Example01</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
@@ -253,13 +253,13 @@ Alice &lt;- Bob: How are you?" style="width: 129.0px; height: 116.25px"/></a>
 </pre></div>
 </div>
 <p>Rendered</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id3">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-223453358f0ef1d443f3d4edab9a7891ddfc1ba6.svg" type="image/svg+xml" style="width:72px;height:175px;">
 <a href="../../../../../../_images/plantuml-223453358f0ef1d443f3d4edab9a7891ddfc1ba6.png"><img src="../../../../../../_images/plantuml-223453358f0ef1d443f3d4edab9a7891ddfc1ba6.png" alt="Foo &lt;|-- Bar" style="width: 53.25px; height: 130.5px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.8 </span><span class="caption-text">Caption with <strong>bold</strong> and <em>italic</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.9 </span><span class="caption-text">Caption with <strong>bold</strong> and <em>italic</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
@@ -325,7 +325,7 @@ Class09 -- Class10
 </pre></div>
 </div>
 <p>Rendered (From loading .uml file)</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id4">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-5681e2dc3adc0165366aa4a73f181cca40d8bf5f.svg" type="image/svg+xml" style="width:180px;height:152px;">
 <a href="../../../../../../_images/plantuml-5681e2dc3adc0165366aa4a73f181cca40d8bf5f.png"><img src="../../../../../../_images/plantuml-5681e2dc3adc0165366aa4a73f181cca40d8bf5f.png" alt="&#64;startuml
@@ -344,14 +344,14 @@ salt
 " style="width: 134.25px; height: 113.25px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.9 </span><span class="caption-text">plantuml_example04</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.10 </span><span class="caption-text">plantuml_example04</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 05</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Code 1.3 </span><span class="caption-text">plantuml_example05.uml</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Code 1.3 </span><span class="caption-text">plantuml_example05.uml</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 
 <span class="s1">&#39;style options</span>
@@ -372,7 +372,7 @@ salt
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-7abe74e89f053584b453b4d7e75c7a96ac858fc7.svg" type="image/svg+xml" style="width:322px;height:143px;">
 <a href="../../../../../../_images/plantuml-7abe74e89f053584b453b4d7e75c7a96ac858fc7.png"><img src="../../../../../../_images/plantuml-7abe74e89f053584b453b4d7e75c7a96ac858fc7.png" alt="&#64;startuml
@@ -394,14 +394,14 @@ Car -- Person : &lt; owns
 " style="width: 240.75px; height: 106.5px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.10 </span><span class="caption-text">plantuml_example05</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.11 </span><span class="caption-text">plantuml_example05</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 06</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-number">Code 1.4 </span><span class="caption-text">plantuml_example06.uml</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Code 1.4 </span><span class="caption-text">plantuml_example06.uml</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 
 <span class="s1">&#39;style options</span>
@@ -475,7 +475,7 @@ Car -- Person : &lt; owns
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id8">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-c3cd608f3485be79c8be123b3d4d2e9d3ba29fa1.svg" type="image/svg+xml" style="width:844px;height:446px;">
 <a href="../../../../../../_images/plantuml-c3cd608f3485be79c8be123b3d4d2e9d3ba29fa1.png"><img src="../../../../../../_images/plantuml-c3cd608f3485be79c8be123b3d4d2e9d3ba29fa1.png" alt="&#64;startuml
@@ -550,14 +550,14 @@ cancel()
 " style="width: 463.65px; height: 244.75px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.11 </span><span class="caption-text">plantuml_example06</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.12 </span><span class="caption-text">plantuml_example06</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 07</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-number">Code 1.5 </span><span class="caption-text">plantuml_example07.uml</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-number">Code 1.5 </span><span class="caption-text">plantuml_example07.uml</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 <span class="n">actor</span> <span class="s2">&quot;Main Database&quot;</span> <span class="k">as</span> <span class="n">DB</span> <span class="o">&lt;&lt;</span> <span class="n">Application</span> <span class="o">&gt;&gt;</span>
 
@@ -602,7 +602,7 @@ cancel()
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id9">
+<div class="figure align-center" id="id10">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-a0a44c8a64fd12709118897705c3f61d98fe93ab.svg" type="image/svg+xml" style="width:1071px;height:508px;">
 <a href="../../../../../../_images/plantuml-a0a44c8a64fd12709118897705c3f61d98fe93ab.png"><img src="../../../../../../_images/plantuml-a0a44c8a64fd12709118897705c3f61d98fe93ab.png" alt="&#64;startuml
@@ -648,14 +648,14 @@ ThirdActor ----&gt; (LowerCase)
 " style="width: 588.5px; height: 278.85px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.12 </span><span class="caption-text">plantuml_example07</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.13 </span><span class="caption-text">plantuml_example07</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 08</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-number">Code 1.6 </span><span class="caption-text">plantuml_example08.uml</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-number">Code 1.6 </span><span class="caption-text">plantuml_example08.uml</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
 
 start
@@ -722,7 +722,7 @@ stop
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id11">
+<div class="figure align-center" id="id12">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-f480e3f73a82e06ff4fd2b6c80265def705ab4d9.svg" type="image/svg+xml" style="width:635px;height:984px;">
 <a href="../../../../../../_images/plantuml-f480e3f73a82e06ff4fd2b6c80265def705ab4d9.png"><img src="../../../../../../_images/plantuml-f480e3f73a82e06ff4fd2b6c80265def705ab4d9.png" alt="&#64;startuml
@@ -790,14 +790,14 @@ stop
 " style="width: 285.3px; height: 442.35px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.13 </span><span class="caption-text">plantuml_example08</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.14 </span><span class="caption-text">plantuml_example08</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 09</p>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-number">Code 1.7 </span><span class="caption-text">plantuml_example09.uml</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-number">Code 1.7 </span><span class="caption-text">plantuml_example09.uml</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 
 <span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">MyState</span>
@@ -846,7 +846,7 @@ stop
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id13">
+<div class="figure align-center" id="id14">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-bb8206417d0d7d278d94dfea160ba9e7799fa2d0.svg" type="image/svg+xml" style="width:892px;height:678px;">
 <a href="../../../../../../_images/plantuml-bb8206417d0d7d278d94dfea160ba9e7799fa2d0.png"><img src="../../../../../../_images/plantuml-bb8206417d0d7d278d94dfea160ba9e7799fa2d0.png" alt="&#64;startuml
@@ -896,14 +896,14 @@ end note
 " style="width: 490.05px; height: 372.35px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.14 </span><span class="caption-text">plantuml_example09</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.15 </span><span class="caption-text">plantuml_example09</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 10</p>
-<div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-number">Code 1.8 </span><span class="caption-text">plantuml_example10.uml</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Code 1.8 </span><span class="caption-text">plantuml_example10.uml</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 <span class="n">folder</span> <span class="n">folder</span> <span class="p">[</span>
 <span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">folder</span>
@@ -949,7 +949,7 @@ end note
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id15">
+<div class="figure align-center" id="id16">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-cb5fa16054fd04d0734f426f655f9d6fc711e7e1.svg" type="image/svg+xml" style="width:469px;height:326px;">
 <a href="../../../../../../_images/plantuml-cb5fa16054fd04d0734f426f655f9d6fc711e7e1.png"><img src="../../../../../../_images/plantuml-cb5fa16054fd04d0734f426f655f9d6fc711e7e1.png" alt="&#64;startuml
@@ -996,14 +996,14 @@ and style
 " style="width: 304.2px; height: 211.25px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.15 </span><span class="caption-text">plantuml_example10</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.16 </span><span class="caption-text">plantuml_example10</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 11</p>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-number">Code 1.9 </span><span class="caption-text">plantuml_example11.uml</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-number">Code 1.9 </span><span class="caption-text">plantuml_example11.uml</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startsalt</span>
 <span class="p">{</span>
   <span class="n">Login</span>    <span class="o">|</span> <span class="s2">&quot;MyName   &quot;</span>
@@ -1015,7 +1015,7 @@ and style
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id17">
+<div class="figure align-center" id="id18">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-de7b2ea6c21a95eb416c2d0c78542eeacafc02b6.svg" type="image/svg+xml" style="width:151px;height:68px;">
 <a href="../../../../../../_images/plantuml-de7b2ea6c21a95eb416c2d0c78542eeacafc02b6.png"><img src="../../../../../../_images/plantuml-de7b2ea6c21a95eb416c2d0c78542eeacafc02b6.png" alt="&#64;startsalt
@@ -1028,14 +1028,14 @@ and style
 " style="width: 150.0px; height: 67.0px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.16 </span><span class="caption-text">plantuml_example11</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.17 </span><span class="caption-text">plantuml_example11</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
 <ul>
 <li><p>Example 12</p>
-<div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-number">Code 1.10 </span><span class="caption-text">plantuml_example12.uml</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-number">Code 1.10 </span><span class="caption-text">plantuml_example12.uml</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startsalt</span>
 <span class="p">{</span>
 <span class="p">{</span><span class="n">T</span>
@@ -1058,7 +1058,7 @@ and style
 </div>
 </div>
 <p>Rendered (From loading .uml file - same as Example04 just different file)</p>
-<div class="figure align-center" id="id19">
+<div class="figure align-center" id="id20">
 <p class="plantuml">
 <object data="../../../../../../_images/plantuml-4f3fb2f5e9b80066da573a638c1271e4a62d0173.svg" type="image/svg+xml" style="width:110px;height:179px;">
 <a href="../../../../../../_images/plantuml-4f3fb2f5e9b80066da573a638c1271e4a62d0173.png"><img src="../../../../../../_images/plantuml-4f3fb2f5e9b80066da573a638c1271e4a62d0173.png" alt="&#64;startsalt
@@ -1082,7 +1082,7 @@ and style
 " style="width: 109.0px; height: 178.0px"/></a>
 
 </object></p>
-<p class="caption"><span class="caption-number">Figure 1.17 </span><span class="caption-text">plantuml_example12</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.18 </span><span class="caption-text">plantuml_example12</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
 </li>
 </ul>
@@ -1096,7 +1096,7 @@ and style
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../drawio/example.html" class="btn btn-neutral float-right" title="1.3.3.10. Diagrams.Net or drawio Extension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../drawio/contents.html" class="btn btn-neutral float-right" title="1.3.3.10. Sphinx DrawIO Directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../blockdiag/rackdiag.html" class="btn btn-neutral float-left" title="1.3.3.8.6. blockdiag Directive - Rack Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
