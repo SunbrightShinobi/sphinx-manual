@@ -55,5 +55,5 @@ github:
 	@ln -snf ../../shared/images		$(IMAGESDIR)
 	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
-	@rm -rf ../$(GITHUBDIR)/*
-	@cp -a build/html/. ../$(GITHUBDIR)
+	@rm -rf $(GITHUBDIR)/*
+	@cp -a build/html/. $(GITHUBDIR)
