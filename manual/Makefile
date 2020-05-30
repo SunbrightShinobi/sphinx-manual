@@ -7,7 +7,12 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
-GITHUBDIR     = ../ghpages
+COMMONDIR     = ./source/common
+COMMONDOCSDIR = ./source/common_docs
+CONFIGSDIR    = ./source/configs
+IMAGESDIR     = ./source/images
+SCRIPTSDIR    = ./source/scripts
+GITHUBDIR     = ../docs
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -18,13 +23,11 @@ help:
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	ln -s ../../common/sphinx_scripts		./source/common
-	ln -s ../../common/_static				./source/_static
-	ln -s ../../common/_templates			./source/_templates
-	ln -s ../../shared/configs				./source/configs
-	ln -s ../../shared/scripts				./source/scripts
-	ln -s ../../shared/docs					./source/common_docs
-	ln -s ../../shared/images				./source/images
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: clean
@@ -37,24 +40,20 @@ clean:
 
 .PHONY: livehtml
 livehtml:
-	ln -s ../../common/sphinx_scripts		./source/common
-	ln -s ../../common/_static				./source/_static
-	ln -s ../../common/_templates			./source/_templates
-	ln -s ../../shared/configs				./source/configs
-	ln -s ../../shared/scripts				./source/scripts
-	ln -s ../../shared/docs					./source/common_docs
-	ln -s ../../shared/images				./source/images
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
 	sphinx-autobuild -b html --poll "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
 .PHONY: github
 github:
-	ln -s ../../common/sphinx_scripts		./source/common
-	ln -s ../../common/_static				./source/_static
-	ln -s ../../common/_templates			./source/_templates
-	ln -s ../../shared/configs				./source/configs
-	ln -s ../../shared/scripts				./source/scripts
-	ln -s ../../shared/docs					./source/common_docs
-	ln -s ../../shared/images				./source/images
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
-	@rm -rf ../docs/*
-	@cp -a build/html/. ../docs
+	@rm -rf ../$(GITHUBDIR)/*
+	@cp -a build/html/. ../$(GITHUBDIR)

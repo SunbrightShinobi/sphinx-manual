@@ -17,9 +17,10 @@ import sys
 
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath('./source/common'))
-sys.path.append(os.path.abspath('./source/configs'))
-sys.path.append(os.path.abspath('./source/scripts'))
 sys.path.append(os.path.abspath('./source/common_docs'))
+sys.path.append(os.path.abspath('./source/configs'))
+sys.path.append(os.path.abspath('./source/images'))
+sys.path.append(os.path.abspath('./source/scripts'))
 
 # -- Project information -----------------------------------------------------
 
@@ -27,6 +28,10 @@ project = 'Sphinx Manual'
 copyright = '2020, Josh Johnson @binarylandscapes'
 author = 'Josh Johnson @binarylandscapes'
 
+jinja_contexts = {
+    'test01': {'topics': {'a': 'b', 'c': 'd'}}
+}
+
 # Load the rest of the default configuration
-exec(open(r'./common/sphinx_defaults.py').read())
+exec(open(r'./common/sphinx_scripts/sphinx_defaults.py').read())
 
