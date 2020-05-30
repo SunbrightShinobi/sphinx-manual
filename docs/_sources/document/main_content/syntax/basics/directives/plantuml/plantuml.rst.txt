@@ -28,8 +28,6 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
       - *0-100* percentage value
     * - `:caption:`
       - *text* to label Figure
-    * - `:name:`
-      - *text* to create hyperlink for sphinx (no spaces)
 
 *   Example 01
 
@@ -38,6 +36,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
         .. uml::
             :scale: 75
             :align: center
+            :caption: PlantUML Example01
 
             Alice -> Bob: Hi!
             Alice <- Bob: How are you?
@@ -47,6 +46,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
     .. uml::
         :scale: 75
         :align: center
+        :caption: PlantUML Example01
 
         Alice -> Bob: Hi!
         Alice <- Bob: How are you?

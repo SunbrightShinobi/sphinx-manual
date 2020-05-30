@@ -14,7 +14,7 @@ link MyState to AnotherCompositeState--><path d="M479.51,135.9 C533.67,148.88 60
 link MyState to WrongState--><path d="M341.3,153.13 C315.66,168.48 287.5,189.08 268,214 C230.96,261.32 212.74,330.78 204.95,369.73 " fill="none" id="MyState-&gt;WrongState" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="203.96,374.79,209.6068,366.7207,204.9159,369.8822,201.7544,365.1913,203.96,374.79" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[667a7a01fcd3900c057a3becd8c3637b]
 link CompositeState to CompositeState--><path d="M522.04,362.03 C542.66,367.09 557,379.75 557,400 C557,418.51 545.02,430.67 527.21,436.5 " fill="none" id="CompositeState-&gt;CompositeState" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="522.04,437.97,531.7926,439.3436,526.8476,436.5964,529.5948,431.6514,522.04,437.97" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="88" x="563" y="404.5669">\ this is a loop</text><!--MD5=[025dfbca5fce38f1175b7cb5f80828c1]
 link AnotherCompositeState to *end--><path d="M675.43,563.25 C669.68,571.04 663.85,578.67 658,586 C639.81,608.81 615.33,632.6 601.24,645.74 " fill="none" id="AnotherCompositeState-&gt;*end" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="597.23,649.46,606.5579,646.2992,600.9057,646.0704,601.1345,640.4182,597.23,649.46" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[32869a8d2f9ede59201a16cc716f824f]
-link CompositeState to *end--><path d="M522.06,562.86 C547.29,597.44 569.86,628.38 581.55,644.42 " fill="none" id="CompositeState-&gt;*end" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="584.56,648.54,582.4974,638.9096,581.6174,644.4976,576.0294,643.6176,584.56,648.54" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5e20092cc500410a537bdef83e98a0b4]
+link CompositeState to *end--><path d="M522.06,562.86 C547.29,597.44 569.86,628.38 581.55,644.42 " fill="none" id="CompositeState-&gt;*end" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="584.56,648.54,582.4974,638.9096,581.6174,644.4976,576.0294,643.6176,584.56,648.54" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[cd010113fd83ec309ff9b31150280ae7]
 @startuml
 
 [*] - -> MyState
@@ -60,7 +60,7 @@ end note
 
 @enduml
 
-PlantUML version 1.2020.07(Sun Apr 19 11:42:40 GMT 2020)
+PlantUML version 1.2020.08(Sun Apr 26 14:08:22 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
