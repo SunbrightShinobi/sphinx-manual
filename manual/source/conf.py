@@ -32,6 +32,16 @@ jinja_contexts = {
     'test01': {'topics': {'a': 'b', 'c': 'd'}}
 }
 
+# Confluence
+confluence_publish = True
+confluence_space_name = 'TG'
+confluence_parent_page = 'Documentation'
+confluence_server_url = 'https://binarylandscapes.atlassian.net/wiki/'
+confluence_server_user = 'josh.johnson@binarylandscapes.com'
+confluence_prev_next_buttons_location = 'top'
+#confluence_publish_postfix = '-postfix'
+#confluence_publish_prefix = 'prefix-'
+
 # Load the rest of the default configuration
 exec(open(r'./common/sphinx_scripts/sphinx_defaults.py').read())
 

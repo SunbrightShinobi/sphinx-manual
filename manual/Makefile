@@ -57,3 +57,12 @@ github:
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 	@rm -rf $(GITHUBDIR)/*
 	@cp -a build/html/. $(GITHUBDIR)
+
+.PHONY: confluence
+confluence:
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
+	@$(SPHINXBUILD) -b confluence "$(SOURCEDIR)" "$(BUILDDIR)/confluence" $(SPHINXOPTS) $(O)
