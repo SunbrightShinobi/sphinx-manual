@@ -8,4 +8,5 @@ Sphinx DrawIO Directives
     :maxdepth: 4
     :glob:
 
+    drawio
     drawio_download_html

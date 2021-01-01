@@ -4,4 +4,4 @@ source/configs
 source/images
 source/scripts
 source/jinja_contexts.txt
-
+source/.drawio

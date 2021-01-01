@@ -16,7 +16,9 @@
 
 This is your *.rst* file code example to import **DrawIO Diagram(s)**  `<http://https://www.diagrams.net/>`_ into your generated documentation. It is also my personal preference to add a direct download link to original file using ``:download:`filename.drawio``` 
 
-    ``.. drawio:: path/filename.drawio``
+    ``.. drawio-image:: path/filename.drawio``
+
+    ``.. drawio-figure:: path/filename.drawio``
 
     .. tabularcolumns:: |p{\dimexpr 0.2\linewidth-2\tabcolsep}|
                           p{\dimexpr 0.6\linewidth-2\tabcolsep}|
@@ -30,11 +32,15 @@ This is your *.rst* file code example to import **DrawIO Diagram(s)**  `<http://
         * - `:align:`
           - *left*, *center* or *right*
         * - `:scale:`
-          - *1-10* 1 is original
+          - *Any positive integer* will override conf.py setting of 100
+        * - `:export-width:`
+          - *Any positive integer* in pixels or for pdf 100 = 1.00 inches
+        * - `:export-height:`
+          - *Any positive integer* in pixels or for pdf 100 = 1.00 inches
         * - `:transparency:`
-          - *true|false* For PNG output only
+          - *true|false* For PNG output only, will override conf.py setting
         * - `:format:`
-          - *svg|png|jpg* Output format, can override default setting (Broken), if set (SVG looks sharpest and does not require headless configuration)
+          - *svg|png|jpg|pdf* Output format, can override default setting (Broken), if set (SVG looks sharpest and does not require headless configuration)
         * - `:alt:`
           - *text* for alternative text in html
         * - `:page-index:`
@@ -42,21 +48,39 @@ This is your *.rst* file code example to import **DrawIO Diagram(s)**  `<http://
 
     ``:download:`path/filename.drawio (Download) <./path/filename.drawio>```
 
-*   Rendered:
+*   Syntax:
 
 .. code-block:: none
 
-    .. drawio:: drawio_example.drawio
+    .. drawio-image:: drawio_example.drawio
+        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 1
         :page-index: 0
-        :scale: 1
+        :scale: 100
 
-    .. drawio:: drawio_example.drawio
+    .. drawio-figure:: drawio_example.drawio
+        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 2
         :page-index: 1
-        :scale: 1
+        :scale: 100
+
+*   Rendered:
+
+    .. drawio-image:: drawio_example.drawio
+        :format: svg
+        :align: center
+        :alt: Example DrawIO File, Sheet 1
+        :page-index: 0
+        :scale: 100
+
+    .. drawio-figure:: drawio_example.drawio
+        :format: svg
+        :align: center
+        :alt: Example DrawIO File, Sheet 2
+        :page-index: 1
+        :scale: 100
 
 .. only:: html
 
