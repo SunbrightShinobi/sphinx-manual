@@ -66,3 +66,30 @@ confluence:
 	@ln -snf ../../shared/images		$(IMAGESDIR)
 	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
 	@$(SPHINXBUILD) -b confluence "$(SOURCEDIR)" "$(BUILDDIR)/confluence" $(SPHINXOPTS) $(O)
+
+.PHONY: latexpdf
+latexpdf:
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
+	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)/latex" $(SPHINXOPTS) $(O)
+
+.PHONY: epub3
+epub3: links
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
+	$(SPHINXBUILD) -b epub3 "$(SOURCEDIR)" "$(BUILDDIR)/epub3" $(SPHINXOPTS) $(O)
+
+.PHONY: rinoh
+rinoh:
+	@ln -snf ../../common/				$(COMMONDIR)
+	@ln -snf ../../shared/configs		$(CONFIGSDIR)
+	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images		$(IMAGESDIR)
+	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
+	@$(SPHINXBUILD) -b rinoh "$(SOURCEDIR)" "$(BUILDDIR)/rinoh" $(SPHINXOPTS) $(O)
