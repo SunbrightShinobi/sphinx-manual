@@ -31,6 +31,10 @@
 
         .. todolist::
 
+    .. raw:: latex
+
+        \beginappendices
+
     ---------------------
     Appendices
     ---------------------

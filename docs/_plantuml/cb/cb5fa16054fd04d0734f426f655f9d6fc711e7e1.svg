@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="321px" preserveAspectRatio="none" style="width:451px;height:321px;" version="1.1" viewBox="0 0 451 321" width="451px" zoomAndPan="magnify"><defs><filter height="300%" id="fcr6shkxbl575" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[18b72bf5d1838316b3d85261d2b42cce]
+entity folder--><polygon fill="#FEFECE" filter="url(#fcr6shkxbl575)" points="16,6,62,6,69,27,202,27,202,134.4844,16,134.4844,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="69" y1="27" y2="27"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="26" y="46.9951">This is an</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="47" x="95" y="46.9951">folder</text><line style="stroke:#000000;stroke-width:1.0;" x1="17" x2="201" y1="50.2969" y2="50.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="26" y="67.292">You can use separator</text><line style="stroke:#000000;stroke-width:1.0;" x1="17" x2="201" y1="74.5938" y2="74.5938"/><line style="stroke:#000000;stroke-width:1.0;" x1="17" x2="201" y1="76.5938" y2="76.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="26" y="91.5889">of different kind</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="17" x2="201" y1="98.8906" y2="98.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="26" y="115.8857">and style</text><!--MD5=[0b70d51bdd028022f5101c089cfdd98e]
+entity node--><polygon fill="#FEFECE" filter="url(#fcr6shkxbl575)" points="237,20.5,247,10.5,433,10.5,433,119.6875,423,129.6875,237,129.6875,237,20.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="423" x2="433" y1="20.5" y2="10.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="237" x2="423" y1="20.5" y2="20.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="423" x2="423" y1="20.5" y2="129.6875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="252" y="43.4951">This is a</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="40" x="312" y="43.4951">node</text><line style="stroke:#000000;stroke-width:1.0;" x1="237" x2="423" y1="46.7969" y2="46.7969"/><line style="stroke:#000000;stroke-width:1.0;" x1="423" x2="433" y1="46.7969" y2="36.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="252" y="63.792">You can use separator</text><line style="stroke:#000000;stroke-width:1.0;" x1="237" x2="423" y1="71.0938" y2="71.0938"/><line style="stroke:#000000;stroke-width:1.0;" x1="423" x2="433" y1="71.0938" y2="61.0938"/><line style="stroke:#000000;stroke-width:1.0;" x1="237" x2="423" y1="73.0938" y2="73.0938"/><line style="stroke:#000000;stroke-width:1.0;" x1="423" x2="433" y1="73.0938" y2="63.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="252" y="88.0889">of different kind</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="237" x2="423" y1="95.3906" y2="95.3906"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="423" x2="433" y1="95.3906" y2="85.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="252" y="112.3857">and style</text><!--MD5=[f50ff5e4cd64f259303fc83dba1819fc]
+entity database--><path d="M21,204 C21,194 109,194 109,194 C109,194 197,194 197,204 L197,302.1875 C197,312.1875 109,312.1875 109,312.1875 C109,312.1875 21,312.1875 21,302.1875 L21,204 " fill="#FEFECE" filter="url(#fcr6shkxbl575)" style="stroke:#000000;stroke-width:1.5;"/><path d="M21,204 C21,214 109,214 109,214 C109,214 197,214 197,204 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="31" y="230.9951">This is a</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="72" x="91" y="230.9951">database</text><path d="M21,229.2969 C21,239.2969 109,239.2969 109,239.2969 C109,239.2969 197,239.2969 197,229.2969 " fill="none" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="31" y="251.292">You can use separator</text><path d="M21,253.5938 C21,263.5938 109,263.5938 109,263.5938 C109,263.5938 197,263.5938 197,253.5938 " fill="none" style="stroke:#000000;stroke-width:1.0;"/><path d="M21,255.5938 C21,265.5938 109,265.5938 109,265.5938 C109,265.5938 197,265.5938 197,255.5938 " fill="none" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="31" y="275.5889">of different kind</text><path d="M21,277.8906 C21,287.8906 109,287.8906 109,287.8906 C109,287.8906 197,287.8906 197,277.8906 " fill="none" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:1.0,2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="31" y="299.8857">and style</text><ellipse cx="335.8857" cy="253.058" fill="#FEFECE" filter="url(#fcr6shkxbl575)" rx="103.8857" ry="56.558" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="273.925" y="224.4706">This is a</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="333.925" y="224.4706">usecase</text><line style="stroke:#A80036;stroke-width:1.0;" x1="243.9603" x2="427.8111" y1="227.7723" y2="227.7723"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="258.925" y="244.7675">You can use separator</text><line style="stroke:#A80036;stroke-width:1.0;" x1="233.0159" x2="438.7555" y1="252.0692" y2="252.0692"/><line style="stroke:#A80036;stroke-width:1.0;" x1="233.0166" x2="438.7548" y1="254.0692" y2="254.0692"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="283.425" y="269.0643">of different kind</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="242.2319" x2="429.5395" y1="276.3661" y2="276.3661"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="305.925" y="293.3612">and style</text><!--MD5=[8b1e040fb4e420e59c1d950044fc8daa]
+link folder to node--><!--MD5=[5a1649bfccdbbd382e838cfd9235c945]
+link folder to database--><!--MD5=[42b75448bdc61cdd8879b205b2dec029]
+link database to usecase--><!--MD5=[3c29a85d3e91b0843bf20b05c546997d]
+@startuml
+folder folder [
+This is an <b>folder
+- - - -
+You can use separator
+====
+of different kind
+....
+and style
+]
+
+node node [
+This is a <b>node
+- - - -
+You can use separator
+====
+of different kind
+....
+and style
+]
+
+database database [
+This is a <b>database
+- - - -
+You can use separator
+====
+of different kind
+....
+and style
+]
+
+usecase usecase [
+This is a <b>usecase
+- - - -
+You can use separator
+====
+of different kind
+....
+and style
+]
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 12:45:07 EST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

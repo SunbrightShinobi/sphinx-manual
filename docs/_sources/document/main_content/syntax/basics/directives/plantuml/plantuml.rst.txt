@@ -36,7 +36,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
         .. uml::
             :scale: 75
             :align: center
-            :caption: PlantUML Example01
+            :caption: plantuml_example01
 
             Alice -> Bob: Hi!
             Alice <- Bob: How are you?
@@ -46,7 +46,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
     .. uml::
         :scale: 75
         :align: center
-        :caption: PlantUML Example01
+        :caption: plantuml_example01
 
         Alice -> Bob: Hi!
         Alice <- Bob: How are you?
@@ -62,6 +62,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
         .. uml::
             :scale: 75
             :align: center
+            :caption: plantuml_example02
 
             Foo <|-- Bar
 
@@ -70,7 +71,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
     .. uml::
         :scale: 75
         :align: center
-        :caption: Caption with **bold** and *italic*
+        :caption: plantuml_example02
 
         Foo <|-- Bar
 
@@ -89,6 +90,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
         .. uml::
             :scale: 75
             :align: center
+            :caption: plantuml_example03
 
             @startuml
 
@@ -112,6 +114,7 @@ This is your *.rst* file code example to create **PlantUML Diagram(s)**  `<http:
     .. uml::
         :scale: 75
         :align: center
+        :caption: plantuml_example03
 
         @startuml
 

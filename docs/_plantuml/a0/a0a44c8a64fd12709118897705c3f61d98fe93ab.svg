@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="504px" preserveAspectRatio="none" style="width:1102px;height:504px;" version="1.1" viewBox="0 0 1102 504" width="1102px" zoomAndPan="magnify"><defs><filter height="300%" id="foabf21l2so06" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[f9ba5bf973e7832d2ce5ed59077b93f7]
+entity DB--><ellipse cx="281.5" cy="33.5986" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M281.5,41.5986 L281.5,68.5986 M268.5,49.5986 L294.5,49.5986 M281.5,68.5986 L268.5,83.5986 M281.5,68.5986 L294.5,83.5986 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="230.5" y="102.0938">Main Database</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="94" x="234.5" y="20.7969">«Application»</text><path d="M6,21.3018 L6,91.833 A0,0 0 0 0 6,91.833 L195,91.833 A0,0 0 0 0 195,91.833 L195,60.8018 L230.28,56.8018 L195,52.8018 L195,31.3018 L185,21.3018 L6,21.3018 A0,0 0 0 0 6,21.3018 " fill="#FBFB77" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M185,21.3018 L185,31.3018 L195,31.3018 L185,21.3018 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="62" x="12" y="38.3687">This actor</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="168" x="12" y="53.5015">has a "name with spaces",</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="12" y="68.6343">an alias</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="109" x="12" y="83.7671">and a stereotype</text><!--MD5=[fee662a292a0353a69bd162820bae93b]
+entity User--><ellipse cx="430.5" cy="33.5986" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M430.5,41.5986 L430.5,68.5986 M417.5,49.5986 L443.5,49.5986 M430.5,68.5986 L417.5,83.5986 M430.5,68.5986 L443.5,83.5986 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="414.5" y="102.0938">User</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="68" x="396.5" y="20.7969">«Human»</text><!--MD5=[46bebd23bfb5f2d9a961720e7b2993d4]
+entity SpecialisedUser--><ellipse cx="441.5" cy="285.3018" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M441.5,293.3018 L441.5,320.3018 M428.5,301.3018 L454.5,301.3018 M441.5,320.3018 L428.5,335.3018 M441.5,320.3018 L454.5,335.3018 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="386.5" y="353.7969">SpecialisedUser</text><!--MD5=[62529e7d5259bf274c3bf3e446350d88]
+entity Administrator--><ellipse cx="577.5" cy="285.3018" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M577.5,293.3018 L577.5,320.3018 M564.5,301.3018 L590.5,301.3018 M577.5,320.3018 L564.5,335.3018 M577.5,320.3018 L590.5,335.3018 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="91" x="532" y="353.7969">Administrator</text><ellipse cx="281.3614" cy="190.7073" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="95.3614" ry="23.9056" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="50" x="249.8332" y="183.8544">«Main»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="208.8332" y="200.1512">Use the application</text><ellipse cx="366.6177" cy="458.4253" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="103.6177" ry="23.1235" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="172" x="280.6177" y="461.272">Configure the application</text><path d="M484,170.8018 L484,211.0674 L629,211.0674 L629,180.8018 L619,170.8018 L484,170.8018 " fill="#FBFB77" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M619,170.8018 L619,180.8018 L629,180.8018 L619,170.8018 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="124" x="490" y="187.8687">This note applies to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="77" x="490" y="203.0015">both actors.</text><!--MD5=[548474300a3eaa928033ef51c8cd3f5e]
+entity AnotherActor--><ellipse cx="753.5" cy="25.8018" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M753.5,33.8018 L753.5,60.8018 M740.5,41.8018 L766.5,41.8018 M753.5,60.8018 L740.5,75.8018 M753.5,60.8018 L766.5,75.8018 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="91" x="708" y="94.2969">AnotherActor</text><ellipse cx="753.3735" cy="316.0765" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="79.3735" ry="18.2747" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="692.9676" y="319.5266">AnotherUseCase</text><!--MD5=[f6196bed92e4dc2cdcc5d1b35148bdca]
+entity ThirdActor--><ellipse cx="886.5" cy="25.8018" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M886.5,33.8018 L886.5,60.8018 M873.5,41.8018 L899.5,41.8018 M886.5,60.8018 L873.5,75.8018 M886.5,60.8018 L899.5,75.8018 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="851" y="94.2969">ThirdActor</text><ellipse cx="886.5594" cy="458.5136" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="64.0594" ry="15.2119" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="76" x="845.5594" y="462.2612">LowerCase</text><ellipse cx="1026.3963" cy="56.581" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="64.3963" ry="15.2793" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="984.8963" y="60.3286">UpperCase</text><!--MD5=[b0c4786cf31a980c8f8ffc2e3baac272]
+entity FourthActor--><ellipse cx="1026.5" cy="427.3018" fill="#FEFECE" filter="url(#foabf21l2so06)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M1026.5,435.3018 L1026.5,462.3018 M1013.5,443.3018 L1039.5,443.3018 M1026.5,462.3018 L1013.5,477.3018 M1026.5,462.3018 L1039.5,477.3018 " fill="none" filter="url(#foabf21l2so06)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="986" y="495.7969">FourthActor</text><!--MD5=[3e5b9aee4da9cc224b352ea2b93b1c07]
+reverse link User to SpecialisedUser--><path d="M433.41,126.0218 C435.45,173.6618 438.1,235.6218 439.8,275.4318 " fill="none" id="User-backto-SpecialisedUser" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="426.42,126.2118,432.56,105.9318,440.4,125.6118,426.42,126.2118" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b4e501b81d36e0a0ad004b01a879159d]
+reverse link User to Administrator--><path d="M484.1,68.1718 C535.82,81.3418 611.3,109.6118 646.5,166.8018 C668.11,201.9018 643.1,244.8818 617.35,275.5518 " fill="none" id="User-backto-Administrator" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="482.47,74.9818,464.58,63.6318,485.65,61.3518,482.47,74.9818" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[810f978febb7e6693cadb942c602355a]
+link Use to Config--><path d="M280.39,215.0018 C279.61,247.6718 280.98,308.6318 298.5,356.8018 C308.61,384.5918 328.08,412.1318 343.6,431.3318 " fill="none" id="Use-to-Config" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="347.05,435.5418,344.441,426.0448,343.8815,431.6739,338.2524,431.1144,347.05,435.5418" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="68" x="299.5" y="320.8687">«includes»</text><!--MD5=[9b1e83a301d632e8d5a1d64f176fc1f5]
+link User to Use--><path d="M396.32,88.0818 C370.38,111.0618 335.12,142.3018 310.54,164.0718 " fill="none" id="User-to-Use" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="306.69,167.4818,316.0734,164.4899,310.4263,164.1591,310.7571,158.5119,306.69,167.4818" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d1c09d067967cb5ab3c78afd3bc5348b]
+link DB to Use--><path d="M281.5,105.8318 C281.5,124.5018 281.5,145.2618 281.5,161.4618 " fill="none" id="DB-to-Use" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="281.5,166.7718,285.5,157.7718,281.5,161.7718,277.5,157.7718,281.5,166.7718" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bd42a5a8053b2f61442bb881258a9563]
+link Administrator to Config--><path d="M531.98,347.5118 C493.21,373.2318 438.26,409.6818 402.51,433.4118 " fill="none" id="Administrator-to-Config" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="398.24,436.2418,407.9473,434.5777,402.4003,433.4683,403.5097,427.9213,398.24,436.2418" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[056ca6c5a647cc018e8fe825a72cde8d]
+link MyNote to Administrator--><path d="M559.74,210.8318 C562.67,228.0818 567.09,254.0618 570.78,275.8018 " fill="none" id="MyNote-Administrator" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[cb02e16fb00f8a2579b51fb7933b53f9]
+link MyNote to SpecialisedUser--><path d="M538.78,210.8318 C522.72,228.0818 498.52,254.0618 478.28,275.8018 " fill="none" id="MyNote-SpecialisedUser" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[0841b8b798db7975cf01e6da1d65f0cd]
+link AnotherActor to AnotherUseCase--><path d="M753.5,97.4718 C753.5,152.1018 753.5,248.7118 753.5,292.5418 " fill="none" id="AnotherActor-to-AnotherUseCase" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="753.5,297.6218,757.5,288.6218,753.5,292.6218,749.5,288.6218,753.5,297.6218" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fa94f3775f57f69cdf4afa5697af73ad]
+link ThirdActor to LowerCase--><path d="M886.5,97.5718 C886.5,181.8618 886.5,375.8518 886.5,437.8618 " fill="none" id="ThirdActor-to-LowerCase" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="886.5,443.1118,890.5,434.1118,886.5,438.1118,882.5,434.1118,886.5,443.1118" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d66fd3f15cbb38b94a6e27352040a4db]
+reverse link UpperCase to FourthActor--><path d="M1026.5,77.8018 C1026.5,140.4218 1026.5,333.5218 1026.5,417.5518 " fill="none" id="UpperCase-backto-FourthActor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1026.5,72.4918,1022.5,81.4918,1026.5,77.4918,1030.5,81.4918,1026.5,72.4918" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[65a74caaf92d86c665c2bf7d6755ddb8]
+@startuml
+actor "Main Database" as DB << Application >>
+
+note left of DB
+  This actor
+  has a "name with spaces",
+  an alias
+  and a stereotype
+end note
+
+actor User << Human >>
+actor SpecialisedUser
+actor Administrator
+
+User <|- - - SpecialisedUser
+User <|- - - Administrator
+
+usecase (Use the application) as (Use) << Main >>
+usecase (Configure the application) as (Config)
+Use ..> Config : <<includes>>
+
+User - -> Use
+DB - -> Use
+
+Administrator - -> Config
+
+note "This note applies to\nboth actors." as MyNote
+MyNote .. Administrator
+MyNote .. SpecialisedUser
+
+'  this is a text comment and won't be displayed
+AnotherActor - - -> (AnotherUseCase)
+
+'  to increase the length of the edges, just add extras dashes, like this:
+ThirdActor - - - -> (LowerCase)
+
+'  The direction of the edge can also be reversed, like this:
+(UpperCase) <- - - - FourthActor
+
+@enduml
+
+@startuml
+actor "Main Database" as DB << Application >>
+
+note left of DB
+  This actor
+  has a "name with spaces",
+  an alias
+  and a stereotype
+end note
+
+actor User << Human >>
+actor SpecialisedUser
+actor Administrator
+
+User <|- - - SpecialisedUser
+User <|- - - Administrator
+
+usecase (Use the application) as (Use) << Main >>
+usecase (Configure the application) as (Config)
+Use ..> Config : <<includes>>
+
+User - -> Use
+DB - -> Use
+
+Administrator - -> Config
+
+note "This note applies to\nboth actors." as MyNote
+MyNote .. Administrator
+MyNote .. SpecialisedUser
+
+AnotherActor - - -> (AnotherUseCase)
+
+ThirdActor - - - -> (LowerCase)
+
+(UpperCase) <- - - - FourthActor
+
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 12:45:07 EST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

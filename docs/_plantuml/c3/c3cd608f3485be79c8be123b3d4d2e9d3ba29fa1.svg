@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="440px" preserveAspectRatio="none" style="width:841px;height:440px;" version="1.1" viewBox="0 0 841 440" width="841px" zoomAndPan="magnify"><defs><filter height="300%" id="f19d1pl2vhrsiw" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[1a7c909d8ac09fc782f5eb680a232d5b]
+cluster Classic Collections--><polygon fill="#FFFFFF" filter="url(#f19d1pl2vhrsiw)" points="16,31,169,31,176,53.2969,326,53.2969,326,433,16,433,16,31" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="176" y1="53.2969" y2="53.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="20" y="45.9951">Classic Collections</text><!--MD5=[b4fa10df80476353258f72a232547d63]
+class AbstractList--><rect codeLine="32" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="28" id="AbstractList" style="stroke:#383838;stroke-width:1.5;" width="101" x="208.5" y="236"/><ellipse cx="221.5" cy="250" fill="#CDCDCD" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M220.9063,247.9688 L220.3594,250.3594 L221.4531,250.3594 L220.9063,247.9688 Z M220.2031,246.9219 L221.6094,246.9219 L223.1875,252.75 L222.0313,252.75 L221.6719,251.3125 L220.1406,251.3125 L219.7813,252.75 L218.625,252.75 L220.2031,246.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="73" x="233.5" y="254.1543">AbstractList</text><!--MD5=[8e34b16d8d8f96f4a11290cd523ed859]
+class AbstractCollection--><rect codeLine="33" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="28" id="AbstractCollection" style="stroke:#383838;stroke-width:1.5;" width="141" x="32.5" y="236"/><ellipse cx="45.5" cy="250" fill="#CDCDCD" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M44.9063,247.9688 L44.3594,250.3594 L45.4531,250.3594 L44.9063,247.9688 Z M44.2031,246.9219 L45.6094,246.9219 L47.1875,252.75 L46.0313,252.75 L45.6719,251.3125 L44.1406,251.3125 L43.7813,252.75 L42.625,252.75 L44.2031,246.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="113" x="57.5" y="254.1543">AbstractCollection</text><!--MD5=[3d4177ac58b4411586d067f34e84928f]
+class List--><rect codeLine="34" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="28" id="List" style="stroke:#383838;stroke-width:1.5;" width="49" x="221.5" y="66"/><ellipse cx="234.5" cy="80" fill="#B1B1B1" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M232.6719,78.1875 L232.6719,77.1719 L236.1406,77.1719 L236.1406,78.1875 L234.9844,78.1875 L234.9844,81.9844 L236.1406,81.9844 L236.1406,83 L232.6719,83 L232.6719,81.9844 L233.8281,81.9844 L233.8281,78.1875 L232.6719,78.1875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="21" x="246.5" y="84.1543">List</text><!--MD5=[c160724f8e3bb89ca8141a12554ac2e3]
+class Collection--><rect codeLine="35" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="28" id="Collection" style="stroke:#383838;stroke-width:1.5;" width="89" x="71.5" y="66"/><ellipse cx="84.5" cy="80" fill="#B1B1B1" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M82.6719,78.1875 L82.6719,77.1719 L86.1406,77.1719 L86.1406,78.1875 L84.9844,78.1875 L84.9844,81.9844 L86.1406,81.9844 L86.1406,83 L82.6719,83 L82.6719,81.9844 L83.8281,81.9844 L83.8281,78.1875 L82.6719,78.1875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="61" x="96.5" y="84.1543">Collection</text><!--MD5=[ab8871ed637f40707b866ba6597734bc]
+class ArrayList--><rect codeLine="44" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="69.6094" id="ArrayList" style="stroke:#383838;stroke-width:1.5;" width="132" x="178" y="347"/><ellipse cx="213.95" cy="361" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M214.6688,363.8281 Q214.4031,363.9688 214.0906,364.0313 Q213.7938,364.1094 213.4656,364.1094 Q212.2938,364.1094 211.6688,363.3438 Q211.0438,362.5625 211.0438,361.0938 Q211.0438,359.6094 211.6688,358.8438 Q212.2938,358.0625 213.4656,358.0625 Q213.7938,358.0625 214.0906,358.1406 Q214.4031,358.2031 214.6688,358.3438 L214.6688,359.625 Q214.3719,359.3438 214.0906,359.2188 Q213.825,359.0938 213.5281,359.0938 Q212.8875,359.0938 212.5594,359.5938 Q212.2469,360.0938 212.2469,361.0938 Q212.2469,362.0781 212.5594,362.5781 Q212.8875,363.0781 213.5281,363.0781 Q213.825,363.0781 214.0906,362.9531 Q214.3719,362.8281 214.6688,362.5469 L214.6688,363.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="231.05" y="365.1543">ArrayList</text><line style="stroke:#383838;stroke-width:1.5;" x1="179" x2="309" y1="375" y2="375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="120" x="184" y="389.2104">Object[] elementData</text><line style="stroke:#383838;stroke-width:1.5;" x1="179" x2="309" y1="395.8047" y2="395.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="30" x="184" y="410.0151">size()</text><!--MD5=[fb3a36e6acd69457a12dcaa984c78192]
+class AbstractClass--><rect codeLine="9" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="146.4375" id="AbstractClass" style="stroke:#383838;stroke-width:1.5;" width="156" x="539" y="7"/><ellipse cx="572.25" cy="21" fill="#CDCDCD" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M571.6563,18.9688 L571.1094,21.3594 L572.2031,21.3594 L571.6563,18.9688 Z M570.9531,17.9219 L572.3594,17.9219 L573.9375,23.75 L572.7813,23.75 L572.4219,22.3125 L570.8906,22.3125 L570.5313,23.75 L569.375,23.75 L570.9531,17.9219 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83" x="588.75" y="25.1543">AbstractClass</text><line style="stroke:#383838;stroke-width:1.5;" x1="540" x2="694" y1="35" y2="35"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="545" y="49.2104">-privateField</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="545" y="62.0151">+publicField</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="89" x="545" y="74.8198">#protectedField</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="121" x="545" y="87.6245">~packagePrivateField</text><line style="stroke:#383838;stroke-width:1.5;" x1="540" x2="694" y1="94.2188" y2="94.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="92" x="545" y="108.4292">-privateMethod()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="91" x="545" y="121.2339">+publicMethod()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="545" y="134.0386">#protectedMethod()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="144" x="545" y="146.8433">~packagePrivateMethod()</text><!--MD5=[c54ba4f61d01a424743e5a1fa0f9e38e]
+class Dummy--><rect codeLine="20" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="69.6094" id="Dummy" style="stroke:#383838;stroke-width:1.5;" width="97" x="730.5" y="45"/><ellipse cx="754.3" cy="59" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M755.0188,61.8281 Q754.7531,61.9688 754.4406,62.0313 Q754.1438,62.1094 753.8156,62.1094 Q752.6438,62.1094 752.0188,61.3438 Q751.3938,60.5625 751.3938,59.0938 Q751.3938,57.6094 752.0188,56.8438 Q752.6438,56.0625 753.8156,56.0625 Q754.1438,56.0625 754.4406,56.1406 Q754.7531,56.2031 755.0188,56.3438 L755.0188,57.625 Q754.7219,57.3438 754.4406,57.2188 Q754.175,57.0938 753.8781,57.0938 Q753.2375,57.0938 752.9094,57.5938 Q752.5969,58.0938 752.5969,59.0938 Q752.5969,60.0781 752.9094,60.5781 Q753.2375,61.0781 753.8781,61.0781 Q754.175,61.0781 754.4406,60.9531 Q754.7219,60.8281 755.0188,60.5469 L755.0188,61.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="768.7" y="63.1543">Dummy</text><line style="stroke:#383838;stroke-width:1.5;" x1="731.5" x2="826.5" y1="73" y2="73"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="42" x="736.5" y="87.2104">staticID</text><line style="stroke:#383838;stroke-width:1.5;" x1="731.5" x2="826.5" y1="93.8047" y2="93.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="736.5" y="108.0151">void methods()</text><!--MD5=[bd6e5d4dd3d7814cbdc3148d3ed1ec4b]
+class Flight--><rect codeLine="25" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="61.6094" id="Flight" style="stroke:#383838;stroke-width:1.5;" width="137" x="548.5" y="219"/><ellipse cx="596.25" cy="233" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M596.9688,235.8281 Q596.7031,235.9688 596.3906,236.0313 Q596.0938,236.1094 595.7656,236.1094 Q594.5938,236.1094 593.9688,235.3438 Q593.3438,234.5625 593.3438,233.0938 Q593.3438,231.6094 593.9688,230.8438 Q594.5938,230.0625 595.7656,230.0625 Q596.0938,230.0625 596.3906,230.1406 Q596.7031,230.2031 596.9688,230.3438 L596.9688,231.625 Q596.6719,231.3438 596.3906,231.2188 Q596.125,231.0938 595.8281,231.0938 Q595.1875,231.0938 594.8594,231.5938 Q594.5469,232.0938 594.5469,233.0938 Q594.5469,234.0781 594.8594,234.5781 Q595.1875,235.0781 595.8281,235.0781 Q596.125,235.0781 596.3906,234.9531 Q596.6719,234.8281 596.9688,234.5469 L596.9688,235.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="613.75" y="237.1543">Flight</text><line style="stroke:#383838;stroke-width:1.5;" x1="549.5" x2="684.5" y1="247" y2="247"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="554.5" y="261.2104">flightNumber : Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="554.5" y="274.0151">departureTime : Date</text><!--MD5=[15b68e006199004da79ea2a4d117d8e9]
+class TimeUnit--><rect codeLine="50" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="74.4141" id="TimeUnit" style="stroke:#383838;stroke-width:1.5;" width="82" x="721" y="213"/><ellipse cx="734" cy="227" fill="#ABABAB" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M735.2969,230 L731.6563,230 L731.6563,224.1719 L735.2969,224.1719 L735.2969,225.1875 L732.8125,225.1875 L732.8125,226.4375 L735.0625,226.4375 L735.0625,227.4531 L732.8125,227.4531 L732.8125,228.9844 L735.2969,228.9844 L735.2969,230 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="746" y="231.1543">TimeUnit</text><line style="stroke:#383838;stroke-width:1.5;" x1="722" x2="802" y1="241" y2="241"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="30" x="727" y="255.2104">DAYS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="40" x="727" y="268.0151">HOURS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="727" y="280.8198">MINUTES</text><!--MD5=[d6181cb537bdc20c0a3007a98a56832d]
+class Student--><rect codeLine="57" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="48.8047" id="Student" style="stroke:#383838;stroke-width:1.5;" width="78" x="342" y="55.5"/><ellipse cx="355" cy="69.5" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M355.7188,72.3281 Q355.4531,72.4688 355.1406,72.5313 Q354.8438,72.6094 354.5156,72.6094 Q353.3438,72.6094 352.7188,71.8438 Q352.0938,71.0625 352.0938,69.5938 Q352.0938,68.1094 352.7188,67.3438 Q353.3438,66.5625 354.5156,66.5625 Q354.8438,66.5625 355.1406,66.6406 Q355.4531,66.7031 355.7188,66.8438 L355.7188,68.125 Q355.4219,67.8438 355.1406,67.7188 Q354.875,67.5938 354.5781,67.5938 Q353.9375,67.5938 353.6094,68.0938 Q353.2969,68.5938 353.2969,69.5938 Q353.2969,70.5781 353.6094,71.0781 Q353.9375,71.5781 354.5781,71.5781 Q354.875,71.5781 355.1406,71.4531 Q355.4219,71.3281 355.7188,71.0469 L355.7188,72.3281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="367" y="73.6543">Student</text><line style="stroke:#383838;stroke-width:1.5;" x1="343" x2="419" y1="83.5" y2="83.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="348" y="97.7104">Name</text><!--MD5=[4066b0363c5a91ff3b6e03e0428953a9]
+class Course--><rect fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="28" id="Course" style="stroke:#383838;stroke-width:1.5;" width="72" x="345" y="368"/><ellipse cx="358" cy="382" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M358.7188,384.8281 Q358.4531,384.9688 358.1406,385.0313 Q357.8438,385.1094 357.5156,385.1094 Q356.3438,385.1094 355.7188,384.3438 Q355.0938,383.5625 355.0938,382.0938 Q355.0938,380.6094 355.7188,379.8438 Q356.3438,379.0625 357.5156,379.0625 Q357.8438,379.0625 358.1406,379.1406 Q358.4531,379.2031 358.7188,379.3438 L358.7188,380.625 Q358.4219,380.3438 358.1406,380.2188 Q357.875,380.0938 357.5781,380.0938 Q356.9375,380.0938 356.6094,380.5938 Q356.2969,381.0938 356.2969,382.0938 Q356.2969,383.0781 356.6094,383.5781 Q356.9375,384.0781 357.5781,384.0781 Q357.875,384.0781 358.1406,383.9531 Q358.4219,383.8281 358.7188,383.5469 L358.7188,384.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="370" y="386.1543">Course</text><!--MD5=[a5e519b5507f5347c192db89cdb5223a]
+class Enrollment--><rect codeLine="63" fill="#F8F8F8" filter="url(#f19d1pl2vhrsiw)" height="61.6094" id="Enrollment" style="stroke:#383838;stroke-width:1.5;" width="95" x="418.5" y="219"/><ellipse cx="431.5" cy="233" fill="#C2C2C2" rx="9" ry="9" style="stroke:#383838;stroke-width:1.0;"/><path d="M432.2188,235.8281 Q431.9531,235.9688 431.6406,236.0313 Q431.3438,236.1094 431.0156,236.1094 Q429.8438,236.1094 429.2188,235.3438 Q428.5938,234.5625 428.5938,233.0938 Q428.5938,231.6094 429.2188,230.8438 Q429.8438,230.0625 431.0156,230.0625 Q431.3438,230.0625 431.6406,230.1406 Q431.9531,230.2031 432.2188,230.3438 L432.2188,231.625 Q431.9219,231.3438 431.6406,231.2188 Q431.375,231.0938 431.0781,231.0938 Q430.4375,231.0938 430.1094,231.5938 Q429.7969,232.0938 429.7969,233.0938 Q429.7969,234.0781 430.1094,234.5781 Q430.4375,235.0781 431.0781,235.0781 Q431.375,235.0781 431.6406,234.9531 Q431.9219,234.8281 432.2188,234.5469 L432.2188,235.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="443.5" y="237.1543">Enrollment</text><line style="stroke:#383838;stroke-width:1.5;" x1="419.5" x2="512.5" y1="247" y2="247"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="424.5" y="261.2104">drop()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="44" x="424.5" y="274.0151">cancel()</text><ellipse cx="381" cy="250" fill="#000000" rx="2" ry="2" style="stroke:none;stroke-width:1.0;"/><!--MD5=[00308d07b6a5721fb0cf5861877e6652]
+reverse link List to AbstractList--><path codeLine="37" d="M248.58,114.37 C251.46,151.6 255.98,209.98 257.98,235.88 " fill="none" id="List-backto-AbstractList" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="none" points="241.58,114.66,247.02,94.18,255.54,113.58,241.58,114.66" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[1822909749df1453bdd84de7a60a3406]
+reverse link Collection to AbstractCollection--><path codeLine="38" d="M113.42,114.37 C110.54,151.6 106.02,209.98 104.02,235.88 " fill="none" id="Collection-backto-AbstractCollection" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="none" points="106.46,113.58,114.98,94.18,120.42,114.66,106.46,113.58" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[0159284274f96a472eb2618ad803aaca]
+reverse link Collection to List--><path codeLine="40" d="M181.06,80 C194.49,80 207.91,80 221.34,80 " fill="none" id="Collection-backto-List" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="none" points="180.69,87,160.69,80,180.69,73,180.69,87" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[7a3a52e8f65ef1a8d8d29530ea5cd870]
+reverse link AbstractCollection to AbstractList--><path codeLine="41" d="M193.72,250 C198.6,250 203.47,250 208.35,250 " fill="none" id="AbstractCollection-backto-AbstractList" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="none" points="193.69,257,173.69,250,193.69,243,193.69,257" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[40e4bb1af59cca28d4643aaff05088cc]
+reverse link AbstractList to ArrayList--><path codeLine="42" d="M255.14,284.42 C252.94,303.55 250.17,327.52 247.95,346.79 " fill="none" id="AbstractList-backto-ArrayList" style="stroke:#383838;stroke-width:1.0;"/><polygon fill="none" points="248.2,283.49,257.45,264.42,262.11,285.09,248.2,283.49" style="stroke:#383838;stroke-width:1.0;"/><!--MD5=[8aa5d3dcf9aa79d4b8cd6da3b948105f]
+link Student to apoint21--><path d="M381,104.71 C381,148.13 381,236.95 381,247.89 " fill="none" id="Student-apoint21" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="355.3406" y="124.2634">0..*</text><!--MD5=[5c552daa116c578465fd4abd382c32f9]
+link apoint21 to Course--><path d="M381,252.46 C381,263.73 381,337.25 381,367.76 " fill="none" id="apoint21-Course" style="stroke:#383838;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="353.7594" y="356.8348">1..*</text><!--MD5=[4ac04230e867c7cec6545063a543f32c]
+link apoint21 to Enrollment--><path d="M383.32,250 C394.95,250 406.58,250 418.2,250 " fill="none" id="apoint21-Enrollment" style="stroke:#383838;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[582a5b21e77f91258f1ecc08cba32dfb]
+link AbstractClass to Dummy--><!--MD5=[2c06e96899b8fb645700547fa766daa1]
+link AbstractClass to Flight--><!--MD5=[9e55a7c694bb97ccd97e800e898d1b45]
+link Flight to TimeUnit--><!--MD5=[e34b4ad6b4f15322953f9986ea89c664]
+@startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 9
+skinparam circledCharacterFontSize 8
+skinparam classAttributeIconSize 0
+hide empty members
+
+abstract class AbstractClass {
+- privateField
++ publicField
+# protectedField
+~ packagePrivateField
+- privateMethod()
++ publicMethod()
+# protectedMethod()
+~ packagePrivateMethod()
+ }
+
+class Dummy {
+{static} staticID
+{abstract} void methods()
+ }
+
+class Flight {
+ flightNumber : Integer
+ departureTime : Date
+ }
+
+package "Classic Collections" {
+
+ abstract class AbstractList
+ abstract AbstractCollection
+ interface List
+ interface Collection
+
+ List <|- - AbstractList
+ Collection <|- - AbstractCollection
+
+ Collection <|- List
+ AbstractCollection <|- AbstractList
+ AbstractList <|- - ArrayList
+
+ class ArrayList {
+   Object[] elementData
+   size()
+    }
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+
+class Student {
+Name
+}
+Student "0..*" - - "1..*" Course
+(Student, Course) .. Enrollment
+
+class Enrollment {
+drop()
+cancel()
+}
+
+@enduml
+
+@startuml
+
+skinparam monochrome true
+skinparam circledCharacterRadius 9
+skinparam circledCharacterFontSize 8
+skinparam classAttributeIconSize 0
+hide empty members
+
+abstract class AbstractClass {
+- privateField
++ publicField
+# protectedField
+~ packagePrivateField
+- privateMethod()
++ publicMethod()
+# protectedMethod()
+~ packagePrivateMethod()
+ }
+
+class Dummy {
+{static} staticID
+{abstract} void methods()
+ }
+
+class Flight {
+ flightNumber : Integer
+ departureTime : Date
+ }
+
+package "Classic Collections" {
+
+ abstract class AbstractList
+ abstract AbstractCollection
+ interface List
+ interface Collection
+
+ List <|- - AbstractList
+ Collection <|- - AbstractCollection
+
+ Collection <|- List
+ AbstractCollection <|- AbstractList
+ AbstractList <|- - ArrayList
+
+ class ArrayList {
+   Object[] elementData
+   size()
+    }
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+
+class Student {
+Name
+}
+Student "0..*" - - "1..*" Course
+(Student, Course) .. Enrollment
+
+class Enrollment {
+drop()
+cancel()
+}
+
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 12:45:07 EST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
