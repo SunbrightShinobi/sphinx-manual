@@ -74,7 +74,7 @@ latexpdf:
 	@ln -snf ../../shared/docs			$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images		$(IMAGESDIR)
 	@ln -snf ../../shared/scripts		$(SCRIPTSDIR)
-	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)/latex" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: epub3
 epub3: links
