@@ -15,7 +15,7 @@ Sphinx Directives
     custom
     blockdiag/contents
     plantuml/plantuml
-    drawio/contents
+    drawio/drawio
 
 .. raw:: latex
 

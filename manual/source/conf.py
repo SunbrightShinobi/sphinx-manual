@@ -12,8 +12,13 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+from datetime import datetime
 import os
 import sys
+import yaml
+import re
+import string
+from yamlreader import yaml_load
 
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath('./source/common'))
@@ -25,12 +30,43 @@ sys.path.append(os.path.abspath('./source/scripts'))
 # -- Project information -----------------------------------------------------
 
 project = 'Sphinx Manual'
-copyright = '2020, Josh Johnson @binarylandscapes'
-author = 'Josh Johnson @binarylandscapes'
+copyright = u'{}, Binarylandscapes LLC'.format(datetime.now().year)
+author = 'Josh Johnson <josh.johnson@binarylandscapes.com>'
+address = 'Binarylandscapes Consulting\\\ 5923 Kingston Pike NUM 352\\\ Knoxville, TN 37919'
+
+systemName = u'<SYSTEM NAME>'
+csci = u'<CSCI NAME>'
+responsibleEngineer = author
+
+documentnumber = 'docnum-tbd'
+docReleaseDate = u'01JAN2021'
+changeNotice = u'TBD'
+document_rev = 'A'
+docReleaseDesc = u'Added DrawIO Extension'
+
+classification = ""
+contractNum = 'TBD'
+cdrlNum = 'TBD'
+doc_sw_pn_current = documentnumber
+doc_sw_pn_dash_current = '0000'
+doc_sw_pn_previous = documentnumber
+doc_sw_pn_dash_previous = '0000'
+
+# jinja_contexts can be multiple folders but they will appear to be merged in jinja_contexts.txt output, if you have documentConfig as part of load as it provides a common context
+# the folder must be first option for yaml_load. Only one folder is permitted. It does not load sub-folders
+# Update the context name and folder on a per document basis if needed
+defaultConfig = {
+        'defaultConfig' : {
+            'systemName' : systemName,
+            'revisionDate' : docReleaseDate,
+        }
+}
 
 jinja_contexts = {
-    'test01': {'topics': {'a': 'b', 'c': 'd'}}
+    'yaml_load' : yaml_load('configs/templates',defaultConfig),
 }
+with open('jinja_contexts.txt', 'wt') as out:
+    print(yaml.safe_dump(jinja_contexts, default_flow_style=False), file=out)
 
 # Confluence
 confluence_publish = True

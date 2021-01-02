@@ -67,6 +67,9 @@ Acronym List
     ER
         Engineering Release
 
+    ESD
+        Electrostatic Discharge
+
     ESXi
         VMware vSphere Hypervisor
 
@@ -90,6 +93,9 @@ Acronym List
 
     GPO
         Group Policy Object
+
+    GPU
+        Graphics Processing Unit
 
     GRUB
         GRand Unified Bootloader

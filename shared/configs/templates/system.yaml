@@ -1,0 +1,8 @@
+
+# All comments are stripped out with yamlreader
+# Cannot use '&' anchors and '*' aliases in separate yaml files but they will work in same yaml file with yamlreader but actual anchor/alias will be stripped out in final dict
+--- # Directives above and Content below and indicates start of document
+system:
+  name: <systemName>
+  domain: <domainName>
+... # End of document content
