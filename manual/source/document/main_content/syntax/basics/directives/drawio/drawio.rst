@@ -1,16 +1,12 @@
 :orphan:
 
------------------------------------------------
-**Diagrams.Net** or **drawio** Extension
------------------------------------------------
-
-.. important::
-
-
-    This will fail of build on AlpineWSL due to there is not a Alpine Linux compatible installer for DrawIO Desktop. So it is recommended to use the ``:download:`filename.html``` or SVG method
+------------------------------------------------
+Sphinx Diagram Directives (Diagrams.Net/drawio)
+------------------------------------------------
 
 *   Requirements:
 
+    * DrawIO Desktop
     * Install: ``sphinxcontrib-drawio`` extension via Python :program:`pip` (Included in `SPHINX_ENV_INSTALL`, Sphinx Environment)
     * Add ``sphinxdrawio.drawio`` to Sphinx extensions in conf.py (Included in `SPHINX_ENV_INSTALL`, Sphinx Environment via defaults.py)
 
@@ -53,34 +49,34 @@ This is your *.rst* file code example to import **DrawIO Diagram(s)**  `<http://
 .. code-block:: none
 
     .. drawio-image:: drawio_example.drawio
-        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 1
         :page-index: 0
         :scale: 100
 
     .. drawio-figure:: drawio_example.drawio
-        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 2
         :page-index: 1
         :scale: 100
+        
+        drawio_figure_example
 
 *   Rendered:
 
     .. drawio-image:: drawio_example.drawio
-        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 1
         :page-index: 0
         :scale: 100
 
     .. drawio-figure:: drawio_example.drawio
-        :format: svg
         :align: center
         :alt: Example DrawIO File, Sheet 2
         :page-index: 1
         :scale: 100
+        
+        drawio_figure_example
 
 .. only:: html
 
