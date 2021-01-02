@@ -38,7 +38,7 @@ systemName = u'<SYSTEM NAME>'
 csci = u'<CSCI NAME>'
 responsibleEngineer = author
 
-documentnumber = 'TBD'
+documentnumber = 'docnum-tbd'
 docReleaseDate = u'01JAN2021'
 changeNotice = u'TBD'
 document_rev = 'A'
