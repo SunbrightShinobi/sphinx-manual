@@ -1,0 +1,219 @@
+
+# All comments are stripped out with yamlreader
+# Cannot use '&' anchors and '*' aliases in separate yaml files but they will work in same yaml file with yamlreader but actual anchor/alias will be stripped out in final dict
+--- # Directives above and Content below and indicates start of document
+hardware:
+  dell_3431: &dell_3431_ws
+    manufacture: Dell
+    model: 3431 SFF Workstation
+    biosVersion: 1.6.0
+  intel_nuc9vxqnx: &intel_nuc9vxqnx
+    manufacture: Intel
+    model: NUC NUC9VXQNX
+    biosVersion: 0034
+
+operating_systems:
+- &esx_os
+  _name: VMware vSphere ESXi
+  type: Linux
+  media: VMware-VMvisor-Installer-7.0b-16324942.x86_64.iso
+  version:
+- &vc_os
+  _name: VMware vSphere vCenter
+  type: Linux
+  media: VMware-VCSA-all-7.0.0-16189094.iso
+  version: 
+
+networks:
+  hyrule_network: &hyrule_network
+    _name: hyrule
+    network_id: 10.1.10.0
+    network_pre: 10.1.10
+    broadcast: 10.1.10.255
+    subnetMask: 255.255.255.0
+    cidr: /24
+    vlanID: 10
+    gateway: &hyrule_gateway 10.1.10.1
+    dns01: 10.1.10.1
+    dns02: 208.67.220.220
+    dns03: 208.67.222.222
+    domain: hyrule.binarylandscapes.com
+    dns_suffixes: hyrule.binarylandscapes.com
+    ntp_server: *hyrule_gateway
+    esxi_vlanType: None
+
+  vsan_network: &vsan_network
+    _name: vmware_vsan
+    network_id: 10.1.255.0
+    network_pre: 10.1.255
+    broadcast: 10.1.255.255
+    subnetMask: 255.255.255.0
+    cidr: /24
+    vlanID: 255
+    gateway: 
+    dns01: 
+    dns02: 
+    domain: 
+    dns_suffixes: 
+    ntp_server: 
+    esxi_vlanType: VLAN
+
+portgroups:
+  hyrule: &hyrule_pg
+    name: &hyrule_pg_name DSwitch01-Hyrule
+    traffic: VM Network
+    network: 
+      <<: *hyrule_network
+  vsan: &vsan_pg
+    name: &vsan_pg_name DSwitch01-vSAN
+    traffic: vSAN
+    network: 
+      <<: *vsan_network
+
+hosts:
+- &esx01
+  _name: &esx01_name gerudo
+  hostname: *esx01_name
+  type: Physical
+  hardware:
+    <<: *dell_3431_ws
+  os: 
+    <<: *esx_os
+  admin_user: root
+  network: 
+    <<: *hyrule_network
+    ip01: 101
+  remote_mgmt:
+    hostname: &esx01_mgmt_name gerudo-mgmt
+    network: 
+      <<: *hyrule_network
+      ip01: 191
+    admin_user: admin
+  esxi:
+    position: primary
+    vsan:
+      network: 
+        <<: *vsan_network
+        ip01: 101
+      member: true
+
+- &esx02
+  _name: &esx02_name hebra
+  hostname: *esx02_name
+  type: Physical
+  hardware:
+    <<: *dell_3431_ws
+  os: 
+    <<: *esx_os
+  admin_user: root
+  network: 
+    <<: *hyrule_network
+    ip01: 102
+  remote_mgmt:
+    hostname: &esx02_mgmt_name hebra-mgmt
+    network: 
+      <<: *hyrule_network
+      ip01: 192
+    admin_user: admin
+  esxi:
+    position: secondary
+    vsan:
+      network: 
+        <<: *vsan_network
+        ip01: 102
+      member: true
+- &esx03
+  _name: &esx03_name akkala
+  hostname: *esx03_name
+  type: Physical
+  hardware:
+    <<: *dell_3431_ws
+  os: 
+    <<: *esx_os
+  admin_user: root
+  network: 
+    <<: *hyrule_network
+    ip01: 103
+  remote_mgmt:
+    hostname: &esx03_mgmt_name akkala-mgmt
+    network: 
+      <<: *hyrule_network
+      ip01: 193
+    admin_user: admin
+  esxi:
+    position: secondary
+    vsan:
+      network: 
+        <<: *vsan_network
+        ip01: 103
+      member: true
+- &esx04
+  _name: &esx04_name underworld
+  hostname: *esx04_name
+  type: Physical
+  hardware:
+    <<: *intel_nuc9vxqnx
+  os: 
+    <<: *esx_os
+  admin_user: root
+  network: 
+    <<: *hyrule_network
+    ip01: 109
+  remote_mgmt:
+    hostname: &esx04_mgmt_name underworld-mgmt
+    network: 
+      <<: *hyrule_network
+      ip01: 199
+    admin_user: admin
+  esxi:
+    position: secondary
+    vsan:
+      network: 
+        <<: *vsan_network
+        ip01: 109
+      member: false
+- &vcenter01
+  _name: &vcenter01_name triforce
+  hostname: *vcenter01_name
+  type: Virtual
+  esxi_host:
+    <<: *esx01
+    portgroup:
+      <<: *hyrule_pg
+  os: 
+    <<: *vc_os
+  admin_user: root
+  network: 
+    <<: *hyrule_network
+    ip01: 100
+  datacenter: Homelab Datacenter
+  cluster: Homelab Cluster
+  sso:
+    domain_name: vsphere.local
+    admin_username: administrator
+  dswitchs:
+  - &dswitch01
+    name: &dswitch01_name DSwitch01
+    portgroups:
+    - <<: *hyrule_pg
+    - <<: *vsan_pg
+  vsan:
+    dswitch:
+      name: *dswitch01_name
+      portgroup: 
+        <<: *vsan_pg
+    license:
+      key: 5H01N-J4H1H-08HHH-0E880-0RMHH
+      name: VMUG vSAN Enterprise License 12 CPUs (up to 32 cores)
+      expires: 30MAY2021
+  vc_license:
+    key: HN490-N9H80-N89G5-0V002-9XJ2M
+    name: VMUG vCenter License (2 Instance)
+    expires: 30MAY2021
+  esxi_license:
+    key: HJ002-JT242-189GT-0D0A6-0R9KH
+    name: VMUG vSphere 7 Enterprise Plus License 12 CPUs (up to 32 cores)
+    expires: 30MAY2021
+
+
+... # End of document content

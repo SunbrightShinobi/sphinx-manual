@@ -1,0 +1,40 @@
+
+# All comments are stripped out with yamlreader
+# Cannot use '&' anchors and '*' aliases in separate yaml files but they will work in same yaml file with yamlreader but actual anchor/alias will be stripped out in final dict
+--- # Directives above and Content below and indicates start of document
+hardware:
+  dell_3431: &dell_3431_ws
+    manufacture: Dell
+    model: 3431 SFF Workstation
+    biosVersion: 1.3.1
+
+operating_systems:
+- &win10_os
+  _name: Microsoft Windows 10
+  type: Windows
+
+networks:
+  hyrule_network: &hyrule_network
+    _name: hyrule
+    network_id: 10.1.10.0
+    broadcast: 10.1.10.255
+    subnetMask: 255.255.255.0
+    cidr: /24
+    vlanID: 10
+    gateway: 10.1.10.1
+
+hosts:
+- &dev01
+  _name: &dev01_name alicesynthesis30
+  hostname: *dev01_name
+  type: Physical
+  hardware:
+    <<: *dell_3431_ws
+  os: 
+    <<: *win10_os
+  admin_user: josh.johnson@binarylandscapes.com
+  remote_mgmt:
+    hostname: 
+    network: 
+    <<: *hyrule_network
+... # End of document content
