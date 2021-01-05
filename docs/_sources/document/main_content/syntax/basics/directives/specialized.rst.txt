@@ -109,27 +109,53 @@ Specialized Directives
 
     \newpage
 
-*   This directive is for documenting Citation references.
+*   This directive is for documenting Citation references, usually at bottom of page.
 
     *   Syntax:
 
-        *   Citation references, usually at bottom of page
+        .. code-block:: none
 
-            .. code-block:: none
+            See :cite:`small` for citation example inline with text or paragraph and reference is shown at end of document in REFERENCES section.
 
-                .. [CIT2002] A citation
-                    (as often used in journals).
+        .. code-block:: none
 
-        *   and is called by: ``[CIT2002]_``
+            See :footcite:`small` for citation example inline with text or paragraph and reference is shown in footnote of page by using.             
+            the .. footbibliography:: directive within page
+
+
+        .. code-block:: none
+
+            .. bibliography::
+                :cited: #Only cited references will be listed, default
+                :all: #All references will be listed. used in the place of cited
+                :style: #[alpha, plain, unsrt, usrtalpha]
+                :list: enumerated #[bullet, enumerated]
+                :enumtype: upperroman #[arabic, loweralpha, upperalpha, lowerroman, upperroman]
+                :start: 3 #Any positive integer or continue to continue from last bibliography directive
+                :labelprefix: A #individual labels for bibliographies
+                :keyprefix: a- #f you have multiple bibliographies, and you would like entries to be repeated in different documents, then use the keyprefix option.
+                :filter: author % "Einstein" #A Valid python expression
+
+        You could also separate your citations between articles and books in different and multiple bib files:
+
+        .. code-block:: none
+
+            .. rubric:: Articles
+
+            .. bibliography:: articles.bib 
+
+            .. rubric:: Books
+
+            .. bibliography:: books1.bib books2.bib 
 
     *   Rendered:
 
-        *   Citation references, usually at bottom of page
+        See :cite:`big` for citation example inline with text or paragraph and reference is shown at end of document in REFERENCES section.
 
-            .. [CIT2002] A citation
-                (as often used in journals).
+        See :footcite:`small` for citation example inline with text or paragraph and reference is shown in footnote of page by using.             
+        the ``.. footbibliography::`` directive within page. **A footcite's references will only appear in footer where called for first instance and will not appear in REFERENCES sections.**
 
-        *   an called by: [CIT2002]_
+        .. footbibliography::
 
 *   This directive is for documenting todo references.
 

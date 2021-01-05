@@ -1,7 +1,7 @@
 :orphan:
 
 ############
-Acronym List
+ACRONYM LIST
 ############
 
 .. raw:: latex
