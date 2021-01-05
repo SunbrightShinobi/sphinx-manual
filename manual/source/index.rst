@@ -26,7 +26,7 @@
               - **Rev.**
               - **Description**
 
-            {% for revision in _document['revisionHistory'] %}
+            {% for revision in _document['revisionHistory']['html'] %}
 
             * - {{ revision['revisionDate'] }}
               - {{ revision['revisionCN'] }}
