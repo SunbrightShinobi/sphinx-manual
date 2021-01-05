@@ -10,9 +10,10 @@
         Revision History
         ------------------
 
-        .. tabularcolumns:: |>{\RaggedRight}p{\dimexpr 0.2\linewidth-2\tabcolsep}
-                            |>{\RaggedRight}p{\dimexpr 0.2\linewidth-2\tabcolsep}
-                            |>{\RaggedRight}p{\dimexpr 0.6\linewidth-2\tabcolsep}|
+        .. tabularcolumns:: |>{\RaggedRight}p{\dimexpr 0.36\linewidth-2\tabcolsep}
+                            |>{\RaggedRight}p{\dimexpr 0.14\linewidth-2\tabcolsep}
+                            |>{\RaggedRight}p{\dimexpr 0.07\linewidth-2\tabcolsep}
+                            |>{\RaggedRight}p{\dimexpr 0.43\linewidth-2\tabcolsep}|
 
         .. list-table:: Revision History
             :header-rows: 1
@@ -21,19 +22,22 @@
             :align: center
 
             * - **Date**
-              - **Rev**
+              - **CN#**
+              - **Rev.**
               - **Description**
 
             {% for revision in _document['revisionHistory'] %}
 
-            * - {{ revision['date'] }}
-              - {{ revision['rev'] }}
-              - {% for change in revision['changes'] %}
-                {{ change }}
-                {% endfor %}
-
+            * - {{ revision['revisionDate'] }}
+              - {{ revision['revisionCN'] }}
+              - {{ revision['revision'] }}
+              - {{ revision['revisionDescriptonLine01'] }}
+                
+                {{ revision['revisionDescriptonLine02'] }}
+                
+                {{ revision['revisionDescriptonLine03'] }}
+                
             {% endfor %}
-
 
         --------------
         To Do List
