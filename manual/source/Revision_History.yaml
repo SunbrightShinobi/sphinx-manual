@@ -32,8 +32,23 @@
 #  - '\multicolumn{1}{c|}{-}' # Revision
 #  - '\multicolumn{1}{l|}{COMMENT LINE 1}\\'
 
-- - '\multicolumn{1}{|c|}{15June2018}' # Revision Release Date
-  - '\multicolumn{1}{l|}{<Prev. CN ID>}' # Revision CN
-  - '\multicolumn{1}{c|}{-}' # Revision
-  - '\multicolumn{1}{l|}{Initial Release}\\'
+- - '\multicolumn{1}{|c|}{\rule{0pt}{36pt}\multirow{2}{2.5in}[2.6em]{\sigField{Sig1}{2.5in}{0.5in}\\}}' # Revision Release Date
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt}\changeNotice}' # Revision CN
+  - '\multicolumn{1}{c|}{\rule{0pt}{36pt}\docrevision}' # Revision
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{\docReleaseDesc}} \\ \hline'
+
+- - '\multicolumn{1}{|c|}{\rule{0pt}{36pt} <Rev. B Release Date>}' # Revision Release Date
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt} <Rev. B CN ID>}' # Revision CN
+  - '\multicolumn{1}{c|}{\rule{0pt}{36pt} B}' # Revision
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{Section x.x, Change Made \\ Section x.x, Change Made \\ Section x.x, Change Made}} \\ \hline'
+
+- - '\multicolumn{1}{|c|}{\rule{0pt}{36pt} <Rev. A Release Date>}' # Revision Release Date
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt} <Rev. A CN ID>}' # Revision CN
+  - '\multicolumn{1}{c|}{\rule{0pt}{36pt} A}' # Revision
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{Section x.x, Change Made \\ Section x.x, Change Made \\ Section x.x, Change Made}} \\ \hline'
+
+- - '\multicolumn{1}{|c|}{\rule{0pt}{36pt} <Rev. - Release Date>}' # Revision Release Date
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt} <Rev. - CN ID>}' # Revision CN
+  - '\multicolumn{1}{c|}{\rule{0pt}{36pt} -}' # Revision
+  - '\multicolumn{1}{l|}{\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{\\ Initial Release \\}} \\'
 

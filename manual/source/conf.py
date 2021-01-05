@@ -41,8 +41,8 @@ responsibleEngineer = author
 documentnumber = 'docnum-tbd'
 docReleaseDate = u'01JAN2021'
 changeNotice = u'TBD'
-document_rev = 'A'
-docReleaseDesc = u'Added DrawIO Extension'
+document_rev = 'C'
+docReleaseDesc = u'Section x.x, Change Made\\\ Section x.x, Change Made\\\ Section x.x, Change Made'
 
 classification = ""
 contractNum = 'TBD'
@@ -55,15 +55,40 @@ doc_sw_pn_dash_previous = '0000'
 # jinja_contexts can be multiple folders but they will appear to be merged in jinja_contexts.txt output, if you have documentConfig as part of load as it provides a common context
 # the folder must be first option for yaml_load. Only one folder is permitted. It does not load sub-folders
 # Update the context name and folder on a per document basis if needed
-defaultConfig = {
-        'defaultConfig' : {
-            'systemName' : systemName,
-            'revisionDate' : docReleaseDate,
-        }
+documentConfig = {
+        '_document' : {
+            'partNumber' : doc_sw_pn_current+doc_sw_pn_dash_current,
+            'revisionHistory' : [
+                {
+                'rev': document_rev,
+                'date': docReleaseDate,
+                'changes': [
+                    'Added DrawIO',
+                    'Section x.x, <Change Made>',
+                    'Section x.x, <Change Made>',
+                    'Section x.x, <Change Made>',
+                    ],
+                },
+                {
+                'rev': 'NC',
+                'date': '31MAY2018',
+                'changes': [
+                    'Initial Release',
+                    'Section x.x, <Change Made>',
+                    'Section x.x, <Change Made>',
+                    'Section x.x, <Change Made>',
+                    ],
+                },
+            ],
+        },
+        'system': {
+            'name' : systemName,
+            'domain': '<domainName>',
+        },
 }
 
 jinja_contexts = {
-    'yaml_load' : yaml_load('configs/templates',defaultConfig),
+    'yaml_load' : yaml_load('configs/templates',documentConfig),
 }
 with open('jinja_contexts.txt', 'wt') as out:
     print(yaml.safe_dump(jinja_contexts, default_flow_style=False), file=out)

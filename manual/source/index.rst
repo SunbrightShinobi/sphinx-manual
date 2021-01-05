@@ -86,9 +86,11 @@
         REFERENCES
         ---------------------
 
-    .. bibliography::
-        :style: alpha
-        
+    .. only:: html or latex
+
+        .. bibliography::
+            :style: alpha
+
     .. only:: html
 
         ---------
