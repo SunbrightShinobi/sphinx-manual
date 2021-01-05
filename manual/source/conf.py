@@ -39,10 +39,10 @@ csci = u'<CSCI NAME>'
 responsibleEngineer = author
 
 documentnumber = 'docnum-tbd'
-docReleaseDate = u'01JAN2021'
-changeNotice = u'TBD'
-document_rev = 'A'
-docReleaseDesc = u'Added DrawIO Extension'
+docReleaseDate = u'04JAN2021'
+changeNotice = u'<Rev. C CN ID>'
+document_rev = 'C'
+docReleaseDesc = u'Section x.x, Change Made\\\ Section x.x, Change Made\\\ Section x.x, Change Made'
 
 classification = ""
 contractNum = 'TBD'
@@ -55,15 +55,83 @@ doc_sw_pn_dash_previous = '0000'
 # jinja_contexts can be multiple folders but they will appear to be merged in jinja_contexts.txt output, if you have documentConfig as part of load as it provides a common context
 # the folder must be first option for yaml_load. Only one folder is permitted. It does not load sub-folders
 # Update the context name and folder on a per document basis if needed
-defaultConfig = {
-        'defaultConfig' : {
-            'systemName' : systemName,
-            'revisionDate' : docReleaseDate,
-        }
+documentConfig = {
+    '_document' : {
+        'revisionHistory' : {
+            'html' :[
+                {
+                    'revision' : document_rev,
+                    'revisionDate' : docReleaseDate,
+                    'revisionCN' : changeNotice,
+                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
+                    'partNumber' : doc_sw_pn_current+doc_sw_pn_dash_current,
+                },
+                {
+                    'revision' :'B',
+                    'revisionDate' : '<Rev. B Release Date>',
+                    'revisionCN' : '<Rev. B CN ID>',
+                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
+                    'partNumber' : 'AxxxxPxxxx-####',
+                },
+                {
+                    'revision' :'A',
+                    'revisionDate' : '<Rev. A Release Date>',
+                    'revisionCN' : '<Rev. A CN ID>',
+                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
+                    'partNumber' : 'AxxxxPxxxx-####',
+                },
+                {
+                    'revision' :'--',
+                    'revisionDate' : '<Rev. - Release Date>',
+                    'revisionCN' : '<Rev. - CN ID>',
+                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
+                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
+                    'partNumber' : 'AxxxxPxxxx-####',
+                },
+            ],
+            'latex' : [
+                [
+                    '\multicolumn{1}{|c|}{\\rule{0pt}{36pt}\multirow{2}{2.5in}[2.6em]{\sigField{Sig1}{2.5in}{0.5in} \\\ }}', # Revision Release Date
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt}\changeNotice}', # Revision CN
+                    '\multicolumn{1}{c|}{\\rule{0pt}{36pt}\docrevision}', # Revision
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{\docReleaseDesc}} \\\ \hline',
+                ],
+                [
+                    '\multicolumn{1}{|c|}{\\rule{0pt}{36pt} <Rev. B Release Date>}', # Revision Release Date
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt} <Rev. B CN ID>}', # Revision CN
+                    '\multicolumn{1}{c|}{\\rule{0pt}{36pt} B}', # Revision
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{Section x.x, Change Made \\\ Section x.x, Change Made \\\ Section x.x, Change Made}} \\\ \hline',
+                ],
+                [
+                    '\multicolumn{1}{|c|}{\\rule{0pt}{36pt} <Rev. A Release Date>}', # Revision Release Date
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt} <Rev. A CN ID>}', # Revision CN
+                    '\multicolumn{1}{c|}{\\rule{0pt}{36pt} A}', # Revision
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{Section x.x, Change Made \\\ Section x.x, Change Made \\\ Section x.x, Change Made}} \\\ \hline',
+                ],
+                [
+                    '\multicolumn{1}{|c|}{\\rule{0pt}{36pt} <Rev. - Release Date>}', # Revision Release Date
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt} <Rev. - CN ID>}', # Revision CN
+                    '\multicolumn{1}{c|}{\\rule{0pt}{36pt} -}', # Revision
+                    '\multicolumn{1}{l|}{\\rule{0pt}{36pt}\multirow{3}{3.0in}[2.5em]{\\\ Initial Release \\\}} \\\ ',
+                ],
+            ],
+        },
+    'system': {
+        'name' : systemName,
+        'domain': '<domainName>',
+        },
+    }
 }
 
 jinja_contexts = {
-    'yaml_load' : yaml_load('configs/templates',defaultConfig),
+    'yaml_load' : yaml_load('configs/templates',documentConfig),
 }
 with open('jinja_contexts.txt', 'wt') as out:
     print(yaml.safe_dump(jinja_contexts, default_flow_style=False), file=out)
