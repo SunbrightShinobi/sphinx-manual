@@ -5,25 +5,86 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37_64\\python.exe",
-		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#7295b1",
-			"activityBar.activeBorder": "#e8d6e0",
-			"activityBar.background": "#7295b1",
-			"activityBar.foreground": "#15202b",
-			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#e8d6e0",
-			"activityBarBadge.foreground": "#15202b",
-			"statusBar.background": "#557c9b",
-			"statusBar.foreground": "#e7e7e7",
-			"statusBarItem.hoverBackground": "#7295b1",
-			"titleBar.activeBackground": "#557c9b",
-			"titleBar.activeForeground": "#e7e7e7",
-			"titleBar.inactiveBackground": "#557c9b99",
-			"titleBar.inactiveForeground": "#e7e7e799"
-		},
-		"peacock.color": "#557c9b",
+		"python.pythonPath": "//usr//bin//python3",
 		"restructuredtext.preview.sphinx.disabled": true,
-		"restructuredtext.linter.disabled": true
-	}
+		"restructuredtext.linter.disabled": true,
+		"editor.renderWhitespace": "all",
+		"editor.wordWrap": "on",
+		"git.allowForcePush": true,
+		"git.promptToSaveFilesBeforeCommit": true,
+		"git.rebaseWhenSync": true,
+		"git.showPushSuccessNotification": true,
+		"git.autofetch": true,
+		"git.confirmSync": false,
+		"explorer.confirmDragAndDrop": false,
+		"files.eol": "\n",
+		"git.confirmForcePush": false,
+		"workbench.startupEditor": "newUntitledFile",
+		"explorer.autoReveal": false,
+		"diffEditor.ignoreTrimWhitespace": false,
+		"todo-tree.highlights.enabled": true,
+		"todo-tree.general.tags": [
+			"BUG",
+			"HACK",
+			"FIXME",
+			"TODO",
+			"XXX",
+			"ISSUE"
+		],
+		"todo-tree.highlights.customHighlight": {
+    
+			"TODO": {
+				"icon": "check",
+				"iconColour": "yellow",
+				"foreground": "grey",
+				"background": "yellow",
+			},
+			"BUG": {
+				"icon": "bug",
+				"iconColour": "red",
+				"foreground": "white",
+				"background": "red",
+			},
+			"FIXME": {
+				"icon": "flame",
+				"iconColour": "orange",
+				"foreground": "white",
+				"background": "orange",
+			},
+			"ISSUE": {
+				"icon": "bug",
+				"iconColour": "red",
+				"foreground": "white",
+				"background": "red",
+			},
+		},
+		"todo-tree.tree.showCountsInTree": true,
+		"todo-tree.highlights.defaultHighlight": {
+		
+		},
+		"todo-tree.general.enableFileWatcher": true,
+		"todo-tree.highlights.useColourScheme": true,
+		"todo-tree.tree.expanded": true,
+		"shellLauncher.shells.windows": [
+    
+			{
+				"shell": "C:\\Windows\\System32\\cmd.exe",
+				"label": "cmd"
+			},
+			{
+				"shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+				"label": "PowerShell"
+			},
+			{
+				"shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+				"label": "Git bash"
+			},
+			{
+				"shell": "C:\\Windows\\System32\\bash.exe",
+				"label": "WSL Bash"
+			}
+		],
+		"python.languageServer": "Pylance"
+						
+	},
 }

@@ -175,7 +175,7 @@ Specialized Directives
 
                 .. todo::
 
-                    (TODO: | FIXME: | BUG:) Currently when building latexpdf, todo directive causes issues. and disabled for adding to document during build but does show warnings during builds.
+                    (TODO: | FIXME: | BUG:) The tag with : in front of this text is not required for the directive, it simply identifies the type and depending on your text editor using :program:`Micrsoft VS Code` with an extention like Todo Tree List it will set a tag for highlights and tracking.
     *   Rendered:
 
         *   Directive to create a todo list in document that appears as a row of Orange note blocks labeled as Todo with a link and location of all todo's

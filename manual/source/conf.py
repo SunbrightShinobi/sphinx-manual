@@ -21,7 +21,6 @@ import string
 from yamlreader import yaml_load
 
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.append(os.path.abspath('./source/common'))
 sys.path.append(os.path.abspath('./source/common_docs'))
 sys.path.append(os.path.abspath('./source/configs'))
 sys.path.append(os.path.abspath('./source/images'))
@@ -34,8 +33,13 @@ copyright = u'{}, Binarylandscapes LLC'.format(datetime.now().year)
 author = 'Josh Johnson <josh.johnson@binarylandscapes.com>'
 address = 'Binarylandscapes Consulting\\\ 5923 Kingston Pike NUM 352\\\ Knoxville, TN 37919'
 
-systemName = u'<SYSTEM NAME>'
+companyProject = u'<PROJECT>'
+segment = u'<SEGMENT>'
+segment_short = u'XX'
 csci = u'<CSCI NAME>'
+csci_short = u'<CSCI>'
+systemName = u'<SYSTEM NAME>'
+icsVersion = u'X1.0'
 responsibleEngineer = author
 
 documentnumber = 'docnum-tbd'
@@ -57,43 +61,29 @@ doc_sw_pn_dash_previous = '0000'
 # Update the context name and folder on a per document basis if needed
 documentConfig = {
     '_document' : {
+        'companyProject' : companyProject,
+        'segment' : segment,
+        'segment_short' : segment_short,
+        'csci' : csci,
+        'csci_short' : csci_short,
+        'icsVersion' : icsVersion,
+        'title' : project,
         'revisionHistory' : {
             'html' :[
                 {
+                    'documentnumber' : documentnumber,
                     'revision' : document_rev,
                     'revisionDate' : docReleaseDate,
                     'revisionCN' : changeNotice,
-                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
-                    'partNumber' : doc_sw_pn_current+doc_sw_pn_dash_current,
-                },
-                {
-                    'revision' :'B',
-                    'revisionDate' : '<Rev. B Release Date>',
-                    'revisionCN' : '<Rev. B CN ID>',
-                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
-                    'partNumber' : 'AxxxxPxxxx-####',
-                },
-                {
-                    'revision' :'A',
-                    'revisionDate' : '<Rev. A Release Date>',
-                    'revisionCN' : '<Rev. A CN ID>',
-                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
-                    'partNumber' : 'AxxxxPxxxx-####',
-                },
-                {
-                    'revision' :'--',
-                    'revisionDate' : '<Rev. - Release Date>',
-                    'revisionCN' : '<Rev. - CN ID>',
-                    'revisionDescriptonLine01' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine02' : 'Section x.x, Change Made',
-                    'revisionDescriptonLine03' : 'Section x.x, Change Made',
-                    'partNumber' : 'AxxxxPxxxx-####',
+                    'revisionDescriptonLine01' : '',
+                    'revisionDescriptonLine02' : 'Initial Release',
+                    'revisionDescriptonLine03' : '',
+                    'docPartNumber' : doc_sw_pn_current+doc_sw_pn_dash_current,
+                    'classification' : classification,
+                    'contractNum' : contractNum,
+                    'cdrlNum' : cdrlNum,
+                    'responsibleEngineer' : responsibleEngineer,
+                    'author' : author,
                 },
             ],
             'latex' : [
@@ -138,14 +128,28 @@ with open('jinja_contexts.txt', 'wt') as out:
 
 # Confluence
 confluence_publish = True
-confluence_space_name = 'TG'
-confluence_parent_page = 'Documentation'
-confluence_server_url = 'https://binarylandscapes.atlassian.net/wiki/'
-confluence_server_user = 'josh.johnson@binarylandscapes.com'
+confluence_space_key = 'US'
+confluence_parent_page = 'Sphinx Manual'
+confluence_server_url = 'https://skydweller.atlassian.net/wiki/'
+confluence_ask_user = False
+confluence_server_user = 'josh.johnson.ext@skydweller.aero'
+confluence_ask_password = True
+#confluence_server_pass = 'VUM1zI3gIZ5JoepT1jaH862F'
+confluence_disable_notifications = True
+confluence_add_secnumbers = True
+confluence_default_alignment = 'left'
+confluence_page_generation_notice = True
+confluence_page_hierarchy = True
 confluence_prev_next_buttons_location = 'top'
+confluence_purge = True
+confluence_publish_dryrun = True
+confluence_sourcelink = {
+    'url': 'https://github.com/binarylandscapes/sphinx-manual',
+}
 #confluence_publish_postfix = '-postfix'
 #confluence_publish_prefix = 'prefix-'
+#confluence_domain_indices = True
 
 # Load the rest of the default configuration
-exec(open(r'./common/sphinx_scripts/sphinx_defaults.py').read())
+exec(open(r'./sphinx_scripts/sphinx_defaults.py').read())
 
