@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.1. Sphinx Documentation Structure &mdash; Sphinx Manual 4bb8e208889 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio_html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=beba1677"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/drawio_html.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.3. RestructedText &amp; Sphinx Syntax" href="syntax/contents.html" />
+    <link rel="prev" title="1. Sphinx Manual" href="contents.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Sphinx Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax/contents.html">1.3. RestructedText &amp; Sphinx Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../common_docs/appendices/acronym_list.html">1. ACRONYM LIST</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sphinx Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="contents.html"><span class="section-number">1. </span>Sphinx Manual</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.1. </span>Sphinx Documentation Structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/document/main_content/doc_structure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-documentation-structure">
+<h1><span class="section-number">1.1. </span>Sphinx Documentation Structure<a class="headerlink" href="#sphinx-documentation-structure" title="Link to this heading"></a></h1>
+<p>From an official Sphinx-doc.org documentation standpoint, the applicable folder structure starts at <code class="file docutils literal notranslate"><span class="pre">/source</span></code> and is perfectly fine to use as the basis while learning. From a production standpoint, the folder structure is more robust to include aspects for configuration management using tools like <strong class="program">Subversion</strong> or <strong class="program">Git</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure in all files and folders of your document there is no special characters or spaces in the names. You are using Cygwin as your environment and thus using a UNIX/Linux based file structure. That is why all folders are defined as using the back slash <code class="docutils literal notranslate"><span class="pre">/</span></code> instead of the forward slash <code class="docutils literal notranslate"><span class="pre">\</span></code> used in Windows.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure none of your files you create start with <kbd class="kbd docutils literal notranslate">_</kbd> and none are named <strong>genindex, modindex, search</strong> as those have reservation within Sphinx.</p>
+</div>
+</section>
+<section id="building-a-table-of-contents">
+<span id="building-toctable"></span><h1><span class="section-number">1.2. </span>Building a Table of Contents<a class="headerlink" href="#building-a-table-of-contents" title="Link to this heading"></a></h1>
+<p>This is the primary method used to link files together into a larger document. (Table of Contents)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While if using globs in your table of contents, you can start the files and folder with ## to order automatically but it is highly recommended to use a more detailed content.rst file with the toc to control ordering of creation</p>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code> - A numeric maxdepth option may be given to indicate the depth of the tree; by default, all levels are included.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> - Adds section numbers even in HTML output. Can also be limited by giving a numeric argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span></code> - Implicit target name that <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> can use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span></code> - Provides a toctree caption</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:titlesonly:</span></code> - Shows only the titles of documents in the tree not other headings of same level</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:glob:</span></code> - All entries are matches against list of availble documents and then ordered into a alphabetical list. Required for <code class="docutils literal notranslate"><span class="pre">folder/*</span></code> entries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:reversed:</span></code> - Reverses ordering of list entries</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> - Will notify Sphinx of document heirarchy but not build links. Useful if making custom links yourself</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:includehidden:</span></code> - If you want to have top level toctree linked but all other toctrees hidden.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Include <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> at top of rst file if it will not be part of toctree and to clear build warning.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
+    :maxdepth: 4
+    :numbered:
+    :name: mastertoc
+    :caption: Table of Contents
+    :glob:
+
+    rst_file01
+    folder01/rst_file02
+    folder02/*
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contents.html" class="btn btn-neutral float-left" title="1. Sphinx Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="syntax/contents.html" class="btn btn-neutral float-right" title="1.3. RestructedText &amp; Sphinx Syntax" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Galaxy Forest Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

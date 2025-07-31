@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3.3.8.4. blockdiag Directive - Network Diagram &mdash; Sphinx Manual 4bb8e208889 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio_html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=beba1677"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/drawio_html.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="1.3.3.8.5. blockdiag Directive - Packet Diagram" href="packetdiag.html" />
+    <link rel="prev" title="1.3.3.8.3. blockdiag Directive - Sequence Diagram" href="seqdiag.html" />
+    <link href="../../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            Sphinx Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code_literal.html">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../specialized.html">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../drawio/drawio.html">1.3.3.10. Sphinx Diagram Directives (Diagrams.Net/drawio)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../common_docs/appendices/acronym_list.html">1. ACRONYM LIST</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Sphinx Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a></li>
+          <li class="breadcrumb-item"><a href="../contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a></li>
+          <li class="breadcrumb-item"><a href="contents.html"><span class="section-number">1.3.3.8. </span>Sphinx Diagram Directives (BlockDiag)</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3.3.8.4. </span><em>blockdiag</em> Directive - <strong>Network Diagram</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/document/main_content/syntax/basics/directives/blockdiag/nwdiag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blockdiag-directive-network-diagram">
+<h1><span class="section-number">1.3.3.8.4. </span><em>blockdiag</em> Directive - <strong>Network Diagram</strong><a class="headerlink" href="#blockdiag-directive-network-diagram" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Requirements:</p>
+<ul>
+<li><p>Install: <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-nwdiag</span></code> via Python <strong class="program">pip</strong> (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.nwdiag</span></code> to Sphinx extentions in conf.py (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment via defaults.py)</p></li>
+</ul>
+</li>
+</ul>
+<p>This is your <em>.rst</em> file code example to create a <strong>Network Diagram</strong> <a class="reference external" href="http://blockdiag.com/en/nwdiag/index.html">http://blockdiag.com/en/nwdiag/index.html</a>:</p>
+<table class="longtable docutils align-default" id="id1">
+<caption><span class="caption-number">Table 1.6 </span><span class="caption-text"><em>nwdiag</em> Options</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Option</strong></p></th>
+<th class="head"><p><strong>Values</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>:align:</cite></p></td>
+<td><p><em>left</em>, <em>center</em> or <em>right</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:scale:</cite></p></td>
+<td><p><em>0-100</em> percentage value</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:caption:</cite></p></td>
+<td><p><em>text</em> to label Figure</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:name:</cite></p></td>
+<td><p><em>text</em> to create hyperlink for sphinx (no spaces)</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:desctable:</cite></p></td>
+<td><p>Adds description table as shown in example. (no spaces in labels) <strong>But this is not recommended due to paging issues in latexpdf</strong></p></td>
+</tr>
+</tbody>
+</table>
+<table class="longtable docutils align-default" id="id2">
+<caption><span class="caption-number">Table 1.7 </span><span class="caption-text">Hexidecimal Color Codes</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Color</strong></p></th>
+<th class="head"><p><strong>Hexidecimal Code</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Black</p></td>
+<td><p>#000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>White</p></td>
+<td><p>#FFFFFF</p></td>
+</tr>
+<tr class="row-even"><td><p>Red</p></td>
+<td><p>#FF0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Green</p></td>
+<td><p>#00FF00</p></td>
+</tr>
+<tr class="row-even"><td><p>Blue</p></td>
+<td><p>#0000FF</p></td>
+</tr>
+<tr class="row-odd"><td><p>Yellow</p></td>
+<td><p>#FFFF00</p></td>
+</tr>
+<tr class="row-even"><td><p>Cyan</p></td>
+<td><p>#00FFFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magenta</p></td>
+<td><p>#FF00FF</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the code-block <em>color</em> uses Hexidecimal values for color assignment to the “network” or a “group of objects”. It is optional.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. nwdiag::
+    :align: center
+    :caption: Example - Network Diagram
+    :name: triton_coe_test_nwdiag
+    :scale: 90
+
+    nwdiag {
+        inet [shape = cloud];
+        inet -- router;
+        group {
+            color = &quot;#00FFFF&quot;;
+            router;
+            web_server01;
+            web_server02;
+        }
+        network dmz {
+            address = &quot;192.168.0.0/24&quot;
+            color = &quot;#FF0000&quot;;
+            web_server01 [address = &quot;192.168.0.1, 192.168.0.10&quot;];
+            web_server02 [address = &quot;192.168.0.2&quot;];
+            router [address = &quot;192.168.0.254&quot;];
+        }
+        network internal {
+            address = &quot;172.0.0.0/24&quot;;
+            color = &quot;#00FF00&quot;;
+            web_server01 [address = &quot;172.0.0.1&quot;];
+            database_server [address = &quot;172.0.0.2&quot;];
+        }
+    }
+</pre></div>
+</div>
+<p>The previous code-block will generate this <strong>Network Diagram</strong>:</p>
+<figure class="align-center" id="id3">
+<div><span id="triton-coe-test-nwdiag"></span><svg height="658.8000000000001" viewBox="0 0 608 732" width="547.2" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,255,255)" height="236" style="filter:url(#filter_blur)" width="420" x="146" y="274" />
+  <path d="M 171 178 A16,8 0 0 1 187 170 A16,6 0 0 1 227 170 A16,8 0 0 1 243 178 A16,8 0 0 1 243 194 A16,20 0 0 1 219 194 A16,20 0 0 1 195 194 A16,20 0 0 1 171 194 A16,8 0 0 1 171 178" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="155" y="306" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="307" y="450" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="459" y="450" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="155" y="594" />
+  <path d="M 131 391 L 587 391 A2,4 0 0 1 587 399 L 131 399 A2,4 0 0 1 131 391" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 535 L 435 535 A2,4 0 0 1 435 543 L 131 543 A2,4 0 0 1 131 535" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 128 388 L 584 388 A2,4 0 0 1 584 396 L 128 396 A2,4 0 0 1 128 388" fill="rgb(255,0,0)" stroke="rgb(0,0,0)" />
+  <path d="M 584 396 A2,4 0 0 1 584 388" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 388 L 584 388" fill="none" stroke="none" />
+  <path d="M 128 532 L 432 532 A2,4 0 0 1 432 540 L 128 540 A2,4 0 0 1 128 532" fill="rgb(0,255,0)" stroke="rgb(0,0,0)" />
+  <path d="M 432 540 A2,4 0 0 1 432 532" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 532 L 432 532" fill="none" stroke="none" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="24" x="108.0" y="391">dmz</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="84" x="78.0" y="405">192.168.0.0/24</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="42" x="99.0" y="535">internal</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="70" x="85.0" y="549">172.0.0.0/24</text>
+  <path d="M 204 104 L 204 156" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 204 196 L 204 248" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 172 A16,8 0 0 1 184 164 A16,6 0 0 1 224 164 A16,8 0 0 1 240 172 A16,8 0 0 1 240 188 A16,20 0 0 1 216 188 A16,20 0 0 1 192 188 A16,20 0 0 1 168 188 A16,8 0 0 1 168 172" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="22" x="204.0" y="182">inet</text>
+  <path d="M 204 248 L 204 300" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 204 340 L 204 388" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="81" x="256.5" y="368">192.168.0.254</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="152" y="300" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="34" x="204.0" y="326">router</text>
+  <path d="M 356 396 L 356 444" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="401.5" y="417">192.168.0.1</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="405.0" y="430">192.168.0.10</text>
+  <path d="M 356 484 L 356 532" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="53" x="394.5" y="512">172.0.0.1</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="304" y="444" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="77" x="356.5" y="471">web_server01</text>
+  <path d="M 508 396 L 508 444" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="553.5" y="424">192.168.0.2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="456" y="444" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="77" x="508.5" y="471">web_server02</text>
+  <path d="M 204 540 L 204 588" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="53" x="242.5" y="568">172.0.0.2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="152" y="588" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="92" x="204.0" y="615">database_server</text>
+</svg>
+</div>
+<figcaption>
+<p><span class="caption-number">Figure 1.5 </span><span class="caption-text">Example - Network Diagram</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seqdiag.html" class="btn btn-neutral float-left" title="1.3.3.8.3. blockdiag Directive - Sequence Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="packetdiag.html" class="btn btn-neutral float-right" title="1.3.3.8.5. blockdiag Directive - Packet Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Galaxy Forest Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

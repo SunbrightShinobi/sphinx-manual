@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3.3.8.3. blockdiag Directive - Sequence Diagram &mdash; Sphinx Manual 4bb8e208889 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio_html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=beba1677"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/drawio_html.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="1.3.3.8.4. blockdiag Directive - Network Diagram" href="nwdiag.html" />
+    <link rel="prev" title="1.3.3.8.2. blockdiag Directive - Activity Diagram" href="actdiag.html" />
+    <link href="../../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            Sphinx Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code_literal.html">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../specialized.html">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../drawio/drawio.html">1.3.3.10. Sphinx Diagram Directives (Diagrams.Net/drawio)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../common_docs/appendices/acronym_list.html">1. ACRONYM LIST</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Sphinx Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a></li>
+          <li class="breadcrumb-item"><a href="../contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a></li>
+          <li class="breadcrumb-item"><a href="contents.html"><span class="section-number">1.3.3.8. </span>Sphinx Diagram Directives (BlockDiag)</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3.3.8.3. </span><em>blockdiag</em> Directive - <strong>Sequence Diagram</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/document/main_content/syntax/basics/directives/blockdiag/seqdiag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blockdiag-directive-sequence-diagram">
+<h1><span class="section-number">1.3.3.8.3. </span><em>blockdiag</em> Directive - <strong>Sequence Diagram</strong><a class="headerlink" href="#blockdiag-directive-sequence-diagram" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Requirements:</p>
+<ul>
+<li><p>Install: <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-seqdiag</span></code> via Python <strong class="program">pip</strong> (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.seqdiag</span></code> to Sphinx extentions in conf.py (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment via defaults.py)</p></li>
+</ul>
+</li>
+</ul>
+<p>This is your <em>.rst</em> file code example to create a <strong>Sequence Diagram</strong> <a class="reference external" href="http://blockdiag.com/en/seqdiag/index.html">http://blockdiag.com/en/seqdiag/index.html</a>:</p>
+<table class="longtable docutils align-default" id="id1">
+<caption><span class="caption-number">Table 1.5 </span><span class="caption-text"><em>seqdiag</em> Options</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Option</strong></p></th>
+<th class="head"><p><strong>Values</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>:align:</cite></p></td>
+<td><p><em>left</em>, <em>center</em> or <em>right</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:scale:</cite></p></td>
+<td><p><em>0-100</em> percentage value</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:caption:</cite></p></td>
+<td><p><em>text</em> to label Figure</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:name:</cite></p></td>
+<td><p><em>text</em> to create hyperlink for sphinx (no spaces)</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:desctable:</cite></p></td>
+<td><p>Adds description table as shown in example. (no spaces in labels)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. seqdiag::
+    :align: center
+    :caption: Example - Sequence Diagram
+    :name: triton_coe_test_seqdiag
+    :scale: 100
+    :desctable:
+
+    seqdiag {
+        Level-1 -&gt;  Level-2 -&gt;  Level-3;
+                    Level-2 -&gt;              Report;
+                                Level-3 -&gt;  Report;
+        Level-1 [description = &quot;Integration in Lab 9&quot;];
+        Level-2 [description = &quot;Qualification in Lab 10 West&quot;];
+        Level-3 [description = &quot;Certification in Triton System Center (TSC)&quot;];
+        Report [description = &quot;Generate Report of testing&quot;];
+    }
+</pre></div>
+</div>
+<p>The previous code-block will generate this <strong>Sequence Diagram</strong>:</p>
+<figure class="align-center" id="id2">
+<div class="align-default"><span id="triton-coe-test-seqdiag"></span><svg height="344.0" viewBox="0 0 832 344" width="832.0" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc />
+  <rect fill="rgb(0,0,0)" height="196" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="8" x="127" y="126" />
+  <rect fill="rgb(0,0,0)" height="196" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="8" x="319" y="126" />
+  <rect fill="rgb(0,0,0)" height="146" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="8" x="511" y="176" />
+  <rect fill="rgb(0,0,0)" height="96" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="8" x="703" y="226" />
+  <rect fill="rgb(0,0,0)" height="46" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="8" x="707" y="276" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <path d="M 128 80 L 128 332" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="moccasin" height="196" stroke="rgb(0,0,0)" width="8" x="124" y="120" />
+  <path d="M 320 80 L 320 332" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="moccasin" height="196" stroke="rgb(0,0,0)" width="8" x="316" y="120" />
+  <path d="M 512 80 L 512 332" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="moccasin" height="146" stroke="rgb(0,0,0)" width="8" x="508" y="170" />
+  <path d="M 704 80 L 704 332" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="8 4" />
+  <rect fill="moccasin" height="96" stroke="rgb(0,0,0)" width="8" x="700" y="220" />
+  <rect fill="moccasin" height="46" stroke="rgb(0,0,0)" width="8" x="704" y="270" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="128.0" y="66">Level-1</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="256" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="320.0" y="66">Level-2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="512.0" y="66">Level-3</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="37" x="704.5" y="67">Report</text>
+  <path d="M 136 120 L 312 120" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="304,116 312,120 304,124" stroke="rgb(0,0,0)" />
+  <path d="M 328 170 L 504 170" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="496,166 504,170 496,174" stroke="rgb(0,0,0)" />
+  <path d="M 328 220 L 696 220" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,216 696,220 688,224" stroke="rgb(0,0,0)" />
+  <path d="M 520 270 L 696 270" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="688,266 696,270 688,274" stroke="rgb(0,0,0)" />
+</svg>
+</div>
+<figcaption>
+<p><span class="caption-number">Figure 1.4 </span><span class="caption-text">Example - Sequence Diagram</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Level-1</p></td>
+<td><p>Integration in Lab 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Level-2</p></td>
+<td><p>Qualification in Lab 10 West</p></td>
+</tr>
+<tr class="row-even"><td><p>Level-3</p></td>
+<td><p>Certification in Triton System Center (TSC)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Report</p></td>
+<td><p>Generate Report of testing</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="actdiag.html" class="btn btn-neutral float-left" title="1.3.3.8.2. blockdiag Directive - Activity Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nwdiag.html" class="btn btn-neutral float-right" title="1.3.3.8.4. blockdiag Directive - Network Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Galaxy Forest Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

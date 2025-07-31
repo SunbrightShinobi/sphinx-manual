@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="143px" preserveAspectRatio="none" style="width:322px;height:143px;" version="1.1" viewBox="0 0 322 143" width="322px" zoomAndPan="magnify"><defs><filter height="300%" id="f1gy9nz7bkets" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[3f0ef310aaa84a542276992c5216544d]
+class Car--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688" id="Car" style="stroke: #383838; stroke-width: 1.5;" width="31" x="139.5" y="8"/><ellipse cx="143.5" cy="19.9844" fill="#C2C2C2" rx="0" ry="0" style="stroke: #383838; stroke-width: 1.0;"/><path d="M164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 L164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 Q164,40.4844 164,40.4844 L164,40.4844 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21" x="146.5" y="24.1387">Car</text><!--MD5=[eee9d396a8aca12c6c152931e8dc1ab6]
+class Driver--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688" id="Driver" style="stroke: #383838; stroke-width: 1.5;" width="46" x="6" y="8"/><ellipse cx="10" cy="19.9844" fill="#C2C2C2" rx="0" ry="0" style="stroke: #383838; stroke-width: 1.0;"/><path d="M30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 L30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 Q30.5,40.4844 30.5,40.4844 L30.5,40.4844 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="13" y="24.1387">Driver</text><!--MD5=[63ed6a0a2dfd613875880437a5e2b06e]
+class Wheel--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688" id="Wheel" style="stroke: #383838; stroke-width: 1.5;" width="48" x="263" y="8"/><ellipse cx="267" cy="19.9844" fill="#C2C2C2" rx="0" ry="0" style="stroke: #383838; stroke-width: 1.0;"/><path d="M287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 L287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 Q287.5,40.4844 287.5,40.4844 L287.5,40.4844 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38" x="270" y="24.1387">Wheel</text><!--MD5=[09ce52be0ee7de43c61b6e2d59bf108b]
+class Person--><rect fill="#F8F8F8" filter="url(#f1gy9nz7bkets)" height="23.9688" id="Person" style="stroke: #383838; stroke-width: 1.5;" width="54" x="128" y="109"/><ellipse cx="132" cy="120.9844" fill="#C2C2C2" rx="0" ry="0" style="stroke: #383838; stroke-width: 1.0;"/><path d="M152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 L152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 Q152.5,141.4844 152.5,141.4844 L152.5,141.4844 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="135" y="125.1387">Person</text><!--MD5=[85884a73f707af3ae230d559cad4fc2c]
+link Driver to Car--><path d="M52.11,20 C77.4,20 117.27,20 139.21,20 " fill="none" id="Driver-Car" style="stroke: #383838; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="38" x="70.25" y="13.0669">drives</text><polygon fill="#000000" points="111.25,7.0664,117.25,10.0664,111.25,13.0664,111.25,7.0664" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[6190aadcc963d15c02367c0199cc5452]
+reverse link Car to Wheel--><path d="M183.99,20 C207.64,20 240.64,20 262.86,20 " fill="none" id="Car&lt;-Wheel" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="170.66,20,176.66,24,182.66,20,176.66,16,170.66,20" style="stroke: #383838; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="188.75" y="13.0669">have 4</text><polygon fill="#000000" points="234.75,7.0664,240.75,10.0664,234.75,13.0664,234.75,7.0664" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[2800f28b8e2a8d078fc1fa2e2aa6715e]
+link Car to Person--><path d="M155,32.36 C155,51.45 155,89.77 155,108.78 " fill="none" id="Car-Person" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#000000" points="167.5,73,170.5,67,173.5,73,167.5,73" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="32" x="156" y="88.0669">owns</text><!--MD5=[c03c170c977f6ed800259de250d7a81a]
+@startuml
+
+skinparam monochrome true
+skinparam circledCharacterRadius 0
+skinparam circledCharacterFontSize 0
+skinparam classAttributeIconSize 0
+hide empty members
+
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car - - Person : < owns
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 05:22:07 EST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.27+6-post-Ubuntu-0ubuntu122.04
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
