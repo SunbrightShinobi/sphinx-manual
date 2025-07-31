@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3.3.10. Sphinx Diagram Directives (Diagrams.Net/drawio) &mdash; Sphinx Manual 56610cd5a31 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/drawio_html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=64e2a147"></script>
+        <script src="../../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../../../_static/drawio_html.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="1.3.4. Linking" href="../../linking.html" />
+    <link rel="prev" title="1.3.3.9. Sphinx Diagram Directives (PlantUML)" href="../plantuml/plantuml.html" />
+    <link href="../../../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            Sphinx Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code_literal.html">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../specialized.html">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.3.10. Sphinx Diagram Directives (Diagrams.Net/drawio)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../common_docs/appendices/acronym_list.html">1. ACRONYM LIST</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Sphinx Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a></li>
+          <li class="breadcrumb-item"><a href="../contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3.3.10. </span>Sphinx Diagram Directives (Diagrams.Net/drawio)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/document/main_content/syntax/basics/directives/drawio/drawio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-diagram-directives-diagrams-net-drawio">
+<h1><span class="section-number">1.3.3.10. </span>Sphinx Diagram Directives (Diagrams.Net/drawio)<a class="headerlink" href="#sphinx-diagram-directives-diagrams-net-drawio" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Requirements:</p>
+<ul>
+<li><p>DrawIO Desktop</p></li>
+<li><p>Install: <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-drawio</span></code> extension via Python <strong class="program">pip</strong> (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxdrawio.drawio</span></code> to Sphinx extensions in conf.py (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment via defaults.py)</p></li>
+</ul>
+</li>
+</ul>
+<p>This is your <em>.rst</em> file code example to import <strong>DrawIO Diagram(s)</strong>  <a class="reference external" href="http://https://www.diagrams.net/">http://https://www.diagrams.net/</a> into your generated documentation. It is also my personal preference to add a direct download link to original file using <code class="docutils literal notranslate"><span class="pre">:download:`filename.drawio`</span></code></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">drawio-image::</span> <span class="pre">path/filename.drawio</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">drawio-figure::</span> <span class="pre">path/filename.drawio</span></code></p>
+<table class="longtable docutils align-default" id="id1">
+<caption><span class="caption-number">Table 1.11 </span><span class="caption-text"><em>DrawIO</em> Options</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Option</strong></p></th>
+<th class="head"><p><strong>Values</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>:align:</cite></p></td>
+<td><p><em>left</em>, <em>center</em> or <em>right</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:scale:</cite></p></td>
+<td><p><em>Any positive integer</em> will override conf.py setting of 100</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:export-width:</cite></p></td>
+<td><p><em>Any positive integer</em> in pixels or for pdf 100 = 1.00 inches</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:export-height:</cite></p></td>
+<td><p><em>Any positive integer</em> in pixels or for pdf 100 = 1.00 inches</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:transparency:</cite></p></td>
+<td><p><em>true|false</em> For PNG output only, will override conf.py setting</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:format:</cite></p></td>
+<td><p><em>svg|png|jpg|pdf</em> Output format, can override default setting (Broken), if set (SVG looks sharpest and does not require headless configuration)</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>:alt:</cite></p></td>
+<td><p><em>text</em> for alternative text in html</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>:page-index:</cite></p></td>
+<td><p><em>number</em> Index number of drawing page. You can only display 1 sheet. Repeat directive for additional sheets.</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">:download:`path/filename.drawio</span> <span class="pre">(Download)</span> <span class="pre">&lt;./path/filename.drawio&gt;`</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Syntax:</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. drawio-image:: drawio_example.drawio
+    :align: center
+    :alt: Example DrawIO File, Sheet 1
+    :page-index: 0
+    :scale: 100
+
+.. drawio-figure:: drawio_example.drawio
+    :align: center
+    :alt: Example DrawIO File, Sheet 2
+    :page-index: 1
+    :scale: 100
+
+    drawio_figure_example
+</pre></div>
+</div>
+<ul>
+<li><p>Rendered:</p>
+<a class="drawio reference internal image-reference" href="../../../../../../_images/drawio_example.svg"><img alt="Example DrawIO File, Sheet 1" class="drawio align-center" height="1075" src="../../../../../../_images/drawio_example.svg" width="1623" /></a>
+<figure class="align-center" id="id2">
+<a class="drawio reference internal image-reference" href="../../../../../../_images/drawio_example1.svg"><img alt="Example DrawIO File, Sheet 2" class="drawio" height="1254" src="../../../../../../_images/drawio_example1.svg" width="1623" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 1.20 </span><span class="caption-text">drawio_figure_example</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<p><a class="reference download internal" download="" href="../../../../../../_downloads/c3cac8337d0732cad0ffc6012517497b/drawio_example.drawio"><code class="xref download docutils literal notranslate"><span class="pre">drawio_example.drawio</span> <span class="pre">(Download)</span></code></a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../plantuml/plantuml.html" class="btn btn-neutral float-left" title="1.3.3.9. Sphinx Diagram Directives (PlantUML)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../linking.html" class="btn btn-neutral float-right" title="1.3.4. Linking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Galaxy Forest Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

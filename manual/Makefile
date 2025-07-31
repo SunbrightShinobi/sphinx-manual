@@ -64,7 +64,7 @@ github:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
-	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(GITHUBDIR)/html" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(GITHUBDIR)/" $(SPHINXOPTS) $(O)
 
 .PHONY: confluence
 confluence:
