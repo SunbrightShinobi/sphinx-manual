@@ -21,30 +21,17 @@
 
             {% if 'inGit' in gitstatus %}
 
-                .. git_changelog::
+                **Not rendered due to document not being part of a Git repository.**
 
             {% else %}
 
-                **Not rendered due to document not being part of a Git repository.**
+                .. git_changelog::
 
             {% endif %}
 
             .. raw:: latex
 
                 \newpage
-
-        *   Generate documentation from a task in an Ansible Playbook. `<https://github.com/shirou/sphinxcontrib-ansibleautodoc>`_
-
-            .. code-block:: none
-
-                .. ansibleautotask:: second task
-                    :playbook: ../ansible/web.yml
-
-            Rendered:
-
-                .. todo::
-                
-                    Add rendered section when I have an example playbook
 
     .. raw:: latex
 

@@ -43,7 +43,6 @@
         To Do List
         --------------
 
-        .. todolist::
 
 
         .. image:: /images/sphinxlogo.png

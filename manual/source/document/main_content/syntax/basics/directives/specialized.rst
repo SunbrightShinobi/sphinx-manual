@@ -163,9 +163,11 @@ Specialized Directives
 
         *   Directive to create a todo list in document that appears as a row of Orange note blocks labeled as Todo with a link and location of all todo's
 
+.. only:: html
+
             .. code-block:: none
 
-                **Todo List**
+                **TODO List**
 
                 .. todolist::
 
@@ -173,30 +175,29 @@ Specialized Directives
 
             .. code-block:: none
 
-                .. todo::
+                (TODO - | FIXME - | BUG -) The tag with with the previous tags in front of this text is not required for the directive, it simply identifies the type and depending on your text editor using :program:`Microsoft VS Code` with an extension like Todo Tree List it will set a tag for highlights and tracking.
 
-                    (TODO: | FIXME: | BUG:) The tag with : in front of this text is not required for the directive, it simply identifies the type and depending on your text editor using :program:`Micrsoft VS Code` with an extention like Todo Tree List it will set a tag for highlights and tracking.
     *   Rendered:
 
         *   Directive to create a todo list in document that appears as a row of Orange note blocks labeled as Todo with a link and location of all todo's
 
-            **Todo List**
+            **TODO List**
 
             .. todolist::
 
-        *   Directive to mark a todo in document that will appear in list and create a Orange note block labeled as Todo
+        *   Directive to mark a todo in document that will appear in list and create a Orange note block labeled as TODO
 
             .. todo:: 
 
-                TODO: Demonstration todo 1
+                TODO - Demonstration todo 1
 
             .. todo:: 
 
-                FIXME: Demonstration todo 2
+                FIXME - Demonstration todo 2
 
             .. todo:: 
 
-                BUG: Demonstration todo 3
+                BUG - Demonstration todo 3
 
 *   This directive is used for a concise titled paragraph, within its own box.
 
@@ -218,7 +219,7 @@ Specialized Directives
 
 .. topic:: Your Example Topic Title
 
-    Subsequent indented lines comprise the body of the topic, and are    interpreted as body elements.
+    Subsequent indented lines comprise the body of the topic, and are interpreted as body elements.
 
 
 .. raw:: latex

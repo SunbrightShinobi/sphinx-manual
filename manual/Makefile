@@ -42,6 +42,7 @@ clean:
 	find . -type f -name '*.pyc' -exec rm -f {} \;
 	find . -type f -name '*.lnk' -exec rm -f {} \;
 	find . -type f -name '*.stackdump' -exec rm -f {} \;
+	rm -rf $(GITHUBDIR)
 
 .PHONY: livehtml
 livehtml:
@@ -63,9 +64,7 @@ github:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
-	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
-	@rm -rf $(GITHUBDIR)/*
-	@cp -a build/html/. $(GITHUBDIR)
+	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(GITHUBDIR)/html" $(SPHINXOPTS) $(O)
 
 .PHONY: confluence
 confluence:

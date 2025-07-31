@@ -29,21 +29,21 @@ sys.path.append(os.path.abspath('./source/scripts'))
 # -- Project information -----------------------------------------------------
 
 project = 'Sphinx Manual'
-copyright = u'{}, Binarylandscapes LLC'.format(datetime.now().year)
-author = 'Josh Johnson <josh.johnson@binarylandscapes.com>'
-address = 'Binarylandscapes Consulting\\\ 5923 Kingston Pike NUM 352\\\ Knoxville, TN 37919'
+copyright = u'{}, Galaxy Forest Labs'.format(datetime.now().year)
+author = 'Josh Johnson <joshua.johnson3@outlook.com>'
+address = 'Galaxy Forest Labs\\\ PO Box 239\\\ Sunbright, TN 37872'
 
-companyProject = u'<PROJECT>'
-segment = u'<SEGMENT>'
+companyProject = u'project'
+segment = u'segment'
 segment_short = u'XX'
-csci = u'<CSCI NAME>'
-csci_short = u'<CSCI>'
-systemName = u'<SYSTEM NAME>'
+csci = u'<csciName>'
+csci_short = u'<csci>'
+systemName = u'<systemName>'
 icsVersion = u'X1.0'
 responsibleEngineer = author
 
-documentnumber = 'docnum-tbd'
-docReleaseDate = u'04JAN2021'
+documentnumber = '<docnum-tbd>'
+docReleaseDate = u'29JULY2025'
 changeNotice = u'<Rev. C CN ID>'
 document_rev = 'C'
 docReleaseDesc = u'Section x.x, Change Made\\\ Section x.x, Change Made\\\ Section x.x, Change Made'
@@ -127,7 +127,7 @@ with open('jinja_contexts.txt', 'wt') as out:
     print(yaml.safe_dump(jinja_contexts, default_flow_style=False), file=out)
 
 # Confluence
-confluence_publish = True
+confluence_publish = False
 confluence_space_key = 'US'
 confluence_parent_page = 'Sphinx Manual'
 confluence_server_url = 'https://skydweller.atlassian.net/wiki/'
@@ -144,7 +144,7 @@ confluence_prev_next_buttons_location = 'top'
 confluence_purge = True
 confluence_publish_dryrun = True
 confluence_sourcelink = {
-    'url': 'https://github.com/binarylandscapes/sphinx-manual',
+    'url': 'https://github.com/SunbrightShinobi/sphinx-manual',
 }
 #confluence_publish_postfix = '-postfix'
 #confluence_publish_prefix = 'prefix-'
