@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; Sphinx Manual 794d8f936c2 documentation</title>
+  <title>1.3.3.11. Sphinx Diagram Directives (Mermaid Diagrams) &mdash; Sphinx Manual a09c971562c documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/drawio.css" />
@@ -17,10 +17,47 @@
   
         <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../../_static/documentation_options.js?v=41d9c990"></script>
+        <script src="../../../../../_static/documentation_options.js?v=7f33041a"></script>
         <script src="../../../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../../../_static/drawio_html.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+        <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+        <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+const load = async () => {
+    await mermaid.run();
+    const all_mermaids = document.querySelectorAll(".mermaid");
+    const mermaids_to_add_zoom = -1 === -1 ? all_mermaids.length : -1;
+    const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
+    if(mermaids_to_add_zoom > 0) {
+        var svgs = d3.selectAll(".mermaid svg");
+        if(all_mermaids.length !== mermaids_processed.length) {
+            // try again in a sec, wait for mermaids to load
+            setTimeout(load, 200);
+            return;
+        } else if(svgs.size() !== mermaids_to_add_zoom) {
+            // try again in a sec, wait for mermaids to load
+            setTimeout(load, 200);
+            return;
+        } else {
+            svgs.each(function() {
+                var svg = d3.select(this);
+                svg.html("<g class='wrapper'>" + svg.html() + "</g>");
+                var inner = svg.select("g");
+                var zoom = d3.zoom().on("zoom", function(event) {
+                    inner.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+            });
+        }
+    }
+};
+
+window.addEventListener("load", load);
+</script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
@@ -49,8 +86,33 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contents.html">1. Sphinx Manual</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../contents.html">1. Sphinx Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html">1.1. Sphinx Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../doc_structure.html#building-a-table-of-contents">1.2. Building a Table of Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../contents.html">1.3. RestructedText &amp; Sphinx Syntax</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../headings.html">1.3.1. Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roles/contents.html">1.3.2. Sphinx Roles</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="contents.html">1.3.3. Sphinx Directives</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="image_figure.html">1.3.3.1. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="note_type.html">1.3.3.2. Note Block Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="table.html">1.3.3.3. Tables Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code_literal.html">1.3.3.4. Code or Literal Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="specialized.html">1.3.3.5. Specialized Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="latexpdf.html">1.3.3.6. Latex Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="custom.html">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="drawio/drawio.html">1.3.3.10. Sphinx Diagram Directives (Diagrams.Net/drawio)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.3.11. Sphinx Diagram Directives (Mermaid Diagrams)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../linking.html">1.3.4. Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../common_docs/appendices/acronym_list.html">1. ACRONYM LIST</a></li>
@@ -73,7 +135,7 @@
           <li class="breadcrumb-item"><a href="../../../contents.html"><span class="section-number">1. </span>Sphinx Manual</a></li>
           <li class="breadcrumb-item"><a href="../../contents.html"><span class="section-number">1.3. </span>RestructedText &amp; Sphinx Syntax</a></li>
           <li class="breadcrumb-item"><a href="contents.html"><span class="section-number">1.3.3. </span>Sphinx Directives</a></li>
-      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3.3.11. </span>Sphinx Diagram Directives (Mermaid Diagrams)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../../_sources/document/main_content/syntax/basics/directives/mermaid.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +145,568 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <section id="sphinx-diagram-directives-mermaid-diagrams">
+<h1><span class="section-number">1.3.3.11. </span>Sphinx Diagram Directives (Mermaid Diagrams)<a class="headerlink" href="#sphinx-diagram-directives-mermaid-diagrams" title="Link to this heading"></a></h1>
+<ul>
+<li><p>Requirements:</p>
+<ul>
+<li><p>Install: mermaid-python via Python <strong class="program">pip</strong></p></li>
+<li><p>Install: <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> extension via Python <strong class="program">pip</strong></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> to Sphinx extensions in conf.py (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment via defaults.py)</p></li>
+<li><p>Configure extension in ‘conf.py’ like shown below:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinxcontrib.mermaid configuration settings</span>
+<span class="n">mermaid_enable</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">mermaid_output_format</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>  <span class="c1"># svg, png, pdf</span>
+<span class="n">mermaid_latex_output_format</span> <span class="o">=</span> <span class="s2">&quot;pdf&quot;</span>  <span class="c1"># pdf is the only option for LaTeX</span>
+<span class="n">mermaid_default_export_scale</span> <span class="o">=</span> <span class="mi">75</span>  <span class="c1"># Default scale for exported diagrams</span>
+<span class="n">mermaid_include_elk</span> <span class="o">=</span> <span class="s2">&quot;0.1.4&quot;</span> <span class="c1">#Include ELK for layout algorithms</span>
+<span class="n">mermaid_cmd</span> <span class="o">=</span> <span class="s2">&quot;npx mmdc&quot;</span>
+<span class="n">mermaid_d3_zoom</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable D3 zoom functionality for Mermaid diagrams</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p>Flow Diagram</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">flowchart_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">flowchart_example</span>
+
+    <span class="n">flowchart</span> <span class="n">TD</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">Christmas</span><span class="p">]</span> <span class="o">--&gt;|</span><span class="n">Get</span> <span class="n">money</span><span class="o">|</span> <span class="n">B</span><span class="p">(</span><span class="n">Go</span> <span class="n">shopping</span><span class="p">)</span>
+        <span class="n">B</span> <span class="o">--&gt;</span> <span class="n">C</span><span class="p">{</span><span class="n">Let</span> <span class="n">me</span> <span class="n">think</span><span class="p">}</span>
+        <span class="n">C</span> <span class="o">--&gt;|</span><span class="n">One</span><span class="o">|</span> <span class="n">D</span><span class="p">[</span><span class="n">Laptop</span><span class="p">]</span>
+        <span class="n">C</span> <span class="o">--&gt;|</span><span class="n">Two</span><span class="o">|</span> <span class="n">E</span><span class="p">[</span><span class="n">iPhone</span><span class="p">]</span>
+        <span class="n">C</span> <span class="o">--&gt;|</span><span class="n">Three</span><span class="o">|</span> <span class="n">F</span><span class="p">[</span><span class="n">fa</span><span class="p">:</span><span class="n">fa</span><span class="o">-</span><span class="n">car</span> <span class="n">Car</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="flowchart-example">
+<pre  class="mermaid">
+        flowchart TD
+    A[Christmas] --&gt;|Get money| B(Go shopping)
+    B --&gt; C{Let me think}
+    C --&gt;|One| D[Laptop]
+    C --&gt;|Two| E[iPhone]
+    C --&gt;|Three| F[fa:fa-car Car]
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.21 </span><span class="caption-text">flowchart_example</span><a class="headerlink" href="#flowchart-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Sequence Diagram</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mermaid::
+    :name: sequence_diagram_example
+    :align: center
+    :caption: sequence_diagram_example
+
+    sequenceDiagram
+        Alice-&gt;&gt;+John: Hello John, how are you?
+        Alice-&gt;&gt;+John: John, can you hear me?
+        John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+        John--&gt;&gt;-Alice: I feel great!
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="sequence-diagram-example">
+<pre  class="mermaid">
+            sequenceDiagram
+        Alice-&gt;&gt;+John: Hello John, how are you?
+        Alice-&gt;&gt;+John: John, can you hear me?
+        John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+        John--&gt;&gt;-Alice: I feel great!
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.22 </span><span class="caption-text">sequence_diagram_example</span><a class="headerlink" href="#sequence-diagram-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Class Diagram</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">class_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">class_diagram_example</span>
+
+    <span class="n">classDiagram</span>
+        <span class="n">Animal</span> <span class="o">&lt;|--</span> <span class="n">Duck</span>
+        <span class="n">Animal</span> <span class="o">&lt;|--</span> <span class="n">Fish</span>
+        <span class="n">Animal</span> <span class="o">&lt;|--</span> <span class="n">Zebra</span>
+        <span class="n">Animal</span> <span class="p">:</span> <span class="o">+</span><span class="nb">int</span> <span class="n">age</span>
+        <span class="n">Animal</span> <span class="p">:</span> <span class="o">+</span><span class="n">String</span> <span class="n">gender</span>
+        <span class="n">Animal</span><span class="p">:</span> <span class="o">+</span><span class="n">isMammal</span><span class="p">()</span>
+        <span class="n">Animal</span><span class="p">:</span> <span class="o">+</span><span class="n">mate</span><span class="p">()</span>
+        <span class="k">class</span> <span class="nc">Duck</span><span class="p">{</span>
+        <span class="o">+</span><span class="n">String</span> <span class="n">beakColor</span>
+        <span class="o">+</span><span class="n">swim</span><span class="p">()</span>
+        <span class="o">+</span><span class="n">quack</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="k">class</span> <span class="nc">Fish</span><span class="p">{</span>
+        <span class="o">-</span><span class="nb">int</span> <span class="n">sizeInFeet</span>
+        <span class="o">-</span><span class="n">canEat</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="k">class</span> <span class="nc">Zebra</span><span class="p">{</span>
+        <span class="o">+</span><span class="nb">bool</span> <span class="n">is_wild</span>
+        <span class="o">+</span><span class="n">run</span><span class="p">()</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="class-diagram-example">
+<pre  class="mermaid">
+        classDiagram
+    Animal &lt;|-- Duck
+    Animal &lt;|-- Fish
+    Animal &lt;|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+    +String beakColor
+    +swim()
+    +quack()
+    }
+    class Fish{
+    -int sizeInFeet
+    -canEat()
+    }
+    class Zebra{
+    +bool is_wild
+    +run()
+    }
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.23 </span><span class="caption-text">class_diagram_example</span><a class="headerlink" href="#class-diagram-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>State Diagram</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">state_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">state_diagram_example</span>
+
+    <span class="n">stateDiagram</span><span class="o">-</span><span class="n">v2</span>
+        <span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">Still</span>
+        <span class="n">Still</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="o">*</span><span class="p">]</span>
+        <span class="n">Still</span> <span class="o">--&gt;</span> <span class="n">Moving</span>
+        <span class="n">Moving</span> <span class="o">--&gt;</span> <span class="n">Still</span>
+        <span class="n">Moving</span> <span class="o">--&gt;</span> <span class="n">Crash</span>
+        <span class="n">Crash</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="o">*</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="state-diagram-example">
+<pre  class="mermaid">
+        stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.24 </span><span class="caption-text">state_diagram_example</span><a class="headerlink" href="#state-diagram-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>ER Diagram</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">er_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">er_diagram_example</span>
+
+    <span class="n">erDiagram</span>
+        <span class="n">CUSTOMER</span> <span class="p">}</span><span class="o">|..|</span><span class="p">{</span> <span class="n">DELIVERY</span><span class="o">-</span><span class="n">ADDRESS</span> <span class="p">:</span> <span class="n">has</span>
+        <span class="n">CUSTOMER</span> <span class="o">||--</span><span class="n">o</span><span class="p">{</span> <span class="n">ORDER</span> <span class="p">:</span> <span class="n">places</span>
+        <span class="n">CUSTOMER</span> <span class="o">||--</span><span class="n">o</span><span class="p">{</span> <span class="n">INVOICE</span> <span class="p">:</span> <span class="s2">&quot;liable for&quot;</span>
+        <span class="n">DELIVERY</span><span class="o">-</span><span class="n">ADDRESS</span> <span class="o">||--</span><span class="n">o</span><span class="p">{</span> <span class="n">ORDER</span> <span class="p">:</span> <span class="n">receives</span>
+        <span class="n">INVOICE</span> <span class="o">||--|</span><span class="p">{</span> <span class="n">ORDER</span> <span class="p">:</span> <span class="n">covers</span>
+        <span class="n">ORDER</span> <span class="o">||--|</span><span class="p">{</span> <span class="n">ORDER</span><span class="o">-</span><span class="n">ITEM</span> <span class="p">:</span> <span class="n">includes</span>
+        <span class="n">PRODUCT</span><span class="o">-</span><span class="n">CATEGORY</span> <span class="o">||--|</span><span class="p">{</span> <span class="n">PRODUCT</span> <span class="p">:</span> <span class="n">contains</span>
+        <span class="n">PRODUCT</span> <span class="o">||--</span><span class="n">o</span><span class="p">{</span> <span class="n">ORDER</span><span class="o">-</span><span class="n">ITEM</span> <span class="p">:</span> <span class="s2">&quot;ordered in&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="er-diagram-example">
+<pre  class="mermaid">
+        erDiagram
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ INVOICE : &quot;liable for&quot;
+    DELIVERY-ADDRESS ||--o{ ORDER : receives
+    INVOICE ||--|{ ORDER : covers
+    ORDER ||--|{ ORDER-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.25 </span><span class="caption-text">er_diagram_example</span><a class="headerlink" href="#er-diagram-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<ul>
+<li><p>Gantt Chart</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">gantt_chart_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">gantt_chart_example</span>
+
+    <span class="n">gantt</span>
+        <span class="n">title</span> <span class="n">A</span> <span class="n">Gantt</span> <span class="n">Diagram</span>
+        <span class="n">dateFormat</span>  <span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span>
+        <span class="n">section</span> <span class="n">Section</span>
+        <span class="n">A</span> <span class="n">task</span>           <span class="p">:</span><span class="n">a1</span><span class="p">,</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="p">,</span> <span class="mi">30</span><span class="n">d</span>
+        <span class="n">Another</span> <span class="n">task</span>     <span class="p">:</span><span class="n">after</span> <span class="n">a1</span>  <span class="p">,</span> <span class="mi">20</span><span class="n">d</span>
+        <span class="n">section</span> <span class="n">Another</span>
+        <span class="n">Task</span> <span class="ow">in</span> <span class="n">sec</span>      <span class="p">:</span><span class="mi">2014</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">12</span>  <span class="p">,</span> <span class="mi">12</span><span class="n">d</span>
+        <span class="n">another</span> <span class="n">task</span>      <span class="p">:</span> <span class="mi">24</span><span class="n">d</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="gantt-chart-example">
+<pre  class="mermaid">
+        gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.26 </span><span class="caption-text">gantt_chart_example</span><a class="headerlink" href="#gantt-chart-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</li>
+<li><p>Journey Diagram</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">journey_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">journey_diagram_example</span>
+
+    <span class="n">journey</span>
+        <span class="n">title</span> <span class="n">My</span> <span class="n">working</span> <span class="n">day</span>
+        <span class="n">section</span> <span class="n">Go</span> <span class="n">to</span> <span class="n">work</span>
+        <span class="n">Make</span> <span class="n">tea</span><span class="p">:</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Me</span>
+        <span class="n">Go</span> <span class="n">upstairs</span><span class="p">:</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Me</span>
+        <span class="n">Do</span> <span class="n">work</span><span class="p">:</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Me</span><span class="p">,</span> <span class="n">Cat</span>
+        <span class="n">section</span> <span class="n">Go</span> <span class="n">home</span>
+        <span class="n">Go</span> <span class="n">downstairs</span><span class="p">:</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Me</span>
+        <span class="n">Sit</span> <span class="n">down</span><span class="p">:</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Me</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="journey-diagram-example">
+<pre  class="mermaid">
+        journey
+    title My working day
+    section Go to work
+    Make tea: 5: Me
+    Go upstairs: 3: Me
+    Do work: 1: Me, Cat
+    section Go home
+    Go downstairs: 5: Me
+    Sit down: 3: Me
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.27 </span><span class="caption-text">journey_diagram_example</span><a class="headerlink" href="#journey-diagram-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Git Graph</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">git_graph_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">git_graph_example</span>
+
+    <span class="n">gitGraph</span>
+        <span class="n">commit</span>
+        <span class="n">commit</span>
+        <span class="n">branch</span> <span class="n">develop</span>
+        <span class="n">checkout</span> <span class="n">develop</span>
+        <span class="n">commit</span>
+        <span class="n">commit</span>
+        <span class="n">checkout</span> <span class="n">main</span>
+        <span class="n">merge</span> <span class="n">develop</span>
+        <span class="n">commit</span>
+        <span class="n">commit</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="git-graph-example">
+<pre  class="mermaid">
+        gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.28 </span><span class="caption-text">git_graph_example</span><a class="headerlink" href="#git-graph-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Pie Chart</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">pie_chart_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">pie_chart_example</span>
+
+    <span class="n">pie</span> <span class="n">title</span> <span class="n">Pets</span> <span class="n">adopted</span> <span class="n">by</span> <span class="n">volunteers</span>
+        <span class="s2">&quot;Dogs&quot;</span> <span class="p">:</span> <span class="mi">386</span>
+        <span class="s2">&quot;Cats&quot;</span> <span class="p">:</span> <span class="mi">85</span>
+        <span class="s2">&quot;Rats&quot;</span> <span class="p">:</span> <span class="mi">15</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="pie-chart-example">
+<pre  class="mermaid">
+        pie title Pets adopted by volunteers
+    &quot;Dogs&quot; : 386
+    &quot;Cats&quot; : 85
+    &quot;Rats&quot; : 15
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.29 </span><span class="caption-text">pie_chart_example</span><a class="headerlink" href="#pie-chart-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Mind Map</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">mind_map_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">mind_map_example</span>
+
+    <span class="n">mindmap</span>
+    <span class="n">root</span><span class="p">((</span><span class="n">mindmap</span><span class="p">))</span>
+        <span class="n">Origins</span>
+        <span class="n">Long</span> <span class="n">history</span>
+        <span class="p">::</span><span class="n">icon</span><span class="p">(</span><span class="n">fa</span> <span class="n">fa</span><span class="o">-</span><span class="n">book</span><span class="p">)</span>
+        <span class="n">Popularisation</span>
+            <span class="n">British</span> <span class="n">popular</span> <span class="n">psychology</span> <span class="n">author</span> <span class="n">Tony</span> <span class="n">Buzan</span>
+        <span class="n">Research</span>
+        <span class="n">On</span> <span class="n">effectiveness</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="ow">and</span> <span class="n">features</span>
+        <span class="n">On</span> <span class="n">Automatic</span> <span class="n">creation</span>
+            <span class="n">Uses</span>
+                <span class="n">Creative</span> <span class="n">techniques</span>
+                <span class="n">Strategic</span> <span class="n">planning</span>
+                <span class="n">Argument</span> <span class="n">mapping</span>
+        <span class="n">Tools</span>
+        <span class="n">Pen</span> <span class="ow">and</span> <span class="n">paper</span>
+        <span class="n">Mermaid</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="mind-map-example">
+<pre  class="mermaid">
+        mindmap
+root((mindmap))
+    Origins
+    Long history
+    ::icon(fa fa-book)
+    Popularisation
+        British popular psychology author Tony Buzan
+    Research
+    On effectiveness&lt;br/&gt;and features
+    On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+    Pen and paper
+    Mermaid
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.30 </span><span class="caption-text">mind_map_example</span><a class="headerlink" href="#mind-map-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<ul>
+<li><p>Quadrant Chart</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">quadrant_chart_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">quadrant_chart_example</span>
+
+<span class="n">quadrantChart</span>
+    <span class="n">title</span> <span class="n">Reach</span> <span class="ow">and</span> <span class="n">engagement</span> <span class="n">of</span> <span class="n">campaigns</span>
+    <span class="n">x</span><span class="o">-</span><span class="n">axis</span> <span class="n">Low</span> <span class="n">Reach</span> <span class="o">--&gt;</span> <span class="n">High</span> <span class="n">Reach</span>
+    <span class="n">y</span><span class="o">-</span><span class="n">axis</span> <span class="n">Low</span> <span class="n">Engagement</span> <span class="o">--&gt;</span> <span class="n">High</span> <span class="n">Engagement</span>
+    <span class="n">quadrant</span><span class="o">-</span><span class="mi">1</span> <span class="n">We</span> <span class="n">should</span> <span class="n">expand</span>
+    <span class="n">quadrant</span><span class="o">-</span><span class="mi">2</span> <span class="n">Need</span> <span class="n">to</span> <span class="n">promote</span>
+    <span class="n">quadrant</span><span class="o">-</span><span class="mi">3</span> <span class="n">Re</span><span class="o">-</span><span class="n">evaluate</span>
+    <span class="n">quadrant</span><span class="o">-</span><span class="mi">4</span> <span class="n">May</span> <span class="n">be</span> <span class="n">improved</span>
+    <span class="n">Campaign</span> <span class="n">A</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]</span>
+    <span class="n">Campaign</span> <span class="n">B</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">]</span>
+    <span class="n">Campaign</span> <span class="n">C</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.57</span><span class="p">,</span> <span class="mf">0.69</span><span class="p">]</span>
+    <span class="n">Campaign</span> <span class="n">D</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">]</span>
+    <span class="n">Campaign</span> <span class="n">E</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.40</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">]</span>
+    <span class="n">Campaign</span> <span class="n">F</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="quadrant-chart-example">
+<pre  class="mermaid">
+        quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --&gt; High Reach
+    y-axis Low Engagement --&gt; High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.31 </span><span class="caption-text">quadrant_chart_example</span><a class="headerlink" href="#quadrant-chart-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<ul>
+<li><p>Packet</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">packet_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">packet_example</span>
+
+    <span class="o">---</span>
+    <span class="n">title</span><span class="p">:</span> <span class="s2">&quot;TCP Packet&quot;</span>
+    <span class="o">---</span>
+    <span class="n">packet</span><span class="o">-</span><span class="n">beta</span>
+    <span class="mi">0</span><span class="o">-</span><span class="mi">15</span><span class="p">:</span> <span class="s2">&quot;Source Port&quot;</span>
+    <span class="mi">16</span><span class="o">-</span><span class="mi">31</span><span class="p">:</span> <span class="s2">&quot;Destination Port&quot;</span>
+    <span class="mi">32</span><span class="o">-</span><span class="mi">63</span><span class="p">:</span> <span class="s2">&quot;Sequence Number&quot;</span>
+    <span class="mi">64</span><span class="o">-</span><span class="mi">95</span><span class="p">:</span> <span class="s2">&quot;Acknowledgment Number&quot;</span>
+    <span class="mi">96</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="s2">&quot;Data Offset&quot;</span>
+    <span class="mi">100</span><span class="o">-</span><span class="mi">105</span><span class="p">:</span> <span class="s2">&quot;Reserved&quot;</span>
+    <span class="mi">106</span><span class="p">:</span> <span class="s2">&quot;URG&quot;</span>
+    <span class="mi">107</span><span class="p">:</span> <span class="s2">&quot;ACK&quot;</span>
+    <span class="mi">108</span><span class="p">:</span> <span class="s2">&quot;PSH&quot;</span>
+    <span class="mi">109</span><span class="p">:</span> <span class="s2">&quot;RST&quot;</span>
+    <span class="mi">110</span><span class="p">:</span> <span class="s2">&quot;SYN&quot;</span>
+    <span class="mi">111</span><span class="p">:</span> <span class="s2">&quot;FIN&quot;</span>
+    <span class="mi">112</span><span class="o">-</span><span class="mi">127</span><span class="p">:</span> <span class="s2">&quot;Window&quot;</span>
+    <span class="mi">128</span><span class="o">-</span><span class="mi">143</span><span class="p">:</span> <span class="s2">&quot;Checksum&quot;</span>
+    <span class="mi">144</span><span class="o">-</span><span class="mi">159</span><span class="p">:</span> <span class="s2">&quot;Urgent Pointer&quot;</span>
+    <span class="mi">160</span><span class="o">-</span><span class="mi">191</span><span class="p">:</span> <span class="s2">&quot;(Options and Padding)&quot;</span>
+    <span class="mi">192</span><span class="o">-</span><span class="mi">255</span><span class="p">:</span> <span class="s2">&quot;Data (variable length)&quot;</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Rendered</p>
+<figure class="align-center" id="packet-example">
+<pre  class="mermaid">
+        ---
+title: &quot;TCP Packet&quot;
+---
+packet-beta
+0-15: &quot;Source Port&quot;
+16-31: &quot;Destination Port&quot;
+32-63: &quot;Sequence Number&quot;
+64-95: &quot;Acknowledgment Number&quot;
+96-99: &quot;Data Offset&quot;
+100-105: &quot;Reserved&quot;
+106: &quot;URG&quot;
+107: &quot;ACK&quot;
+108: &quot;PSH&quot;
+109: &quot;RST&quot;
+110: &quot;SYN&quot;
+111: &quot;FIN&quot;
+112-127: &quot;Window&quot;
+128-143: &quot;Checksum&quot;
+144-159: &quot;Urgent Pointer&quot;
+160-191: &quot;(Options and Padding)&quot;
+192-255: &quot;Data (variable length)&quot;
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.32 </span><span class="caption-text">packet_example</span><a class="headerlink" href="#packet-example" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+
 
            </div>
           </div>

@@ -9,3 +9,7 @@ node_modules
 package.json
 
 manual/package-lock.json
+
+manual/test.mmd
+
+manual/test.svg
