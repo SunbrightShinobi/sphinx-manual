@@ -16,6 +16,7 @@ Sphinx Directives
     blockdiag/contents
     plantuml/plantuml
     drawio/drawio
+    mermaid
 
 .. raw:: latex
 

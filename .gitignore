@@ -4,3 +4,8 @@ build/
 *.pyc
 *.lnk
 *.stackdump
+node_modules
+
+package.json
+
+manual/package-lock.json
