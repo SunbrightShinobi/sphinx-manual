@@ -42,7 +42,6 @@ clean:
 	find . -type f -name '*.pyc' -exec rm -f {} \;
 	find . -type f -name '*.lnk' -exec rm -f {} \;
 	find . -type f -name '*.stackdump' -exec rm -f {} \;
-	rm -rf $(GITHUBDIR)
 
 .PHONY: livehtml
 livehtml:
@@ -57,6 +56,7 @@ livehtml:
 
 .PHONY: github
 github:
+	rm -rf $(GITHUBDIR)
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
