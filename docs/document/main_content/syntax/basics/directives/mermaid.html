@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1.3.3.11. Sphinx Diagram Directives (Mermaid Diagrams) &mdash; Sphinx Manual 21c8873b7f4 documentation</title>
+  <title>1.3.3.11. Sphinx Diagram Directives (Mermaid Diagrams) &mdash; Sphinx Manual b067013dc18 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/drawio.css" />
@@ -17,46 +17,16 @@
   
         <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../../_static/documentation_options.js?v=e5bcf7a7"></script>
+        <script src="../../../../../_static/documentation_options.js?v=6b407fb6"></script>
         <script src="../../../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../../../_static/drawio_html.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
         <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
-        <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
         <script type="module">
 import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
-const load = async () => {
-    await mermaid.run();
-    const all_mermaids = document.querySelectorAll(".mermaid");
-    const mermaids_to_add_zoom = -1 === -1 ? all_mermaids.length : -1;
-    const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
-    if(mermaids_to_add_zoom > 0) {
-        var svgs = d3.selectAll(".mermaid svg");
-        if(all_mermaids.length !== mermaids_processed.length) {
-            // try again in a sec, wait for mermaids to load
-            setTimeout(load, 200);
-            return;
-        } else if(svgs.size() !== mermaids_to_add_zoom) {
-            // try again in a sec, wait for mermaids to load
-            setTimeout(load, 200);
-            return;
-        } else {
-            svgs.each(function() {
-                var svg = d3.select(this);
-                svg.html("<g class='wrapper'>" + svg.html() + "</g>");
-                var inner = svg.select("g");
-                var zoom = d3.zoom().on("zoom", function(event) {
-                    inner.attr("transform", event.transform);
-                });
-                svg.call(zoom);
-            });
-        }
-    }
-};
-
-window.addEventListener("load", load);
+window.addEventListener("load", () => mermaid.run());
 </script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
@@ -78,6 +48,9 @@ window.addEventListener("load", load);
           <a href="../../../../../index.html" class="icon icon-home">
             Sphinx Manual
           </a>
+              <div class="version">
+                1.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -191,14 +164,13 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="flowchart-example">
-<pre  class="mermaid">
-        flowchart TD
+<img src="../../../../../_images/mermaid-4aa043e83e8cd9fa8fa09ea723853666a922a262.png" alt="flowchart TD
     A[Christmas] --&gt;|Get money| B(Go shopping)
     B --&gt; C{Let me think}
     C --&gt;|One| D[Laptop]
     C --&gt;|Two| E[iPhone]
-    C --&gt;|Three| F[fa:fa-car Car]
-    </pre><figcaption>
+    C --&gt;|Three| F[fa:fa-car Car]" />
+<figcaption>
 <p><span class="caption-number">Figure 1.21 </span><span class="caption-text">flowchart_example</span><a class="headerlink" href="#flowchart-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -225,13 +197,12 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="sequence-diagram-example">
-<pre  class="mermaid">
-            sequenceDiagram
+<img src="../../../../../_images/mermaid-a39ec0328991a5686730e5ab0f716338345a2336.png" alt="sequenceDiagram
         Alice-&gt;&gt;+John: Hello John, how are you?
         Alice-&gt;&gt;+John: John, can you hear me?
         John--&gt;&gt;-Alice: Hi Alice, I can hear you!
-        John--&gt;&gt;-Alice: I feel great!
-    </pre><figcaption>
+        John--&gt;&gt;-Alice: I feel great!" />
+<figcaption>
 <p><span class="caption-number">Figure 1.22 </span><span class="caption-text">sequence_diagram_example</span><a class="headerlink" href="#sequence-diagram-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -274,8 +245,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="class-diagram-example">
-<pre  class="mermaid">
-        classDiagram
+<img src="../../../../../_images/mermaid-0701dcd12321eb4f46583eed49fab85aa1853012.png" alt="classDiagram
     Animal &lt;|-- Duck
     Animal &lt;|-- Fish
     Animal &lt;|-- Zebra
@@ -295,8 +265,8 @@ window.addEventListener("load", load);
     class Zebra{
     +bool is_wild
     +run()
-    }
-    </pre><figcaption>
+    }" />
+<figcaption>
 <p><span class="caption-number">Figure 1.23 </span><span class="caption-text">class_diagram_example</span><a class="headerlink" href="#class-diagram-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -325,15 +295,14 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="state-diagram-example">
-<pre  class="mermaid">
-        stateDiagram-v2
+<img src="../../../../../_images/mermaid-1150c1ac7af6da4d2890d24d7afdb7a5b440482a.png" alt="stateDiagram-v2
     [*] --&gt; Still
     Still --&gt; [*]
     Still --&gt; Moving
     Moving --&gt; Still
     Moving --&gt; Crash
-    Crash --&gt; [*]
-    </pre><figcaption>
+    Crash --&gt; [*]" />
+<figcaption>
 <p><span class="caption-number">Figure 1.24 </span><span class="caption-text">state_diagram_example</span><a class="headerlink" href="#state-diagram-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -364,8 +333,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="er-diagram-example">
-<pre  class="mermaid">
-        erDiagram
+<img src="../../../../../_images/mermaid-b014de97da0bd0f5ded247f347f87843a28fe562.png" alt="erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
     CUSTOMER ||--o{ ORDER : places
     CUSTOMER ||--o{ INVOICE : &quot;liable for&quot;
@@ -373,13 +341,13 @@ window.addEventListener("load", load);
     INVOICE ||--|{ ORDER : covers
     ORDER ||--|{ ORDER-ITEM : includes
     PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-    PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;
-    </pre><figcaption>
+    PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;" />
+<figcaption>
 <p><span class="caption-number">Figure 1.25 </span><span class="caption-text">er_diagram_example</span><a class="headerlink" href="#er-diagram-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
-<ul>
+</li>
 <li><p>Gantt Chart</p>
 <ul class="simple">
 <li><p>Syntax</p></li>
@@ -404,8 +372,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="gantt-chart-example">
-<pre  class="mermaid">
-        gantt
+<img src="../../../../../_images/mermaid-407ebc57eec5e3a0da26544bbcc262c513cbf3f3.png" alt="gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
@@ -413,14 +380,13 @@ window.addEventListener("load", load);
     Another task     :after a1  , 20d
     section Another
     Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-    </pre><figcaption>
+    another task      : 24d" />
+<figcaption>
 <p><span class="caption-number">Figure 1.26 </span><span class="caption-text">gantt_chart_example</span><a class="headerlink" href="#gantt-chart-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
-</ul>
-</li>
+<li><p>Requirement Diagram</p></li>
 <li><p>Journey Diagram</p>
 <ul class="simple">
 <li><p>Syntax</p></li>
@@ -445,8 +411,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="journey-diagram-example">
-<pre  class="mermaid">
-        journey
+<img src="../../../../../_images/mermaid-a5332300841faadaa297d50717a08a771e1890a8.png" alt="journey
     title My working day
     section Go to work
     Make tea: 5: Me
@@ -454,8 +419,8 @@ window.addEventListener("load", load);
     Do work: 1: Me, Cat
     section Go home
     Go downstairs: 5: Me
-    Sit down: 3: Me
-    </pre><figcaption>
+    Sit down: 3: Me" />
+<figcaption>
 <p><span class="caption-number">Figure 1.27 </span><span class="caption-text">journey_diagram_example</span><a class="headerlink" href="#journey-diagram-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -486,8 +451,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="git-graph-example">
-<pre  class="mermaid">
-        gitGraph
+<img src="../../../../../_images/mermaid-1064b68b03ebf566ebd92b630e3238ed0739fcd1.png" alt="gitGraph
     commit
     commit
     branch develop
@@ -497,8 +461,8 @@ window.addEventListener("load", load);
     checkout main
     merge develop
     commit
-    commit
-    </pre><figcaption>
+    commit" />
+<figcaption>
 <p><span class="caption-number">Figure 1.28 </span><span class="caption-text">git_graph_example</span><a class="headerlink" href="#git-graph-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -522,12 +486,11 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="pie-chart-example">
-<pre  class="mermaid">
-        pie title Pets adopted by volunteers
+<img src="../../../../../_images/mermaid-681b12158126cdd81c3f3424b2f93c70d8876261.png" alt="pie title Pets adopted by volunteers
     &quot;Dogs&quot; : 386
     &quot;Cats&quot; : 85
-    &quot;Rats&quot; : 15
-    </pre><figcaption>
+    &quot;Rats&quot; : 15" />
+<figcaption>
 <p><span class="caption-number">Figure 1.29 </span><span class="caption-text">pie_chart_example</span><a class="headerlink" href="#pie-chart-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -564,8 +527,7 @@ window.addEventListener("load", load);
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="mind-map-example">
-<pre  class="mermaid">
-        mindmap
+<img src="../../../../../_images/mermaid-93d953f3d6b979020943b854e395579f5e9ca5ec.png" alt="mindmap
 root((mindmap))
     Origins
     Long history
@@ -581,8 +543,8 @@ root((mindmap))
             Argument mapping
     Tools
     Pen and paper
-    Mermaid
-    </pre><figcaption>
+    Mermaid" />
+<figcaption>
 <p><span class="caption-number">Figure 1.30 </span><span class="caption-text">mind_map_example</span><a class="headerlink" href="#mind-map-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -618,8 +580,7 @@ root((mindmap))
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="quadrant-chart-example">
-<pre  class="mermaid">
-        quadrantChart
+<img src="../../../../../_images/mermaid-ee12093d90eff3df6738edbafe01c8319d68211b.png" alt="quadrantChart
     title Reach and engagement of campaigns
     x-axis Low Reach --&gt; High Reach
     y-axis Low Engagement --&gt; High Engagement
@@ -632,8 +593,8 @@ root((mindmap))
     Campaign C: [0.57, 0.69]
     Campaign D: [0.78, 0.34]
     Campaign E: [0.40, 0.34]
-    Campaign F: [0.35, 0.78]
-    </pre><figcaption>
+    Campaign F: [0.35, 0.78]" />
+<figcaption>
 <p><span class="caption-number">Figure 1.31 </span><span class="caption-text">quadrant_chart_example</span><a class="headerlink" href="#quadrant-chart-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
@@ -675,8 +636,7 @@ root((mindmap))
 <ul>
 <li><p>Rendered</p>
 <figure class="align-center" id="packet-example">
-<pre  class="mermaid">
-        ---
+<img src="../../../../../_images/mermaid-e2be305ba75b348bfd4390061dc674ae85a544f9.png" alt="---
 title: &quot;TCP Packet&quot;
 ---
 packet-beta
@@ -696,8 +656,8 @@ packet-beta
 128-143: &quot;Checksum&quot;
 144-159: &quot;Urgent Pointer&quot;
 160-191: &quot;(Options and Padding)&quot;
-192-255: &quot;Data (variable length)&quot;
-    </pre><figcaption>
+192-255: &quot;Data (variable length)&quot;" />
+<figcaption>
 <p><span class="caption-number">Figure 1.32 </span><span class="caption-text">packet_example</span><a class="headerlink" href="#packet-example" title="Link to this image"></a></p>
 </figcaption>
 </figure>
