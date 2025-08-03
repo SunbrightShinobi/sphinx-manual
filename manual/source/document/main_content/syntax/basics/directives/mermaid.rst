@@ -54,6 +54,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
             C -->|Two| E[iPhone]
             C -->|Three| F[fa:fa-car Car]
 
+  .. raw:: latex
+
+      \newpage
+
 * Sequence Diagram
 
     * Syntax
@@ -83,6 +87,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
                 Alice->>+John: John, can you hear me?
                 John-->>-Alice: Hi Alice, I can hear you!
                 John-->>-Alice: I feel great!
+
+  .. raw:: latex
+
+      \newpage
 
 * Class Diagram
 
@@ -146,6 +154,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
             +run()
             }
 
+  .. raw:: latex
+
+      \newpage
+
 * State Diagram
 
     * Syntax
@@ -179,7 +191,11 @@ Sphinx Diagram Directives (Mermaid Diagrams)
             Moving --> Still
             Moving --> Crash
             Crash --> [*]
-       
+
+  .. raw:: latex
+
+      \newpage
+
 * ER Diagram
 
     * Syntax
@@ -218,44 +234,53 @@ Sphinx Diagram Directives (Mermaid Diagrams)
             PRODUCT-CATEGORY ||--|{ PRODUCT : contains
             PRODUCT ||--o{ ORDER-ITEM : "ordered in"
 
-  * Gantt Chart
+  .. raw:: latex
 
-    * Syntax
+      \newpage
 
-    .. code-block::
+* Gantt Chart
 
-        .. mermaid::
-            :name: gantt_chart_example
-            :align: center
-            :caption: gantt_chart_example
+  * Syntax
 
-            gantt
-                title A Gantt Diagram
-                dateFormat  YYYY-MM-DD
-                section Section
-                A task           :a1, 2014-01-01, 30d
-                Another task     :after a1  , 20d
-                section Another
-                Task in sec      :2014-01-12  , 12d
-                another task      : 24d
+  .. code-block::
 
-    * Rendered
+      .. mermaid::
+          :name: gantt_chart_example
+          :align: center
+          :caption: gantt_chart_example
 
-    .. mermaid::
-        :name: gantt_chart_example
-        :align: center
-        :caption: gantt_chart_example
+          gantt
+              title A Gantt Diagram
+              dateFormat  YYYY-MM-DD
+              section Section
+              A task           :a1, 2014-01-01, 30d
+              Another task     :after a1  , 20d
+              section Another
+              Task in sec      :2014-01-12  , 12d
+              another task      : 24d
 
-        gantt
-            title A Gantt Diagram
-            dateFormat  YYYY-MM-DD
-            section Section
-            A task           :a1, 2014-01-01, 30d
-            Another task     :after a1  , 20d
-            section Another
-            Task in sec      :2014-01-12  , 12d
-            another task      : 24d
+  * Rendered
 
+  .. mermaid::
+      :name: gantt_chart_example
+      :align: center
+      :caption: gantt_chart_example
+
+      gantt
+          title A Gantt Diagram
+          dateFormat  YYYY-MM-DD
+          section Section
+          A task           :a1, 2014-01-01, 30d
+          Another task     :after a1  , 20d
+          section Another
+          Task in sec      :2014-01-12  , 12d
+          another task      : 24d
+
+  .. raw:: latex
+
+      \newpage
+      
+* Requirement Diagram
 * Journey Diagram
 
   * Syntax
@@ -293,6 +318,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           section Go home
           Go downstairs: 5: Me
           Sit down: 3: Me
+
+  .. raw:: latex
+
+      \newpage
 
 * Git Graph
 
@@ -336,6 +365,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           commit
           commit
 
+  .. raw:: latex
+
+      \newpage
+
 * Pie Chart
 
   * Syntax
@@ -363,6 +396,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           "Dogs" : 386
           "Cats" : 85
           "Rats" : 15
+
+  .. raw:: latex
+
+      \newpage
 
 * Mind Map
 
@@ -417,6 +454,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           Tools
           Pen and paper
           Mermaid
+
+  .. raw:: latex
+
+      \newpage
 
 .. * ZenUML   #Not supported in mermaid-python
 
@@ -484,6 +525,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
             }
           }
 
+  .. raw:: latex
+
+      \newpage
+
 * Quadrant Chart
 
   * Syntax
@@ -532,6 +577,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           Campaign E: [0.40, 0.34]
           Campaign F: [0.35, 0.78]
 
+  .. raw:: latex
+
+      \newpage
+
 .. * XY Chart  #Not supported in mermaid-python
 
   * Syntax
@@ -568,6 +617,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           point C: [3, 1]
           point D: [4, 4]
 
+  .. raw:: latex
+
+      \newpage
+
 .. * Block Diagram  #Not supported in mermaid-python
 
   * Syntax
@@ -601,6 +654,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           block C: [300, 0, 100, 100]
           A --> B
           B --> C
+
+  .. raw:: latex
+
+      \newpage
 
 * Packet
 
@@ -664,6 +721,10 @@ Sphinx Diagram Directives (Mermaid Diagrams)
         160-191: "(Options and Padding)"
         192-255: "Data (variable length)"
 
+    .. raw:: latex
+
+        \newpage
+
 .. * TreeMap  #Not supported in mermaid-python
 
   * Syntax
@@ -699,3 +760,7 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       "Section 2"
           "Leaf 2.1": 20
           "Leaf 2.2": 25
+
+  .. raw:: latex
+
+      \newpage
