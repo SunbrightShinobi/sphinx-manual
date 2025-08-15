@@ -5,3 +5,6 @@ source/images
 source/scripts
 source/jinja_contexts.txt
 source/.drawio
+source/_static
+source/_templates
+source/sphinx_scripts
