@@ -45,6 +45,8 @@ clean:
 
 .PHONY: livehtml
 livehtml:
+html:
+	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
@@ -56,6 +58,7 @@ livehtml:
 
 .PHONY: github
 github:
+	python3 check_conf.py
 	rm -rf $(GITHUBDIR)
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -68,6 +71,7 @@ github:
 
 .PHONY: confluence
 confluence:
+	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
@@ -79,6 +83,7 @@ confluence:
 
 .PHONY: latexpdf
 latexpdf:
+	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
@@ -90,6 +95,7 @@ latexpdf:
 
 .PHONY: epub3
 epub3: links
+	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
@@ -101,6 +107,7 @@ epub3: links
 
 .PHONY: rinoh
 rinoh:
+	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
 	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
