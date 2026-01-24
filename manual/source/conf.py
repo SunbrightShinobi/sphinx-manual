@@ -38,10 +38,10 @@ def latex(s: str) -> str:
 
 docType = 'Sphinx Manual'
 docType_short = 'EWI'
-author = 'Josh Johnson <joshua.johnson3@outlook.com>'
-company = 'Galaxy Forest Labs'
-address = r'Galaxy Forest Labs\\ PO Box 239\\ Sunbright, TN 37872'
-copyright = f'{datetime.now().year}, Galaxy Forest Labs'
+author = "Josh Johnson <joshua.johnson3@outlook.com>"
+company = "Galaxy Forest Labs"
+address = r"Galaxy Forest Labs\\ PO Box 239\\ Sunbright, TN 37872"
+copyright = f"{datetime.now().year}, Galaxy Forest Labs"
 
 companyProject = 'project'
 segment = 'segment'
@@ -152,7 +152,7 @@ documentConfig = {
                     f'{responsibleEngineer} \\ \\ '
                     f'{author} \\ \\ '
                     '}',
-                   r'\\sigField{Sig1}{2.5in}{0.5in} \\ }}',
+                    r'\\sigField{Sig1}{2.5in}{0.5in} \\ }}',
                     r'\\multicolumn{1}{l|}{\\rule{0pt}{36pt}\changeNotice}',
                     r'\\multicolumn{1}{c|}{\\rule{0pt}{36pt}\docrevision}',
                     r'\\multicolumn{1}{l|}{\\rule{0pt}{36pt}'
