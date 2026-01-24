@@ -19,6 +19,16 @@ sys.path.append(os.path.abspath('./source/scripts'))
 exec(open(r'./sphinx_scripts/sphinx_git.py').read())
 docReleaseVersion = get_git_release()
 
+# -- Helper functions --------------------------------------------------------
+
+def latex(s: str) -> str:
+    """
+    Helper for LaTeX content.
+    - Write LaTeX naturally with single backslashes
+    - Python-safe escaping handled here
+    """
+    return s.replace('\\', r'\\')
+
 # -- Project information -----------------------------------------------------
 
 docType = 'Sphinx Manual'
@@ -112,7 +122,32 @@ documentConfig = {
             'latex': [
                 [
                     r'\\multicolumn{1}{|c|}{\\rule{0pt}{36pt}'
-                    r'\\multirow{2}{2.5in}[2.6em]{\sigField{Sig1}{2.5in}{0.5in} \\ }}',
+                    r'\\multirow{2}{2.5in}[2.6em]{'
+                    '\\textbf{Document Number} \\ \\ '
+                    '\\textbf{Revision} \\ \\ '
+                    '\\textbf{Date} \\ \\ '
+                    '\\textbf{Change Notice} \\ \\ '
+                    '\\textbf{Document Part Number} \\ \\ '
+                    '\\textbf{Classification} \\ \\ '
+                    '\\textbf{Contract Number} \\ \\ '
+                    '\\textbf{CDRL Number} \\ \\ '
+                    '\\textbf{Responsible Engineer} \\ \\ '
+                    '\\textbf{Author} \\ \\ '
+                    '}',
+                    r'\\multicolumn{1}{c|}{\\rule{0pt}{36pt}'
+                    r'\\multirow{2}{2.5in}[2.6em]{'
+                    f'{documentnumber} \\ \\ '
+                    f'{document_rev} \\ \\ '
+                    f'{docReleaseDate} \\ \\ '
+                    f'{changeNotice} \\ \\ '
+                    f'{doc_sw_pn_current}{doc_sw_pn_dash_current} \\ \\ '
+                    f'{classification} \\ \\ '
+                    f'{contractNum} \\ \\ '
+                    f'{cdrlNum} \\ \\ '
+                    f'{responsibleEngineer} \\ \\ '
+                    f'{author} \\ \\ '
+                    '}',
+                   r'\\sigField{Sig1}{2.5in}{0.5in} \\ }}',
                     r'\\multicolumn{1}{l|}{\\rule{0pt}{36pt}\changeNotice}',
                     r'\\multicolumn{1}{c|}{\\rule{0pt}{36pt}\docrevision}',
                     r'\\multicolumn{1}{l|}{\\rule{0pt}{36pt}'
@@ -138,8 +173,7 @@ documentConfig = {
                     r'\\multirow{3}{3.0in}[2.5em]{'
                     r'Section x.x, Change Made \\ '
                     r'Section x.x, Change Made \\ '
-                    r'Section x.x, Change Made} \\ '
-                    r'} \hline',
+                    r'Section x.x, Change Made} \\ \hline',
                 ],
                 [
                     r'\\multicolumn{1}{|c|}{\\rule{0pt}{36pt}\\iptSignatureTitle}',
@@ -166,7 +200,7 @@ documentConfig = {
         'id': systemNameShort,
     },
 
-    'requiredMedia': [{}],
+    'requiredMedia': [],
 }
 
 BASE_DIR = os.path.dirname(__file__)
