@@ -1,9 +1,5 @@
 const DOCUMENTATION_OPTIONS = {
-<<<<<<< HEAD
-    VERSION: 'cf157fbca62',
-=======
-    VERSION: 'bf4fa3503fb',
->>>>>>> 0c7afe1 (Updated pages)
+    VERSION: '299f770f6d7',
     LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',
