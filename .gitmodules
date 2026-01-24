@@ -1,3 +1,4 @@
 [submodule "common"]
 	path = common
 	url = https://github.com/sunbrightshinobi/sphinx-docs-core.git
+	branch = master
