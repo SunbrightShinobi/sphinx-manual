@@ -6,6 +6,7 @@ from datetime import datetime
 import os
 import sys
 import yaml
+import string
 from yamlreader import yaml_load
 
 # -- Path setup --------------------------------------------------------------
@@ -16,11 +17,15 @@ sys.path.append(os.path.abspath('./source/configs'))
 sys.path.append(os.path.abspath('./source/images'))
 sys.path.append(os.path.abspath('./source/scripts'))
 
-exec(open(r'./sphinx_scripts/sphinx_git.py').read())
+def exec_file(path):
+    with open(path, 'r') as f:
+        code = compile(f.read(), path, 'exec')
+        exec(code, globals())
+
+exec_file('./sphinx_scripts/sphinx_git.py')
 docReleaseVersion = get_git_release()
 
 # -- Helper functions --------------------------------------------------------
-
 def latex(s: str) -> str:
     """
     Helper for LaTeX content.
@@ -233,9 +238,7 @@ confluence_publish_dryrun = True
 confluence_sourcelink = {
     'url': 'https://github.com/SunbrightShinobi/sphinx-manual',
 }
+exec_file('./sphinx_scripts/sphinx_defaults.py')
 
 # -- Defaults ----------------------------------------------------------------
-
-exec(open(r'./sphinx_scripts/sphinx_defaults.py').read())
-
 exclude_patterns = ['**/.nojekyll']

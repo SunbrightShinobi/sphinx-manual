@@ -43,9 +43,20 @@ clean:
 	find . -type f -name '*.lnk' -exec rm -f {} \;
 	find . -type f -name '*.stackdump' -exec rm -f {} \;
 
+.PHONY: html
+html:
+	python3 check_conf.py
+	@ln -snf ../../common/_static										$(COMMONDIR)/_static
+	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
+	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
+	@ln -snf ../../shared/configs/$(CONFIGS_SRCDIR)						$(CONFIGSDIR)
+	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
+	@ln -snf ../../shared/images										$(IMAGESDIR)
+	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@$(SPHINXBUILD) -aE -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
+
 .PHONY: livehtml
 livehtml:
-html:
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
