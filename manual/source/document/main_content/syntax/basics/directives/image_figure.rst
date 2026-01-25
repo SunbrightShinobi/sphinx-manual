@@ -31,7 +31,6 @@ Image & Figure Directives
 
     \newpage
 
-
 *   This is how you add a figure
 
     *   Syntax:

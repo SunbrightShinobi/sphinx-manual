@@ -11,11 +11,26 @@ COMMONDIR     = ./source
 COMMONDOCSDIR = ./source/common_docs
 CONFIGSDIR    = ./source/configs
 IMAGESDIR     = ./source/images
+DIAGRAMSDIR   = ./source/diagrams
 SCRIPTSDIR    = ./source/scripts
 GITHUBDIR     = ../docs
 SPHINX_TEMPLATES = us_dod
 TEMPLATE_FOLDER = design_doc
 CONFIGS_SRCDIR = sku
+
+# Export all DrawIO diagrams to SVG before builds that need it
+_drawio_svg:
+	@echo "Converting DrawIO files to SVG..."
+	@mkdir -p source/_static/diagrams
+	@for f in ../shared/diagrams/*.drawio; do \
+		echo "Processing $$f..."; \
+		drawio --export \
+		--disable-gpu \
+		--disable-software-rasterizer \
+		--no-sandbox \
+		--output source/_static/diagrams/ \
+		--format svg "$$f"; \
+	done
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -33,6 +48,7 @@ help:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: clean
@@ -44,7 +60,7 @@ clean:
 	find . -type f -name '*.stackdump' -exec rm -f {} \;
 
 .PHONY: html
-html:
+html: _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -53,10 +69,11 @@ html:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -aE -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
 
 .PHONY: livehtml
-livehtml:
+livehtml: _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -65,10 +82,15 @@ livehtml:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
-	sphinx-autobuild -aE -b html --re-ignore $(SOURCEDIR)/jinja_contexts.txt "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
+	sphinx-autobuild -aE -b html \
+	--ignore "source/_static/diagrams/*.svg" \
+	--re-ignore "source/jinja_contexts.txt" \
+	source \
+	build/html
 
 .PHONY: github
-github:
+github: _drawio_svg
 	python3 check_conf.py
 	rm -rf $(GITHUBDIR)
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
@@ -78,10 +100,11 @@ github:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(GITHUBDIR)/" $(SPHINXOPTS) $(O)
 
 .PHONY: confluence
-confluence:
+confluence: _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -90,10 +113,11 @@ confluence:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -aE -b confluence "$(SOURCEDIR)" "$(BUILDDIR)/confluence" $(SPHINXOPTS) $(O)
 
 .PHONY: latexpdf
-latexpdf:
+latexpdf: _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -102,10 +126,11 @@ latexpdf:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: epub3
-epub3: links
+epub3: links _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -114,10 +139,11 @@ epub3: links
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	$(SPHINXBUILD) -b epub3 "$(SOURCEDIR)" "$(BUILDDIR)/epub3" $(SPHINXOPTS) $(O)
 
 .PHONY: rinoh
-rinoh:
+rinoh: _drawio_svg
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -126,4 +152,5 @@ rinoh:
 	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
+	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -b rinoh "$(SOURCEDIR)" "$(BUILDDIR)/rinoh" $(SPHINXOPTS) $(O)
