@@ -17,7 +17,7 @@ Image & Figure Directives
         .. code-block:: none
 
             .. figure:: /_static/diagrams/drawio_example.svg
-                :scale: 80
+                :scale: 100
                 :alt: Draw.io Example
                 :align: center
 
@@ -26,7 +26,7 @@ Image & Figure Directives
     *   Rendered:
 
         .. figure:: /_static/diagrams/drawio_example.svg
-            :scale: 80
+            :scale: 100
             :alt: Drawio SVG Example
             :align: center
 
