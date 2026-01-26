@@ -18,20 +18,6 @@ SPHINX_TEMPLATES = us_dod
 TEMPLATE_FOLDER = design_doc
 CONFIGS_SRCDIR = sku
 
-# Export all DrawIO diagrams to SVG before builds that need it
-_drawio_svg:
-	@echo "Converting DrawIO files to SVG..."
-	@mkdir -p source/_static/diagrams
-	@for f in ../shared/diagrams/*.drawio; do \
-		echo "Processing $$f..."; \
-		drawio --export \
-		--disable-gpu \
-		--disable-software-rasterizer \
-		--no-sandbox \
-		--output source/_static/diagrams/ \
-		--format svg "$$f"; \
-	done
-
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -154,3 +140,23 @@ rinoh: _drawio_svg
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
 	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	@$(SPHINXBUILD) -b rinoh "$(SOURCEDIR)" "$(BUILDDIR)/rinoh" $(SPHINXOPTS) $(O)
+
+# Export all DrawIO diagrams to SVG before builds that need it
+_drawio_svg:
+	@echo "Converting DrawIO files to SVG..."
+	@for f in ../shared/diagrams/*.drawio; do \
+		echo "Processing $$f..."; \
+		drawio \
+		--export \
+		--recursive \
+		--scale 100 \
+		--border 0 \
+		--svg-theme "light" \
+		--svg-links-target new-win \
+		--disable-gpu \
+		--disable-software-rasterizer \
+		--no-sandbox \
+		--embed-diagram \
+		--output source/_static/diagrams/ \
+		--format svg "$$f"; \
+	done

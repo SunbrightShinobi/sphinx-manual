@@ -160,7 +160,7 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 # -- HTML output -------------------------------------------------------------
-html_theme = 'alabaster'
+html_theme = 'furo'
 html_static_path = ['_static']
 
 # -- LaTeX / PDF output ------------------------------------------------------
@@ -219,16 +219,6 @@ actdiag_latex_image_format = "PDF"
 plantuml = "java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar"
 plantuml_output_format = "svg"
 plantuml_latex_output_format = "pdf"
-
-# draw.io Extension settings
-#drawio_headless = True
-#drawio_builder_export_format = {"html": "svg", "latex": "pdf"}
-#drawio_default_export_scale = 100
-#drawio_default_transparency = False
-#drawio_no_sandbox = True
-#drawio_disable_gpu = True
-#drawio_disable_verbose_electron = False
-#drawio_disable_dev_shm_usage = False
 
 # mermaid
 os.environ["MERMAIDCLI_COMMAND"] = "npx --package=@mermaid-js/mermaid-cli --call mmdc"
