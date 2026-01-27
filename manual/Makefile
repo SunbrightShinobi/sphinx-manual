@@ -136,6 +136,21 @@ epub3: links _drawio_svg
 
 # Export all DrawIO diagrams to SVG before builds that need it
 
+_drawio_svg:
+	@echo "Converting DrawIO files to SVG..."
+	@mkdir -p source/_static/diagrams/
+	@for f in ../shared/diagrams/*.drawio; do \
+		basename=$$(basename "$$f" .drawio); \
+		echo "Processing $$f..."; \
+		drawio "$$f" \
+		--export \
+		--disable-gpu \
+		--disable-software-rasterizer \
+		--no-sandbox \
+		--format svg \
+		-o "source/_static/diagrams/$$basename.svg"; \
+	done
+
 _drawio_pdf:
 	@echo "Converting DrawIO files to PDF..."
 	@mkdir -p source/_static/diagrams/
