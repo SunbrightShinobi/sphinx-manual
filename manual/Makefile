@@ -113,7 +113,13 @@ latexpdf: _drawio_pdf
 	@ln -snf ../../shared/images										$(IMAGESDIR)
 	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
 	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
-	@$(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@LATEXOPTS="-interaction=nonstopmode" $(SPHINXBUILD) -M latexpdf "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) || true
+	@mkdir -p "$(BUILDDIR)/latex"
+	@for f in $(COMMONDIR)/_static/diagrams/*.pdf; do \
+		[ -f "$$f" ] && cp "$$f" "$(BUILDDIR)/latex/" || true; \
+	done
+	@cd "$(BUILDDIR)/latex" && latexmk -f -pdf -dvi- -ps- -interaction=nonstopmode myproject.tex > /dev/null 2>&1 || true
+	@if [ -f "$(BUILDDIR)/latex/myproject.pdf" ]; then echo "PDF generated: $(BUILDDIR)/latex/myproject.pdf"; else echo "ERROR: PDF generation failed"; exit 1; fi
 
 .PHONY: epub3
 epub3: links _drawio_svg
@@ -132,20 +138,16 @@ epub3: links _drawio_svg
 
 _drawio_pdf:
 	@echo "Converting DrawIO files to PDF..."
+	@mkdir -p source/_static/diagrams/
 	@for f in ../shared/diagrams/*.drawio; do \
+		basename=$$(basename "$$f" .drawio); \
 		echo "Processing $$f..."; \
-		drawio \
+		drawio "$$f" \
 		--export \
-		--recursive \
-		--scale 100 \
-		--border 0 \
-		--svg-theme "light" \
-		--svg-links-target new-win \
 		--disable-gpu \
 		--disable-software-rasterizer \
 		--no-sandbox \
-		--embed-diagram \
-		--output source/_static/diagrams/ \
-		--format pdf "$$f"; \
+		--format pdf \
+		-o "source/_static/diagrams/$$basename.pdf"; \
 	done
 

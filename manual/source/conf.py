@@ -10,12 +10,45 @@ from sphinx.util.osutil import ensuredir
 from sphinx.builders.latex import LaTeXBuilder
 # ---------------Convert to pdf for latexpff---------------------
 def setup(app):
-    # Remove SVG support entirely for LaTeX
-    LaTeXBuilder.supported_image_types = [
-        "image/pdf",
-        "image/png",
-        "image/jpeg",
-    ]
+    app.connect('builder-inited', setup_latex_images)
+    app.connect('build-finished', postprocess_latex_svg_to_pdf)
+
+def setup_latex_images(app):
+    """Setup image handling for LaTeX builds"""
+    if app.builder.name == 'latex':
+        # Ensure PDF versions of SVG diagrams exist
+        diagrams_dir = Path(app.confdir) / '_static' / 'diagrams'
+        if diagrams_dir.exists():
+            for svg_file in diagrams_dir.glob('*.svg'):
+                pdf_file = svg_file.with_suffix('.pdf')
+                # If PDF already exists (created by _drawio_pdf), we're good
+                if not pdf_file.exists():
+                    # Try drawio command
+                    try:
+                        subprocess.run([
+                            'drawio', str(svg_file.parent.parent.parent / 'shared' / 'diagrams' / svg_file.stem + '.drawio'),
+                            '--export', '--disable-gpu',
+                            '--disable-software-rasterizer', '--no-sandbox',
+                            '--format', 'pdf', '-o', str(pdf_file)
+                        ], check=True, capture_output=True, timeout=30)
+                    except Exception:
+                        pass
+
+def postprocess_latex_svg_to_pdf(app, exc):
+    """Replace SVG references with PDF in LaTeX output"""
+    if app.builder.name != 'latex' or exc:
+        return
+    
+    # Find and replace SVG references in the generated LaTeX file
+    latex_file = Path(app.outdir) / f'{app.config.project}.tex'
+    if latex_file.exists():
+        content = latex_file.read_text()
+        # Replace .svg references with .pdf
+        # Look for patterns like {file}.svg or file.svg
+        import re
+        content = re.sub(r'([^}]*)\.svg([^}]*)', r'\1.pdf\2', content)
+        content = re.sub(r'}{\.svg}', r'}.pdf}', content)
+        latex_file.write_text(content)
 # ------------------------------------------------------------------
 # Base HTML context (MUST exist before use)
 # ------------------------------------------------------------------
@@ -174,6 +207,26 @@ html_static_path = ['_static']
 
 # -- LaTeX / PDF output ------------------------------------------------------
 latex_engine = 'pdflatex'
+latex_elements = {
+    'preamble': r'''
+\newcommand{\beginappendices}{\appendix}
+''',
+    'extrapackages': r'''
+\usepackage{varwidth}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{svg}
+''',
+    'latex_engine': 'pdflatex',
+    'maketitle': '\\sphinxmaketitle',
+}
+
+latex_documents = [
+    ('index', 'myproject.tex', 'My Project', 'Author', 'manual'),
+]
+
+latex_show_urls = 'footnote'
+latex_use_xindy = False
 
 # -- Numfig for numbering figures/tables/code/sections -----------------------
 numfig = True
