@@ -6,7 +6,16 @@ from datetime import datetime
 from yamlreader import yaml_load
 import subprocess
 from pathlib import Path
-
+from sphinx.util.osutil import ensuredir
+from sphinx.builders.latex import LaTeXBuilder
+# ---------------Convert to pdf for latexpff---------------------
+def setup(app):
+    # Remove SVG support entirely for LaTeX
+    LaTeXBuilder.supported_image_types = [
+        "image/pdf",
+        "image/png",
+        "image/jpeg",
+    ]
 # ------------------------------------------------------------------
 # Base HTML context (MUST exist before use)
 # ------------------------------------------------------------------
@@ -165,10 +174,6 @@ html_static_path = ['_static']
 
 # -- LaTeX / PDF output ------------------------------------------------------
 latex_engine = 'pdflatex'
-latex_elements = {
-    'papersize': 'letterpaper',
-    'pointsize': '10pt',
-}
 
 # -- Numfig for numbering figures/tables/code/sections -----------------------
 numfig = True

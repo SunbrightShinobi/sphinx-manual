@@ -103,7 +103,7 @@ confluence: _drawio_svg
 	@$(SPHINXBUILD) -aE -b confluence "$(SOURCEDIR)" "$(BUILDDIR)/confluence" $(SPHINXOPTS) $(O)
 
 .PHONY: latexpdf
-latexpdf: _drawio_svg
+latexpdf: _drawio_pdf
 	python3 check_conf.py
 	@ln -snf ../../common/_static										$(COMMONDIR)/_static
 	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
@@ -128,22 +128,10 @@ epub3: links _drawio_svg
 	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
 	$(SPHINXBUILD) -b epub3 "$(SOURCEDIR)" "$(BUILDDIR)/epub3" $(SPHINXOPTS) $(O)
 
-.PHONY: rinoh
-rinoh: _drawio_svg
-	python3 check_conf.py
-	@ln -snf ../../common/_static										$(COMMONDIR)/_static
-	@ln -snf ../../common/sphinx_scripts								$(COMMONDIR)/sphinx_scripts
-	@ln -snf ../../common/_templates/$(SPHINX_TEMPLATES)				$(COMMONDIR)/_templates
-	@ln -snf ../../shared/configs/$(CONFIGS_SRCDIR)						$(CONFIGSDIR)
-	@ln -snf ../../shared/docs											$(COMMONDOCSDIR)
-	@ln -snf ../../shared/images										$(IMAGESDIR)
-	@ln -snf ../../shared/scripts										$(SCRIPTSDIR)
-	@ln -snf ../../shared/diagrams										$(DIAGRAMSDIR)
-	@$(SPHINXBUILD) -b rinoh "$(SOURCEDIR)" "$(BUILDDIR)/rinoh" $(SPHINXOPTS) $(O)
-
 # Export all DrawIO diagrams to SVG before builds that need it
-_drawio_svg:
-	@echo "Converting DrawIO files to SVG..."
+
+_drawio_pdf:
+	@echo "Converting DrawIO files to PDF..."
 	@for f in ../shared/diagrams/*.drawio; do \
 		echo "Processing $$f..."; \
 		drawio \
@@ -158,5 +146,6 @@ _drawio_svg:
 		--no-sandbox \
 		--embed-diagram \
 		--output source/_static/diagrams/ \
-		--format svg "$$f"; \
+		--format pdf "$$f"; \
 	done
+
