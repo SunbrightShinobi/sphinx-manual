@@ -2,11 +2,11 @@
 Sphinx Documentation Structure
 =================================================
 
-From an official Sphinx-doc.org documentation standpoint, the applicable folder structure starts at :file:`/source` and is perfectly fine to use as the basis while learning. From a production standpoint, the folder structure is more robust to include aspects for configuration management using tools like :program:`Subversion` or :program:`Git`.
+From an official Sphinx-doc.org documentation standpoint, the applicable folder structure starts at :file:`/source` and is perfectly fine to use as the basis while learning. From a production standpoint, the folder structure is more robust to include aspects for configuration management using tools like :program:`Git`.
 
 .. note::
 
-    Ensure in all files and folders of your document there is no special characters or spaces in the names. You are using Cygwin as your environment and thus using a UNIX/Linux based file structure. That is why all folders are defined as using the back slash ``/`` instead of the forward slash ``\`` used in Windows.
+    Ensure in all files and folders of your document there is no special characters or spaces in the names. You are using Windows Subsystem for Linux (WSL) as your environment and thus using a UNIX/Linux based file structure. That is why all folders are defined as using the back slash ``/`` instead of the forward slash ``\`` used in Windows.
 
 .. note::
 
