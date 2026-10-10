@@ -227,7 +227,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../linking.html">1.3.4. Linking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html">1.4. Getting Started with Sphinx from template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html">1.4. Installing Ubuntu WSL and Cloning Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started.html#getting-started-with-sphinx-from-template">1.5. Getting Started with Sphinx from template</a></li>
 </ul>
 </li>
 </ul>
@@ -275,13 +276,13 @@
 <h1><span class="section-number">1.3.3.11. </span>Sphinx Diagram Directives (Mermaid Diagrams)<a class="headerlink" href="#sphinx-diagram-directives-mermaid-diagrams" title="Link to this heading">¶</a></h1>
 <ul>
 <li><p>Requirements:</p>
-<ul>
+<blockquote>
+<div><ul>
 <li><p>Install: mermaid-python via Python <strong class="program">pip</strong></p></li>
 <li><p>Install: <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> extension via Python <strong class="program">pip</strong></p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> to Sphinx extensions in conf.py (Included in <cite>SPHINX_ENV_INSTALL</cite>, Sphinx Environment via defaults.py)</p></li>
 <li><p>Configure extension in ‘conf.py’ like shown below:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinxcontrib.mermaid configuration settings</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinxcontrib.mermaid configuration settings</span>
 <span class="n">mermaid_enable</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">mermaid_output_format</span> <span class="o">=</span> <span class="s2">&quot;raw&quot;</span>  <span class="c1"># svg, png, pdf</span>
 <span class="n">mermaid_latex_output_format</span> <span class="o">=</span> <span class="s2">&quot;pdf&quot;</span>  <span class="c1"># pdf is the only option for LaTeX</span>
@@ -289,11 +290,13 @@
 <span class="n">mermaid_include_elk</span> <span class="o">=</span> <span class="s2">&quot;0.1.4&quot;</span> <span class="c1">#Include ELK for layout algorithms</span>
 <span class="n">mermaid_cmd</span> <span class="o">=</span> <span class="s2">&quot;npx mmdc&quot;</span>
 <span class="n">mermaid_d3_zoom</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable D3 zoom functionality for Mermaid diagrams</span>
+<span class="n">mermaid_dark_theme</span> <span class="o">=</span> <span class="s2">&quot;dark&quot;</span>
+<span class="n">mermaid_light_theme</span> <span class="o">=</span> <span class="s2">&quot;base&quot;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 </ul>
+</div></blockquote>
 </li>
 <li><p>Flow Diagram</p>
 <blockquote>
@@ -317,13 +320,14 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="flowchart-example">
-<img src="../../../../../_images/mermaid-4aa043e83e8cd9fa8fa09ea723853666a922a262.png" alt="flowchart TD
+<pre  class="mermaid">
+        flowchart TD
     A[Christmas] --&gt;|Get money| B(Go shopping)
     B --&gt; C{Let me think}
     C --&gt;|One| D[Laptop]
     C --&gt;|Two| E[iPhone]
-    C --&gt;|Three| F[fa:fa-car Car]" />
-<figcaption>
+    C --&gt;|Three| F[fa:fa-car Car]
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.21 </span><span class="caption-text">flowchart_example</span><a class="headerlink" href="#flowchart-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -350,12 +354,13 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="sequence-diagram-example">
-<img src="../../../../../_images/mermaid-a39ec0328991a5686730e5ab0f716338345a2336.png" alt="sequenceDiagram
+<pre  class="mermaid">
+            sequenceDiagram
         Alice-&gt;&gt;+John: Hello John, how are you?
         Alice-&gt;&gt;+John: John, can you hear me?
         John--&gt;&gt;-Alice: Hi Alice, I can hear you!
-        John--&gt;&gt;-Alice: I feel great!" />
-<figcaption>
+        John--&gt;&gt;-Alice: I feel great!
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.22 </span><span class="caption-text">sequence_diagram_example</span><a class="headerlink" href="#sequence-diagram-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -398,7 +403,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="class-diagram-example">
-<img src="../../../../../_images/mermaid-0701dcd12321eb4f46583eed49fab85aa1853012.png" alt="classDiagram
+<pre  class="mermaid">
+        classDiagram
     Animal &lt;|-- Duck
     Animal &lt;|-- Fish
     Animal &lt;|-- Zebra
@@ -418,8 +424,8 @@
     class Zebra{
     +bool is_wild
     +run()
-    }" />
-<figcaption>
+    }
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.23 </span><span class="caption-text">class_diagram_example</span><a class="headerlink" href="#class-diagram-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -448,14 +454,15 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="state-diagram-example">
-<img src="../../../../../_images/mermaid-1150c1ac7af6da4d2890d24d7afdb7a5b440482a.png" alt="stateDiagram-v2
+<pre  class="mermaid">
+        stateDiagram-v2
     [*] --&gt; Still
     Still --&gt; [*]
     Still --&gt; Moving
     Moving --&gt; Still
     Moving --&gt; Crash
-    Crash --&gt; [*]" />
-<figcaption>
+    Crash --&gt; [*]
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.24 </span><span class="caption-text">state_diagram_example</span><a class="headerlink" href="#state-diagram-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -486,7 +493,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="er-diagram-example">
-<img src="../../../../../_images/mermaid-b014de97da0bd0f5ded247f347f87843a28fe562.png" alt="erDiagram
+<pre  class="mermaid">
+        erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
     CUSTOMER ||--o{ ORDER : places
     CUSTOMER ||--o{ INVOICE : &quot;liable for&quot;
@@ -494,8 +502,8 @@
     INVOICE ||--|{ ORDER : covers
     ORDER ||--|{ ORDER-ITEM : includes
     PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-    PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;" />
-<figcaption>
+    PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.25 </span><span class="caption-text">er_diagram_example</span><a class="headerlink" href="#er-diagram-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -525,7 +533,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="gantt-chart-example">
-<img src="../../../../../_images/mermaid-407ebc57eec5e3a0da26544bbcc262c513cbf3f3.png" alt="gantt
+<pre  class="mermaid">
+        gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
@@ -533,13 +542,57 @@
     Another task     :after a1  , 20d
     section Another
     Task in sec      :2014-01-12  , 12d
-    another task      : 24d" />
-<figcaption>
+    another task      : 24d
+    </pre><figcaption>
 <p><span class="caption-number">Figure 1.26 </span><span class="caption-text">gantt_chart_example</span><a class="headerlink" href="#gantt-chart-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
-<li><p>Requirement Diagram</p></li>
+<li><p>Requirement Diagram</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>FIXME: Need to fix rendered</p>
+</div>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">requirement_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">requirement_diagram_example</span>
+
+    <span class="n">requirementDiagram</span>
+        <span class="n">requirement</span> <span class="n">test_req</span> <span class="p">{</span>
+            <span class="nb">id</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;The system shall be able to send an email.&quot;</span>
+        <span class="p">}</span>
+        <span class="n">functionalRequirement</span> <span class="n">test_func_req</span> <span class="p">{</span>
+            <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span>
+            <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;The system shall be able to send an email with an attachment.&quot;</span>
+        <span class="p">}</span>
+        <span class="n">test_req</span> <span class="o">--&gt;</span> <span class="n">test_func_req</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="requirement-diagram-example">
+<pre  class="mermaid">
+        requirementDiagram
+    requirement test_req {
+        id: 1
+        text: &quot;The system shall be able to send an email.&quot;
+    }
+    functionalRequirement test_func_req {
+        id: 2
+        text: &quot;The system shall be able to send an email with an attachment.&quot;
+    }
+    test_req --&gt; test_func_req
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.27 </span><span class="caption-text">requirement_diagram_example</span><a class="headerlink" href="#requirement-diagram-example" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
 <li><p>Journey Diagram</p>
 <ul class="simple">
 <li><p>Syntax</p></li>
@@ -564,7 +617,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="journey-diagram-example">
-<img src="../../../../../_images/mermaid-a5332300841faadaa297d50717a08a771e1890a8.png" alt="journey
+<pre  class="mermaid">
+        journey
     title My working day
     section Go to work
     Make tea: 5: Me
@@ -572,9 +626,9 @@
     Do work: 1: Me, Cat
     section Go home
     Go downstairs: 5: Me
-    Sit down: 3: Me" />
-<figcaption>
-<p><span class="caption-number">Figure 1.27 </span><span class="caption-text">journey_diagram_example</span><a class="headerlink" href="#journey-diagram-example" title="Link to this image">¶</a></p>
+    Sit down: 3: Me
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.28 </span><span class="caption-text">journey_diagram_example</span><a class="headerlink" href="#journey-diagram-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
@@ -604,7 +658,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="git-graph-example">
-<img src="../../../../../_images/mermaid-1064b68b03ebf566ebd92b630e3238ed0739fcd1.png" alt="gitGraph
+<pre  class="mermaid">
+        gitGraph
     commit
     commit
     branch develop
@@ -614,9 +669,9 @@
     checkout main
     merge develop
     commit
-    commit" />
-<figcaption>
-<p><span class="caption-number">Figure 1.28 </span><span class="caption-text">git_graph_example</span><a class="headerlink" href="#git-graph-example" title="Link to this image">¶</a></p>
+    commit
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.29 </span><span class="caption-text">git_graph_example</span><a class="headerlink" href="#git-graph-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
@@ -639,12 +694,13 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="pie-chart-example">
-<img src="../../../../../_images/mermaid-681b12158126cdd81c3f3424b2f93c70d8876261.png" alt="pie title Pets adopted by volunteers
+<pre  class="mermaid">
+        pie title Pets adopted by volunteers
     &quot;Dogs&quot; : 386
     &quot;Cats&quot; : 85
-    &quot;Rats&quot; : 15" />
-<figcaption>
-<p><span class="caption-number">Figure 1.29 </span><span class="caption-text">pie_chart_example</span><a class="headerlink" href="#pie-chart-example" title="Link to this image">¶</a></p>
+    &quot;Rats&quot; : 15
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.30 </span><span class="caption-text">pie_chart_example</span><a class="headerlink" href="#pie-chart-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
@@ -680,7 +736,8 @@
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="mind-map-example">
-<img src="../../../../../_images/mermaid-93d953f3d6b979020943b854e395579f5e9ca5ec.png" alt="mindmap
+<pre  class="mermaid">
+        mindmap
 root((mindmap))
     Origins
     Long history
@@ -696,14 +753,79 @@ root((mindmap))
             Argument mapping
     Tools
     Pen and paper
-    Mermaid" />
-<figcaption>
-<p><span class="caption-number">Figure 1.30 </span><span class="caption-text">mind_map_example</span><a class="headerlink" href="#mind-map-example" title="Link to this image">¶</a></p>
+    Mermaid
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.31 </span><span class="caption-text">mind_map_example</span><a class="headerlink" href="#mind-map-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
+<li><p>ZenUML</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
 </ul>
-<ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mermaid::
+    :name: zenuml_example
+    :align: center
+    :caption: zenuml_example
+
+zenuml
+    title Order Service
+    @Actor Client #FFEBE6
+    @Boundary OrderController #0747A6
+    @EC2 &lt;&lt;BFF&gt;&gt; OrderService #E3FCEF
+    group BusinessService {
+    @Lambda PurchaseService
+    @AzureFunction InvoiceService
+    }
+
+    @Starter(Client)
+    // `POST /orders`
+    OrderController.post(payload) {
+    OrderService.create(payload) {
+        order = new Order(payload)
+        if(order != null) {
+        par {
+            PurchaseService.createPO(order)
+            InvoiceService.createInvoice(order)
+        }
+        }
+    }
+    }
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="zenuml-example">
+<pre  class="mermaid">
+        zenuml
+  title Order Service
+  &#64;Actor Client #FFEBE6
+  &#64;Boundary OrderController #0747A6
+  &#64;EC2 &lt;&lt;BFF&gt;&gt; OrderService #E3FCEF
+  group BusinessService {
+  &#64;Lambda PurchaseService
+  &#64;AzureFunction InvoiceService
+  }
+
+  &#64;Starter(Client)
+  // `POST /orders`
+  OrderController.post(payload) {
+  OrderService.create(payload) {
+      order = new Order(payload)
+      if(order != null) {
+      par {
+          PurchaseService.createPO(order)
+          InvoiceService.createInvoice(order)
+          }
+      }
+    }
+  }
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.32 </span><span class="caption-text">zenuml_example</span><a class="headerlink" href="#zenuml-example" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
 <li><p>Quadrant Chart</p>
 <ul class="simple">
 <li><p>Syntax</p></li>
@@ -733,27 +855,108 @@ root((mindmap))
 <li><p>Rendered</p></li>
 </ul>
 <figure class="align-center" id="quadrant-chart-example">
-<img src="../../../../../_images/mermaid-ee12093d90eff3df6738edbafe01c8319d68211b.png" alt="quadrantChart
-    title Reach and engagement of campaigns
-    x-axis Low Reach --&gt; High Reach
-    y-axis Low Engagement --&gt; High Engagement
-    quadrant-1 We should expand
-    quadrant-2 Need to promote
-    quadrant-3 Re-evaluate
-    quadrant-4 May be improved
-    Campaign A: [0.3, 0.6]
-    Campaign B: [0.45, 0.23]
-    Campaign C: [0.57, 0.69]
-    Campaign D: [0.78, 0.34]
-    Campaign E: [0.40, 0.34]
-    Campaign F: [0.35, 0.78]" />
-<figcaption>
-<p><span class="caption-number">Figure 1.31 </span><span class="caption-text">quadrant_chart_example</span><a class="headerlink" href="#quadrant-chart-example" title="Link to this image">¶</a></p>
+<pre  class="mermaid">
+        quadrantChart
+  title Reach and engagement of campaigns
+  x-axis Low Reach --&gt; High Reach
+  y-axis Low Engagement --&gt; High Engagement
+  quadrant-1 We should expand
+  quadrant-2 Need to promote
+  quadrant-3 Re-evaluate
+  quadrant-4 May be improved
+  Campaign A: [0.3, 0.6]
+  Campaign B: [0.45, 0.23]
+  Campaign C: [0.57, 0.69]
+  Campaign D: [0.78, 0.34]
+  Campaign E: [0.40, 0.34]
+  Campaign F: [0.35, 0.78]
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.33 </span><span class="caption-text">quadrant_chart_example</span><a class="headerlink" href="#quadrant-chart-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
+<li><p>XY Chart</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
 </ul>
-<ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">xy_chart_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">xy_chart_example</span>
+
+    <span class="n">xychart</span><span class="o">-</span><span class="n">beta</span>
+      <span class="n">title</span> <span class="s2">&quot;Sales Revenue&quot;</span>
+      <span class="n">x</span><span class="o">-</span><span class="n">axis</span> <span class="p">[</span><span class="n">jan</span><span class="p">,</span> <span class="n">feb</span><span class="p">,</span> <span class="n">mar</span><span class="p">,</span> <span class="n">apr</span><span class="p">,</span> <span class="n">may</span><span class="p">,</span> <span class="n">jun</span><span class="p">,</span> <span class="n">jul</span><span class="p">,</span> <span class="n">aug</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="nb">oct</span><span class="p">,</span> <span class="n">nov</span><span class="p">,</span> <span class="n">dec</span><span class="p">]</span>
+      <span class="n">y</span><span class="o">-</span><span class="n">axis</span> <span class="s2">&quot;Revenue (in $)&quot;</span> <span class="mi">4000</span> <span class="o">--&gt;</span> <span class="mi">11000</span>
+      <span class="n">bar</span> <span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7500</span><span class="p">,</span> <span class="mi">8200</span><span class="p">,</span> <span class="mi">9500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">11000</span><span class="p">,</span> <span class="mi">10200</span><span class="p">,</span> <span class="mi">9200</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">]</span>
+      <span class="n">line</span> <span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7500</span><span class="p">,</span> <span class="mi">8200</span><span class="p">,</span> <span class="mi">9500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">11000</span><span class="p">,</span> <span class="mi">10200</span><span class="p">,</span> <span class="mi">9200</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="xy-chart-example">
+<pre  class="mermaid">
+        xychart-beta
+  title &quot;Sales Revenue&quot;
+  x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+  y-axis &quot;Revenue (in $)&quot; 4000 --&gt; 11000
+  bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+  line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.34 </span><span class="caption-text">xy_chart_example</span><a class="headerlink" href="#xy-chart-example" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Block Diagram</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">block_diagram_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">block_diagram_example</span>
+
+    <span class="n">block</span><span class="o">-</span><span class="n">beta</span>
+    <span class="n">columns</span> <span class="mi">1</span>
+      <span class="n">db</span><span class="p">((</span><span class="s2">&quot;DB&quot;</span><span class="p">))</span>
+      <span class="n">blockArrowId6</span><span class="o">&lt;</span><span class="p">[</span><span class="s2">&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="p">(</span><span class="n">down</span><span class="p">)</span>
+      <span class="n">block</span><span class="p">:</span><span class="n">ID</span>
+        <span class="n">A</span>
+        <span class="n">B</span><span class="p">[</span><span class="s2">&quot;A wide one in the middle&quot;</span><span class="p">]</span>
+        <span class="n">C</span>
+      <span class="n">end</span>
+      <span class="n">space</span>
+      <span class="n">D</span>
+      <span class="n">ID</span> <span class="o">--&gt;</span> <span class="n">D</span>
+      <span class="n">C</span> <span class="o">--&gt;</span> <span class="n">D</span>
+      <span class="n">style</span> <span class="n">B</span> <span class="n">fill</span><span class="p">:</span><span class="c1">#969,stroke:#333,stroke-width:4px</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="block-diagram-example">
+<pre  class="mermaid">
+        block-beta
+columns 1
+  db((&quot;DB&quot;))
+  blockArrowId6&lt;[&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;]&gt;(down)
+  block:ID
+    A
+    B[&quot;A wide one in the middle&quot;]
+    C
+  end
+  space
+  D
+  ID --&gt; D
+  C --&gt; D
+  style B fill:#969,stroke:#333,stroke-width:4px
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.35 </span><span class="caption-text">block_diagram_example</span><a class="headerlink" href="#block-diagram-example" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
 <li><p>Packet</p>
 <ul class="simple">
 <li><p>Syntax</p></li>
@@ -789,7 +992,8 @@ root((mindmap))
 <ul>
 <li><p>Rendered</p>
 <figure class="align-center" id="packet-example">
-<img src="../../../../../_images/mermaid-e2be305ba75b348bfd4390061dc674ae85a544f9.png" alt="---
+<pre  class="mermaid">
+        ---
 title: &quot;TCP Packet&quot;
 ---
 packet-beta
@@ -809,13 +1013,50 @@ packet-beta
 128-143: &quot;Checksum&quot;
 144-159: &quot;Urgent Pointer&quot;
 160-191: &quot;(Options and Padding)&quot;
-192-255: &quot;Data (variable length)&quot;" />
-<figcaption>
-<p><span class="caption-number">Figure 1.32 </span><span class="caption-text">packet_example</span><a class="headerlink" href="#packet-example" title="Link to this image">¶</a></p>
+192-255: &quot;Data (variable length)&quot;
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.36 </span><span class="caption-text">packet_example</span><a class="headerlink" href="#packet-example" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </li>
 </ul>
+</li>
+<li><p>TreeMap</p>
+<ul class="simple">
+<li><p>Syntax</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mermaid</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">name</span><span class="p">:</span> <span class="n">treemap_example</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">treemap_example</span>
+
+    <span class="n">treemap</span><span class="o">-</span><span class="n">beta</span>
+    <span class="s2">&quot;Section 1&quot;</span>
+        <span class="s2">&quot;Leaf 1.1&quot;</span><span class="p">:</span> <span class="mi">12</span>
+        <span class="s2">&quot;Section 1.2&quot;</span>
+        <span class="s2">&quot;Leaf 1.2.1&quot;</span><span class="p">:</span> <span class="mi">12</span>
+    <span class="s2">&quot;Section 2&quot;</span>
+        <span class="s2">&quot;Leaf 2.1&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="s2">&quot;Leaf 2.2&quot;</span><span class="p">:</span> <span class="mi">25</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Rendered</p></li>
+</ul>
+<figure class="align-center" id="treemap-example">
+<pre  class="mermaid">
+        treemap-beta
+&quot;Section 1&quot;
+    &quot;Leaf 1.1&quot;: 12
+    &quot;Section 1.2&quot;
+    &quot;Leaf 1.2.1&quot;: 12
+&quot;Section 2&quot;
+    &quot;Leaf 2.1&quot;: 20
+    &quot;Leaf 2.2&quot;: 25
+    </pre><figcaption>
+<p><span class="caption-number">Figure 1.37 </span><span class="caption-text">treemap_example</span><a class="headerlink" href="#treemap-example" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 </li>
 </ul>
 </section>
@@ -873,6 +1114,7 @@ packet-beta
     <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.12.1/dist/mermaid.esm.min.mjs";
 
 
@@ -881,173 +1123,11 @@ packet-beta
 
 const initStyles = () => {
     const defaultStyle = document.createElement('style');
-    defaultStyle.textContent = `pre.mermaid {
-    /* Same as .mermaid-container > pre */
-    display: block;
-    width: 100%;
-}
-
-pre.mermaid > svg {
-    /* Same as .mermaid-container > pre > svg */
-    height: 500px;
-    width: 100%;
-    max-width: 100% !important;
-}`;
+    defaultStyle.textContent = "pre.mermaid {\n    /* Same as .mermaid-container > pre */\n    display: block;\n    width: 100%;\n}\n\npre.mermaid > svg {\n    /* Same as .mermaid-container > pre > svg */\n    height: 500px;\n    width: 100%;\n    max-width: 100% !important;\n}";
     document.head.appendChild(defaultStyle);
 
     const fullscreenStyle = document.createElement('style');
-    fullscreenStyle.textContent = `.mermaid-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.mermaid-container > pre {
-    display: block;
-    width: 100%;
-}
-
-.mermaid-container > pre > svg {
-    height: 500px;
-    width: 100%;
-    max-width: 100% !important;
-}
-
-.mermaid-fullscreen-btn {
-    width: 28px;
-    height: 28px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    line-height: 1;
-    padding: 0;
-    color: #333;
-}
-
-.mermaid-fullscreen-btn:hover {
-    opacity: 100% !important;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
-}
-
-.mermaid-fullscreen-btn.dark-theme {
-    background: rgba(50, 50, 50, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #e0e0e0;
-}
-
-.mermaid-fullscreen-btn.dark-theme:hover {
-    background: rgba(60, 60, 60, 1);
-    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
-}
-
-.mermaid-fullscreen-modal {
-    display: none;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 95vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
-    z-index: 9999;
-    padding: 20px;
-    overflow: auto;
-}
-
-.mermaid-fullscreen-modal.dark-theme {
-    background: rgba(0, 0, 0, 0.98);
-}
-
-.mermaid-fullscreen-modal.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mermaid-container-fullscreen {
-    position: relative;
-    width: 95vw;
-    height: 90vh;
-    max-width: 95vw;
-    max-height: 90vh;
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mermaid-container-fullscreen.dark-theme {
-    background: #1a1a1a;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-}
-
-.mermaid-container-fullscreen pre.mermaid {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mermaid-container-fullscreen .mermaid svg {
-    height: 100% !important;
-    width: 100% !important;
-    cursor: grab;
-}
-
-.mermaid-fullscreen-close {
-    position: fixed !important;
-    top: 20px !important;
-    right: 20px !important;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s;
-    font-size: 24px;
-    line-height: 1;
-    color: #333;
-}
-
-.mermaid-fullscreen-close:hover {
-    background: white;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-    transform: scale(1.1);
-}
-
-.mermaid-fullscreen-close.dark-theme {
-    background: rgba(50, 50, 50, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #e0e0e0;
-}
-
-.mermaid-fullscreen-close.dark-theme:hover {
-    background: rgba(60, 60, 60, 1);
-    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
-}
-
-.mermaid-fullscreen-modal .mermaid-fullscreen-btn {
-    display: none !important;
-}`;
+    fullscreenStyle.textContent = ".mermaid-container {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n}\n\n.mermaid-container > pre {\n    display: block;\n    width: 100%;\n}\n\n.mermaid-container > pre > svg {\n    height: 500px;\n    width: 100%;\n    max-width: 100% !important;\n}\n\n.mermaid-fullscreen-btn {\n    position: absolute;\n    width: 28px;\n    height: 28px;\n    background: rgba(255, 255, 255, 0.95);\n    border: 1px solid rgba(0, 0, 0, 0.3);\n    border-radius: 4px;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);\n    font-size: 14px;\n    line-height: 1;\n    padding: 0;\n    color: #333;\n}\n\n.mermaid-fullscreen-btn:hover {\n    opacity: 100% !important;\n    background: rgba(255, 255, 255, 1);\n    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);\n    transform: scale(1.1);\n}\n\n.mermaid-fullscreen-btn.dark-theme {\n    background: rgba(50, 50, 50, 0.95);\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    color: #e0e0e0;\n}\n\n.mermaid-fullscreen-btn.dark-theme:hover {\n    background: rgba(60, 60, 60, 1);\n    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);\n}\n\n.mermaid-fullscreen-modal {\n    display: none;\n    position: fixed !important;\n    top: 0 !important;\n    left: 0 !important;\n    width: 95vw;\n    height: 100vh;\n    background: rgba(255, 255, 255, 0.98);\n    z-index: 9999;\n    padding: 20px;\n    overflow: auto;\n}\n\n.mermaid-fullscreen-modal.dark-theme {\n    background: rgba(0, 0, 0, 0.98);\n}\n\n.mermaid-fullscreen-modal.active {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.mermaid-container-fullscreen {\n    position: relative;\n    width: 95vw;\n    height: 90vh;\n    max-width: 95vw;\n    max-height: 90vh;\n    background: white;\n    border-radius: 8px;\n    padding: 20px;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);\n    overflow: auto;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.mermaid-container-fullscreen.dark-theme {\n    background: #1a1a1a;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);\n}\n\n.mermaid-container-fullscreen pre.mermaid {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.mermaid-container-fullscreen .mermaid svg {\n    height: 100% !important;\n    width: 100% !important;\n    cursor: grab;\n}\n\n.mermaid-fullscreen-close {\n    position: fixed !important;\n    top: 20px !important;\n    right: 20px !important;\n    width: 40px;\n    height: 40px;\n    background: rgba(255, 255, 255, 0.95);\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    border-radius: 50%;\n    cursor: pointer;\n    z-index: 10000;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);\n    transition: all 0.2s;\n    font-size: 24px;\n    line-height: 1;\n    color: #333;\n}\n\n.mermaid-fullscreen-close:hover {\n    background: white;\n    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);\n    transform: scale(1.1);\n}\n\n.mermaid-fullscreen-close.dark-theme {\n    background: rgba(50, 50, 50, 0.95);\n    border: 1px solid rgba(255, 255, 255, 0.2);\n    color: #e0e0e0;\n}\n\n.mermaid-fullscreen-close.dark-theme:hover {\n    background: rgba(60, 60, 60, 1);\n    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);\n}\n\n.mermaid-fullscreen-modal .mermaid-fullscreen-btn {\n    display: none !important;\n}";
     document.head.appendChild(fullscreenStyle);
 }
 
@@ -1092,6 +1172,32 @@ let darkTheme = isDarkTheme();
 let modal = null;
 let modalContent = null;
 let previousScrollOffset = [window.scrollX, window.scrollY];
+let _lazyObserver = null;
+let _renderQueue = Promise.resolve();
+let closeModal = () => {};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('active')) {
+        closeModal();
+    }
+});
+
+// Apply d3 zoom to each SVG. Idempotent: an SVG already wrapped is skipped,
+// so this is safe to call both for the initial batch and for diagrams that
+// render lazily once they become visible.
+const addZoomToSvgs = (svgs) => {
+    svgs.each(function() {
+        if (this.getAttribute('data-zoom-applied') === 'true') return;
+        var svg = d3.select(this);
+        svg.html("<g class='wrapper'>" + svg.html() + "</g>");
+        var inner = svg.select("g");
+        var zoom = d3.zoom().on("zoom", function(event) {
+            inner.attr("transform", event.transform);
+        });
+        svg.call(zoom);
+        this.setAttribute('data-zoom-applied', 'true');
+    });
+};
 
 const runMermaid = async (rerun) => {
     console.log("Running mermaid diagrams, rerun =", rerun);
@@ -1099,7 +1205,15 @@ const runMermaid = async (rerun) => {
     let all_mermaids = document.querySelectorAll(".mermaid");
 
     if (rerun) {
+        // Disconnect any previous lazy rendering observer
+        if (_lazyObserver) {
+            _lazyObserver.disconnect();
+            _lazyObserver = null;
+        }
+
         all_mermaids.forEach((el) => {
+            el.removeAttribute('data-mermaid-deferred');
+            el.removeAttribute('data-mermaid-render-failed');
             if(!el.hasAttribute("data-original-code")) {
                 // store original code
                 // console.log(`Storing original code for first run: `, el.innerHTML);
@@ -1116,42 +1230,100 @@ const runMermaid = async (rerun) => {
                 el.setAttribute('data-original-code', el.innerHTML);
             }
         });
-        await mermaid.run();
+
+        // Separate visible and hidden elements. Mermaid's layout engine measures
+        // text dimensions via the DOM, which fails for elements hidden by a parent
+        // (e.g., Reveal.js non-active slides, sphinx-design unopened tabs),
+        // producing broken SVGs. Render visible elements now, defer hidden ones.
+        const visible = [];
+        const hidden = [];
+        all_mermaids.forEach((el) => {
+            // offsetParent is null for display:none ancestors.
+            // getClientRects().length > 0 catches position:fixed elements
+            // (which also have null offsetParent but are still visible).
+            if (el.offsetParent !== null || el.getClientRects().length > 0) {
+                visible.push(el);
+            } else {
+                hidden.push(el);
+                el.setAttribute('data-mermaid-deferred', 'true');
+            }
+        });
+
+        if (visible.length > 0) {
+            try {
+                await mermaid.run({ nodes: visible });
+            } catch (e) {
+                console.error("Mermaid rendering failed:", e);
+            }
+        }
+
+        // Lazily render hidden elements when they become visible.
+        // Uses a promise chain (_renderQueue) to serialize rendering,
+        // since IntersectionObserver may report multiple entries at once
+        // and mermaid.run() is not safe to call concurrently.
+        if (hidden.length > 0) {
+            if (typeof IntersectionObserver === 'undefined') {
+                console.warn("IntersectionObserver not available; hidden mermaid diagrams will not render.");
+            } else {
+                _renderQueue = Promise.resolve();
+                _lazyObserver = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting && entry.target.getAttribute("data-processed") !== "true") {
+                            _lazyObserver.unobserve(entry.target);
+                            const el = entry.target;
+                            _renderQueue = _renderQueue.then(async () => {
+                                try {
+                                    await mermaid.run({ nodes: [el] });
+                                    el.removeAttribute('data-mermaid-deferred');
+                                    // Apply zoom to the now-rendered diagram, matching
+                                    // the decoration visible diagrams receive.
+                                    if (true) {
+                                        addZoomToSvgs(d3.selectAll(".mermaid").select(function() {
+                                            return this.querySelector("svg");
+                                        }));
+                                    }
+                                } catch (e) {
+                                    console.error("Mermaid deferred rendering failed:", e);
+                                    el.removeAttribute('data-mermaid-deferred');
+                                    el.setAttribute('data-mermaid-render-failed', 'true');
+                                }
+                            });
+                        }
+                    }
+                });
+                hidden.forEach((el) => _lazyObserver.observe(el));
+            }
+        }
     }
 
     all_mermaids = document.querySelectorAll(".mermaid");
-    const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
+    // Exclude deferred (hidden) and render-failed elements from completion checks
+    const mermaids_active = document.querySelectorAll(".mermaid:not([data-mermaid-deferred]):not([data-mermaid-render-failed])");
+    const mermaids_processed = document.querySelectorAll(".mermaid:not([data-mermaid-deferred]):not([data-mermaid-render-failed])[data-processed='true']");
 
-    if ("True" === "True") {
-        const mermaids_to_add_zoom = -1 === -1 ? all_mermaids.length : -1;
+    if (true) {
+        const mermaids_to_add_zoom = -1 === -1 ? mermaids_active.length : -1;
         if(mermaids_to_add_zoom > 0) {
-            var svgs = d3.selectAll(".mermaid svg");
-            if(all_mermaids.length !== mermaids_processed.length) {
+            var svgs = d3.selectAll(".mermaid").select(function() {
+                return this.querySelector("svg");
+            });
+            // Wait until every active (visible) diagram has rendered. Deferred
+            // diagrams are excluded, so a fixed d3_node_count that counts a
+            // hidden diagram no longer loops forever waiting for its SVG.
+            if(mermaids_active.length !== mermaids_processed.length) {
                 setTimeout(() => runMermaid(false), 200);
                 return;
-            } else if(svgs.size() !== mermaids_to_add_zoom) {
-                setTimeout(() => runMermaid(false), 200);
-                return;
-            } else {
-                svgs.each(function() {
-                    var svg = d3.select(this);
-                    svg.html("<g class='wrapper'>" + svg.html() + "</g>");
-                    var inner = svg.select("g");
-                    var zoom = d3.zoom().on("zoom", function(event) {
-                        inner.attr("transform", event.transform);
-                    });
-                    svg.call(zoom);
-                });
             }
+            addZoomToSvgs(svgs);
         }
-    } else if(all_mermaids.length !== mermaids_processed.length) {
+    } else if(mermaids_active.length !== mermaids_processed.length) {
         // Wait for mermaid to process all diagrams
         setTimeout(() => runMermaid(false), 200);
         return;
     }
 
     // Stop here if not adding fullscreen capability
-    if ("True" !== "True") return;
+    if (!true) return;
 
     if (modal !== null ) {
         // Destroy existing modal
@@ -1174,7 +1346,7 @@ const runMermaid = async (rerun) => {
     modalContent = modal.querySelector('.mermaid-container-fullscreen');
     const closeBtn = modal.querySelector('.mermaid-fullscreen-close');
 
-    const closeModal = () => {
+    closeModal = () => {
         modal.classList.remove('active');
         modalContent.innerHTML = '';
         document.body.style.overflow = ''
@@ -1185,12 +1357,6 @@ const runMermaid = async (rerun) => {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-
     document.querySelectorAll('.mermaid').forEach((mermaidDiv) => {
         if (mermaidDiv.parentNode.classList.contains('mermaid-container') ||
             mermaidDiv.closest('.mermaid-fullscreen-modal')) {
@@ -1210,8 +1376,8 @@ const runMermaid = async (rerun) => {
         const fullscreenBtn = document.createElement('button');
         fullscreenBtn.className = 'mermaid-fullscreen-btn' + (darkTheme ? ' dark-theme' : '');
         fullscreenBtn.setAttribute('aria-label', 'View diagram in fullscreen');
-        fullscreenBtn.textContent = '⛶';
-        fullscreenBtn.style.opacity = '50%';
+        fullscreenBtn.textContent = "\u26f6";
+        fullscreenBtn.style.opacity = "50%";
 
         // Calculate dynamic position based on diagram's margin and padding
         const diagramStyle = window.getComputedStyle(mermaidDiv);
@@ -1223,7 +1389,7 @@ const runMermaid = async (rerun) => {
         fullscreenBtn.style.right = `${marginRight + paddingRight + 4}px`;
 
         fullscreenBtn.addEventListener('click', () => {
-            previousScrollOffset = [window.scroll, window.scrollY];
+            previousScrollOffset = [window.scrollX, window.scrollY];
             const clone = mermaidDiv.cloneNode(true);
             modalContent.innerHTML = '';
             modalContent.appendChild(clone);
@@ -1235,9 +1401,9 @@ const runMermaid = async (rerun) => {
                 svg.style.width = '100%';
                 svg.style.height = 'auto';
                 svg.style.maxWidth = '100%';
-                svg.style.sdisplay = 'block';
+                svg.style.display = 'block';
 
-                if ("True" === "True") {
+                if (true) {
                     setTimeout(() => {
                         const g = svg.querySelector('g');
                         if (g) {
@@ -1260,8 +1426,26 @@ const runMermaid = async (rerun) => {
     });
 };
 
+
+// Resolves once the lazily-loaded zenuml plugin has registered (or immediately
+// when the page has no zenuml diagram). `load` awaits this before rendering.
+let zenumlReady = Promise.resolve();
+const pageHasZenuml = () => [...document.querySelectorAll(".mermaid")].some((el) => {
+    const code = el.getAttribute("data-original-code") || el.textContent || "";
+    const diagram = code
+        .replace(/^\s*---\s*\n[^]*?\n---\s*/, "")
+        .replace(/^\s*%%\{[^]*?\}%%\s*/, "");
+    return /^\s*zenuml\b/i.test(diagram);
+});
+
+
 const load = async () => {
     initStyles();
+
+
+    // Wait for the zenuml plugin (loaded lazily below) to finish registering
+    // before rendering, so zenuml diagrams are recognised.
+    await zenumlReady;
 
     await runMermaid(true);
 
@@ -1271,10 +1455,8 @@ const load = async () => {
             darkTheme = newDarkTheme;
             console.log("Theme change detected, re-running mermaid with", darkTheme ? "dark" : "default", "theme");
             await mermaid.initialize(
-                {...JSON.parse(
-                    `{"startOnLoad": false}`
-                ),
-                ...{ darkMode: darkTheme, theme: darkTheme ? 'dark' : 'default' },
+                {...{"startOnLoad": false},
+                ...{ darkMode: darkTheme, theme: darkTheme ? "dark" : "default" },
                 }
             );
             await runMermaid(true);
@@ -1296,16 +1478,44 @@ const load = async () => {
 
 
 
+// Only load and register the zenuml plugin when the page actually contains a
+// zenuml diagram. This avoids fetching the (large) zenuml bundle on every page,
+// and avoids its side effects where they are not needed. The import is kept off
+// the module's top level (no top-level await) so the "load" listener below is
+// still registered synchronously; `load` awaits `zenumlReady` before rendering.
+if (pageHasZenuml()) {
+    // The zenuml bundle injects a stylesheet that declares generic design tokens
+    // (--background, --border, --white, ...) on :root, clobbering identically-named
+    // tokens in the host theme (sphinxawesome, shibuya, ...) and causing a flash of
+    // restyled page content. Confine those declarations to the zenuml diagram
+    // subtree so they no longer leak onto the host page.
+    const descopeZenumlStyle = (node) => {
+        if (!node || node.tagName !== "STYLE" || node.hasAttribute("data-zenuml-descoped")) return;
+        const css = node.textContent || "";
+        if (!css.includes("--occurance-border")) return; // zenuml stylesheet signature
+        node.setAttribute("data-zenuml-descoped", "true");
+        node.textContent = css.replace(/:root\b/g, ".zenuml");
+    };
+    new MutationObserver((records) => {
+        for (const rec of records) {
+            for (const node of rec.addedNodes) descopeZenumlStyle(node);
+        }
+    }).observe(document.head, { childList: true });
+
+    zenumlReady = import("https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2.2/dist/mermaid-zenuml.esm.min.mjs").then(({ default: zenumlLayouts }) => {
+        mermaid.registerExternalDiagrams([zenumlLayouts]);
+    });
+}
+
 
 console.log("Initializing mermaid with", darkTheme ? "dark" : "default", "theme");
 mermaid.initialize(
-    {...JSON.parse(
-        `{"startOnLoad": false}`
-    ),
-    ...{ darkMode: darkTheme, theme: darkTheme ? 'dark' : 'default' },
+    {...{"startOnLoad": false},
+    ...{ darkMode: darkTheme, theme: darkTheme ? "dark" : "default" },
     }
 );
 
-window.addEventListener("load", load);</script>
+window.addEventListener("load", load);
+window.runMermaid = runMermaid;</script>
     </body>
 </html>

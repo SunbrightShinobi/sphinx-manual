@@ -4,23 +4,25 @@
 Sphinx Diagram Directives (Mermaid Diagrams)
 ------------------------------------------------
 
-*   Requirements:
+* Requirements:
 
     * Install: mermaid-python via Python :program:`pip` 
     * Install: ``sphinxcontrib-mermaid`` extension via Python :program:`pip`
     * Add ``sphinxcontrib-mermaid`` to Sphinx extensions in conf.py (Included in `SPHINX_ENV_INSTALL`, Sphinx Environment via defaults.py)
     * Configure extension in 'conf.py' like shown below:
 
-        .. code-block:: python
+      .. code-block:: python
 
-            # sphinxcontrib.mermaid configuration settings
-            mermaid_enable = True
-            mermaid_output_format = "raw"  # svg, png, pdf
-            mermaid_latex_output_format = "pdf"  # pdf is the only option for LaTeX
-            mermaid_default_export_scale = 75  # Default scale for exported diagrams
-            mermaid_include_elk = "0.1.4" #Include ELK for layout algorithms
-            mermaid_cmd = "npx mmdc"
-            mermaid_d3_zoom = True  # Enable D3 zoom functionality for Mermaid diagrams
+        # sphinxcontrib.mermaid configuration settings
+        mermaid_enable = True
+        mermaid_output_format = "raw"  # svg, png, pdf
+        mermaid_latex_output_format = "pdf"  # pdf is the only option for LaTeX
+        mermaid_default_export_scale = 75  # Default scale for exported diagrams
+        mermaid_include_elk = "0.1.4" #Include ELK for layout algorithms
+        mermaid_cmd = "npx mmdc"
+        mermaid_d3_zoom = True  # Enable D3 zoom functionality for Mermaid diagrams
+        mermaid_dark_theme = "dark"
+        mermaid_light_theme = "base"
 
 * Flow Diagram
 
@@ -281,6 +283,49 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       \newpage
       
 * Requirement Diagram
+
+  .. todo::
+  
+    FIXME: Need to fix rendered
+
+  * Syntax
+
+  .. code-block::
+
+    .. mermaid::
+        :name: requirement_diagram_example
+        :align: center
+        :caption: requirement_diagram_example
+
+        requirementDiagram
+            requirement test_req {
+                id: 1
+                text: "The system shall be able to send an email."
+            }
+            functionalRequirement test_func_req {
+                id: 2
+                text: "The system shall be able to send an email with an attachment."
+            }
+            test_req --> test_func_req
+
+  * Rendered
+
+  .. mermaid::
+      :name: requirement_diagram_example
+      :align: center
+      :caption: requirement_diagram_example
+          
+      requirementDiagram
+          requirement test_req {
+              id: 1
+              text: "The system shall be able to send an email."
+          }
+          functionalRequirement test_func_req {
+              id: 2
+              text: "The system shall be able to send an email with an attachment."
+          }
+          test_req --> test_func_req
+
 * Journey Diagram
 
   * Syntax
@@ -459,7 +504,7 @@ Sphinx Diagram Directives (Mermaid Diagrams)
 
       \newpage
 
-.. * ZenUML   #Not supported in mermaid-python
+* ZenUML
 
   * Syntax
 
@@ -476,54 +521,54 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           @Boundary OrderController #0747A6
           @EC2 <<BFF>> OrderService #E3FCEF
           group BusinessService {
-            @Lambda PurchaseService
-            @AzureFunction InvoiceService
+          @Lambda PurchaseService
+          @AzureFunction InvoiceService
           }
 
           @Starter(Client)
           // `POST /orders`
           OrderController.post(payload) {
-            OrderService.create(payload) {
+          OrderService.create(payload) {
               order = new Order(payload)
               if(order != null) {
-                par {
+              par {
                   PurchaseService.createPO(order)
                   InvoiceService.createInvoice(order)      
-                }      
+              }      
               }
-            }
           }
-    
+          }
+
   * Rendered
 
   .. mermaid::
-      :name: zenuml_example
-      :align: center
-      :caption: zenuml_example
+    :name: zenuml_example
+    :align: center
+    :caption: zenuml_example
 
-      zenuml
-          title Order Service
-          @Actor Client #FFEBE6
-          @Boundary OrderController #0747A6
-          @EC2 <<BFF>> OrderService #E3FCEF
-          group BusinessService {
-            @Lambda PurchaseService
-            @AzureFunction InvoiceService
-          }
+    zenuml
+      title Order Service
+      @Actor Client #FFEBE6
+      @Boundary OrderController #0747A6
+      @EC2 <<BFF>> OrderService #E3FCEF
+      group BusinessService {
+      @Lambda PurchaseService
+      @AzureFunction InvoiceService
+      }
 
-          @Starter(Client)
-          // `POST /orders`
-          OrderController.post(payload) {
-            OrderService.create(payload) {
-              order = new Order(payload)
-              if(order != null) {
-                par {
-                  PurchaseService.createPO(order)
-                  InvoiceService.createInvoice(order)      
-                }      
-              }
-            }
+      @Starter(Client)
+      // `POST /orders`
+      OrderController.post(payload) {
+      OrderService.create(payload) {
+          order = new Order(payload)
+          if(order != null) {
+          par {
+              PurchaseService.createPO(order)
+              InvoiceService.createInvoice(order)      
+              }      
           }
+        }
+      }
 
   .. raw:: latex
 
@@ -563,44 +608,42 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       :caption: quadrant_chart_example
 
       quadrantChart
-          title Reach and engagement of campaigns
-          x-axis Low Reach --> High Reach
-          y-axis Low Engagement --> High Engagement
-          quadrant-1 We should expand
-          quadrant-2 Need to promote
-          quadrant-3 Re-evaluate
-          quadrant-4 May be improved
-          Campaign A: [0.3, 0.6]
-          Campaign B: [0.45, 0.23]
-          Campaign C: [0.57, 0.69]
-          Campaign D: [0.78, 0.34]
-          Campaign E: [0.40, 0.34]
-          Campaign F: [0.35, 0.78]
+        title Reach and engagement of campaigns
+        x-axis Low Reach --> High Reach
+        y-axis Low Engagement --> High Engagement
+        quadrant-1 We should expand
+        quadrant-2 Need to promote
+        quadrant-3 Re-evaluate
+        quadrant-4 May be improved
+        Campaign A: [0.3, 0.6]
+        Campaign B: [0.45, 0.23]
+        Campaign C: [0.57, 0.69]
+        Campaign D: [0.78, 0.34]
+        Campaign E: [0.40, 0.34]
+        Campaign F: [0.35, 0.78]
 
   .. raw:: latex
 
       \newpage
 
-.. * XY Chart  #Not supported in mermaid-python
+* XY Chart
 
   * Syntax
 
   .. code-block::
 
-      .. mermaid::
-          :name: xy_chart_example
-          :align: center
-          :caption: xy_chart_example
+    .. mermaid::
+        :name: xy_chart_example
+        :align: center
+        :caption: xy_chart_example
 
-      xychart-beta
-          title XY Chart Example
-          x-axis X Axis Label
-          y-axis Y Axis Label
-          point A: [1, 2]
-          point B: [2, 3]
-          point C: [3, 1]
-          point D: [4, 4]
-
+        xychart-beta
+          title "Sales Revenue"
+          x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+          y-axis "Revenue (in $)" 4000 --> 11000
+          bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+          line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+  
   * Rendered
 
   .. mermaid::
@@ -608,20 +651,18 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       :align: center
       :caption: xy_chart_example
 
-      xyChart-beta
-          title XY Chart Example
-          x-axis X Axis Label
-          y-axis Y Axis Label
-          point A: [1, 2]
-          point B: [2, 3]
-          point C: [3, 1]
-          point D: [4, 4]
+      xychart-beta
+        title "Sales Revenue"
+        x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+        y-axis "Revenue (in $)" 4000 --> 11000
+        bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+        line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 
   .. raw:: latex
 
       \newpage
 
-.. * Block Diagram  #Not supported in mermaid-python
+* Block Diagram
 
   * Syntax
 
@@ -632,13 +673,20 @@ Sphinx Diagram Directives (Mermaid Diagrams)
           :align: center
           :caption: block_diagram_example
 
-      block-beta
-          title Block Diagram Example
-          block A: [0, 0, 100, 100]
-          block B: [150, 50, 100, 100]
-          block C: [300, 0, 100, 100]
-          A --> B
-          B --> C
+          block-beta
+          columns 1
+            db(("DB"))
+            blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+            block:ID
+              A
+              B["A wide one in the middle"]
+              C
+            end
+            space
+            D
+            ID --> D
+            C --> D
+            style B fill:#969,stroke:#333,stroke-width:4px
 
   * Rendered
 
@@ -648,12 +696,19 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       :caption: block_diagram_example
 
       block-beta
-          title Block Diagram Example
-          block A: [0, 0, 100, 100]
-          block B: [150, 50, 100, 100]
-          block C: [300, 0, 100, 100]
-          A --> B
-          B --> C
+      columns 1
+        db(("DB"))
+        blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+        block:ID
+          A
+          B["A wide one in the middle"]
+          C
+        end
+        space
+        D
+        ID --> D
+        C --> D
+        style B fill:#969,stroke:#333,stroke-width:4px
 
   .. raw:: latex
 
@@ -725,7 +780,7 @@ Sphinx Diagram Directives (Mermaid Diagrams)
 
         \newpage
 
-.. * TreeMap  #Not supported in mermaid-python
+* TreeMap
 
   * Syntax
 

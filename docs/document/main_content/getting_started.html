@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="1. ACRONYM LIST" href="../../common_docs/appendices/acronym_list.html"><link rel="prev" title="1.3.4. Linking" href="syntax/basics/linking.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>1.4. Getting Started with Sphinx from template - My Project 1.0.0 documentation</title>
+        <title>1.4. Installing Ubuntu WSL and Cloning Repositories - My Project 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -227,7 +227,8 @@
 <li class="toctree-l3"><a class="reference internal" href="syntax/basics/linking.html">1.3.4. Linking</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1.4. Getting Started with Sphinx from template</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">1.4. Installing Ubuntu WSL and Cloning Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-with-sphinx-from-template">1.5. Getting Started with Sphinx from template</a></li>
 </ul>
 </li>
 </ul>
@@ -271,14 +272,44 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="getting-started-with-sphinx-from-template">
-<h1><span class="section-number">1.4. </span>Getting Started with Sphinx from template<a class="headerlink" href="#getting-started-with-sphinx-from-template" title="Link to this heading">¶</a></h1>
+          <section id="installing-ubuntu-wsl-and-cloning-repositories">
+<h1><span class="section-number">1.4. </span>Installing Ubuntu WSL and Cloning Repositories<a class="headerlink" href="#installing-ubuntu-wsl-and-cloning-repositories" title="Link to this heading">¶</a></h1>
+<ol class="arabic">
+<li><p>First we need to install the Windows Subsystem for Linux (WSL) on your Windows 10/11 machine. This will allow us to run a Linux environment directly on Windows without the overhead of a traditional virtual machine or dualboot setup.</p></li>
+<li><p>Open PowerShell as Administrator and run the following command to enable the WSL feature:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</pre></div>
+</div>
+</li>
+<li><p>Next, enable the Virtual Machine Platform feature by running the following command in PowerShell:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</pre></div>
+</div>
+</li>
+<li><p>Restart your computer to apply the changes.</p></li>
+<li><p>After restarting, open the Microsoft Store and search for “Ubuntu”. Choose the latest LTS version (e.g., Ubuntu 24.04 LTS) and click “Get” to start the installation.</p></li>
+<li><p>Once the installation is complete, launch Ubuntu from the Start menu. The first time you run it, you’ll be prompted to create a new user account and password for the Linux environment.</p></li>
+<li><p>Then run <code class="samp docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;https://github.com/SunbrightShinobi/ubuntuWSL.git&gt;_</span></code> This is the repository that contains all the installation scripts and configuration files needed to setup your WSL environment for Sphinx documentation building.</p></li>
+<li><p>Then run the setup script with the following commands:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd ubuntuWSL
+chmod +x setup_wsl_sphinx.sh
+./setup_wsl_sphinx.sh
+</pre></div>
+</div>
+</li>
+<li><p>When prompted, enter your sudo password to allow the script to install necessary packages and dependencies.</p></li>
+<li><p>Then close and reopen your Ubuntu WSL terminal to ensure all changes take effect.</p></li>
+<li><p>Then run <code class="samp docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;https://github.com/SunbrightShinobi/sphinx-manual.git&gt;_</span></code> This will clone the repository inside you WSL Linux file structure. Which much faster and more efficient than working on the Windows side.</p></li>
+<li><p>If desired run <code class="samp docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;https://github.com/SunbrightShinobi/documentation-templates.git&gt;_`</span></code> to get a repository of preconfigured Sphinx document templates to use as starting points for new documents.</p></li>
+</ol>
+</section>
+<section id="getting-started-with-sphinx-from-template">
+<h1><span class="section-number">1.5. </span>Getting Started with Sphinx from template<a class="headerlink" href="#getting-started-with-sphinx-from-template" title="Link to this heading">¶</a></h1>
 <p>First we need to setup a copy of the template document to use. If you are not working in a CM enviroment that already has one in the repository and just want to work from local desktop then just copy the entire default template folder from you baseline environment included with Cygwin installer, with the command below:</p>
 <p><code class="samp docutils literal notranslate"><span class="pre">cp</span> <span class="pre">/baseline_sphinx_env/template_document_default</span> <span class="pre">/baseline_sphinx_env/</span><em><span class="pre">new_document_name</span></em></code></p>
 <p>Otherwise ask your team where you should copy the preconfigured template from in your CM repository.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>In SVN you would branch the folder keeping it inside the folder structure of the needed common style, configuration files and scripts to a new name of your assigned CM document number.</p></li>
 <li><p>In Git you would make a copy of folder keeping it inside the folder structure of the needed common style, configuration files and scripts and rename the folder to your assigned CM document number.</p></li>
 </ul>
 </div></blockquote>
@@ -309,12 +340,13 @@ latex_additional_files = [&#39;./latex_templates/sphinx/_procedure.sty&#39;,
 </ol>
 </li>
 <li><p>That is all that is required to build until you get more familar. The rest of the items will show up in a TBD table to let you know to go edit them.</p></li>
-<li><p>Now ensure your <strong class="program">Cygwin</strong> is running and you are inside your document folder. Perform either of the following steps depending on desired result:</p>
+<li><p>Now ensure your <strong class="program">WSL</strong> is running and you are inside your document folder. Perform either of the following steps depending on desired result:</p>
 <ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">livehtml</kbd> - Makes a livehtml build with a running web server at <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> that auto rebuilds upon detecting a change to any files of document.</p></li>
 <li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">html</kbd> - Makes a html build folder structure that can be uploaded to a web server. Output is located in <code class="file docutils literal notranslate"><span class="pre">./build/html</span></code></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">latexpdf</kbd> - Makes a text file build then runs it through latex to make a pdf. Output is located in <code class="file docutils literal notranslate"><span class="pre">./build/latex</span></code> of document folder.</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">clean</kbd> <kbd class="kbd docutils literal notranslate">livehtml</kbd>, <kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">clean</kbd> <kbd class="kbd docutils literal notranslate">html</kbd> or <kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">clean</kbd> <kbd class="kbd docutils literal notranslate">latexpdf</kbd> does same as above items but prior to build generation it deletes the <code class="file docutils literal notranslate"><span class="pre">build</span></code> folder</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">lgithunivehtml</kbd> - Makes a html build in the build/pages folder to be committed to GitHub Pages for hosting online. Once it pushed to Github folder it will be live at <a href="#id1"><span class="problematic" id="id2">`&lt;https://your_github_username&gt;.github.io/&lt;your_repository_name&gt;/`_</span></a></p></li>
+<li><p><kbd class="kbd docutils literal notranslate">make</kbd> <kbd class="kbd docutils literal notranslate">clean</kbd> <kbd class="kbd docutils literal notranslate">latexpdf</kbd> does same as above items but prior to build generation it deletes the <code class="file docutils literal notranslate"><span class="pre">build</span></code> folder</p></li>
 </ul>
 </li>
 </ol>
