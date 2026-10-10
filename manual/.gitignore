@@ -8,3 +8,4 @@ source/.drawio
 source/_static
 source/_templates
 source/sphinx_scripts
+build/html

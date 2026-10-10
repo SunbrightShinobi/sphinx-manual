@@ -281,13 +281,14 @@ plantuml_latex_output_format = "pdf"
 # mermaid
 os.environ["MERMAIDCLI_COMMAND"] = "npx --package=@mermaid-js/mermaid-cli --call mmdc"
 mermaid_enable = True
-mermaid_output_format = "png"
+mermaid_output_format = "raw"
 mermaid_latex_output_format = "pdf"
 mermaid_default_export_scale = 75
 mermaid_include_elk = False
 mermaid_cmd = "npx mmdc"
 mermaid_d3_zoom = True
-
+mermaid_include_zenuml = True
+mermaid_fullscreen = True
 # bibtex
 bibtex_bibfiles = ['common_docs/references/refs.bib']
 bibtex_default_style = 'alpha'

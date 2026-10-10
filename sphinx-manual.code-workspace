@@ -84,7 +84,9 @@
 				"label": "WSL Bash"
 			}
 		],
-		"python.languageServer": "Pylance"
+		"python.languageServer": "Pylance",
+		"ansible.python.interpreterPath": "c:\\Users\\JoshJohnson\\miniconda3\\python.exe",
+		"esbonio.sphinx.confDir": ""
 						
 	},
 }
