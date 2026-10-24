@@ -13,7 +13,6 @@ Sphinx Directives
     specialized
     latexpdf
     custom
-    blockdiag/contents
     plantuml/plantuml
     drawio
     mermaid
