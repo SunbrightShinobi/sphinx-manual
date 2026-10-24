@@ -185,12 +185,6 @@ extensions = [
     'myst_parser',
 
     # Diagrams
-    'sphinxcontrib.seqdiag',
-    'sphinxcontrib.nwdiag',
-    'sphinxcontrib.rackdiag',
-    'sphinxcontrib.packetdiag',
-    'sphinxcontrib.blockdiag',
-    'sphinxcontrib.actdiag',
     'sphinxcontrib.plantuml',
     'sphinxcontrib.mermaid',
 
