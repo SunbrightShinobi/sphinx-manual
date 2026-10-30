@@ -96,7 +96,7 @@ signature03Name = '<name03>'
 signature03Title = '<title03>'
 
 documentnumber = '<docnum-tbd>'
-docReleaseDate = '25JAN2026'
+docReleaseDate = f"{datetime.now().strftime('%d %B %Y')}"
 changeNotice = '<Rev. - CN ID>'
 document_rev = '-'
 
