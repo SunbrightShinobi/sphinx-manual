@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../../../genindex.html"><link rel="search" title="Search" href="../../../../../search.html"><link rel="next" title="1.3.3.8. Sphinx Diagram Directives (BlockDiag)" href="blockdiag/contents.html"><link rel="prev" title="1.3.3.6. Latex Directives" href="latexpdf.html">
+<link rel="index" title="Index" href="../../../../../genindex.html"><link rel="search" title="Search" href="../../../../../search.html"><link rel="next" title="1.3.3.8. Sphinx Diagram Directives (PlantUML)" href="plantuml/plantuml.html"><link rel="prev" title="1.3.3.6. Latex Directives" href="latexpdf.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>1.3.3.7. Custom Directives (Not part of Sphinx baseline) - My Project 1.0.0 documentation</title>
@@ -210,18 +210,9 @@
 <li class="toctree-l4"><a class="reference internal" href="specialized.html">1.3.3.5. Specialized Directives</a></li>
 <li class="toctree-l4"><a class="reference internal" href="latexpdf.html">1.3.3.6. Latex Directives</a></li>
 <li class="toctree-l4 current current-page"><a class="current reference internal" href="#">1.3.3.7. Custom Directives (Not part of Sphinx baseline)</a></li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="blockdiag/contents.html">1.3.3.8. Sphinx Diagram Directives (BlockDiag)</a><input aria-label="Toggle navigation of 1.3.3.8. Sphinx Diagram Directives (BlockDiag)" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/blockdiag.html">1.3.3.8.1. <em>blockdiag</em> Directive - <strong>Block Diagram</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/actdiag.html">1.3.3.8.2. <em>blockdiag</em> Directive - <strong>Activity Diagram</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/seqdiag.html">1.3.3.8.3. <em>blockdiag</em> Directive - <strong>Sequence Diagram</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/nwdiag.html">1.3.3.8.4. <em>blockdiag</em> Directive - <strong>Network Diagram</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/packetdiag.html">1.3.3.8.5. <em>blockdiag</em> Directive - <strong>Packet Diagram</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="blockdiag/rackdiag.html">1.3.3.8.6. <em>blockdiag</em> Directive - <strong>Rack Diagram</strong></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="plantuml/plantuml.html">1.3.3.9. Sphinx Diagram Directives (PlantUML)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="drawio.html">1.3.3.10. Image &amp; Figure Directives</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mermaid.html">1.3.3.11. Sphinx Diagram Directives (Mermaid Diagrams)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plantuml/plantuml.html">1.3.3.8. Sphinx Diagram Directives (PlantUML)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="drawio.html">1.3.3.9. Image &amp; Figure Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mermaid.html">1.3.3.10. Sphinx Diagram Directives (Mermaid Diagrams)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../linking.html">1.3.4. Linking</a></li>
@@ -289,17 +280,24 @@
 <p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">git_changelog::</span></code></p>
 </li>
 <li><p>Rendered (Git Changelog of this document):</p>
-<ul class="simple">
+<ul>
+<li><p><strong>Update Mermaid requirement diagram and release date format</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-30 20:47:31</em></p>
+<p>- Resolves a rendering issue for the Mermaid requirement diagram example by updating its content to demonstrate more complete syntax, including `risk`, `verifymethod`, and `element` with `satisfies` relationships.
+- Adds a LaTeX page break after the diagram for improved formatting in PDF output.
+- Appends “HTML,” to the `docReleaseDate` in `conf.py` to specify the output format.</p>
+</li>
+<li><p><strong>Made updates to document build process and GitHub Pages command</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-30 19:13:54</em></p>
+<p>Automated the `docReleaseDate` field in `conf.py` to use the current date.
+Renamed the GitHub Pages build command from `lgithunivehtml` to `github` in `getting_started.rst` for clarity and to correct a typo.</p>
+</li>
+<li><p><strong>Merge remote-tracking branch ‘origin/master’</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-24 19:09:20</em></p></li>
+<li><p><strong>Removed blockdiag references</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-24 19:04:29</em></p></li>
+<li><p><strong>Removed blockdiag references</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-24 19:04:29</em></p></li>
+<li><p><strong>Made updates to github pages build 10ovt2026</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-10 16:56:04</em></p></li>
 <li><p><strong>Merge remote-tracking branch ‘origin/master’</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-10 16:53:06</em></p></li>
 <li><p><strong>Made updates to clean up and fixed some of the mermaid diagrams</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-10 16:41:55</em></p></li>
 <li><p><strong>Made updates to clean up and fixed some of the mermaid diagrams</strong><span> by </span><em>Josh Johnson (SunbrightShinobi)</em><span> at </span><em>2026-10-10 16:41:55</em></p></li>
 <li><p><strong>Updating install steps</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-02-01 16:05:05</em></p></li>
-<li><p><strong>Update to pages build</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-27 18:23:13</em></p></li>
-<li><p><strong>Fixed html build</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-27 17:59:08</em></p></li>
-<li><p><strong>Made updates from copilot cli</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-27 17:52:39</em></p></li>
-<li><p><strong>More changes for latexpdf build and removed rinoh</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-26 19:43:36</em></p></li>
-<li><p><strong>Updated github pages</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-25 20:43:40</em></p></li>
-<li><p><strong>Made updates for html</strong><span> by </span><em>SunbrightShinobi</em><span> at </span><em>2026-01-25 20:43:14</em></p></li>
 </ul>
 </li>
 </ul>
@@ -314,12 +312,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="blockdiag/contents.html">
+          <a class="next-page" href="plantuml/plantuml.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">1.3.3.8. </span>Sphinx Diagram Directives (BlockDiag)</div>
+                <div class="title"><span class="section-number">1.3.3.8. </span>Sphinx Diagram Directives (PlantUML)</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

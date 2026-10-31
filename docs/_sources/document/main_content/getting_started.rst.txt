@@ -87,7 +87,7 @@ Once you have your folder copied and renamed to a assigned document number or sh
     *   :kbd:`make livehtml` - Makes a livehtml build with a running web server at `<http://127.0.0.1:8000/>`_ that auto rebuilds upon detecting a change to any files of document.
     *   :kbd:`make html` - Makes a html build folder structure that can be uploaded to a web server. Output is located in :file:`./build/html`
     *   :kbd:`make latexpdf` - Makes a text file build then runs it through latex to make a pdf. Output is located in :file:`./build/latex` of document folder.
-    *   :kbd:`make lgithunivehtml` - Makes a html build in the build/pages folder to be committed to GitHub Pages for hosting online. Once it pushed to Github folder it will be live at `<https://your_github_username>.github.io/<your_repository_name>/`_
+    *   :kbd:`make github` - Makes a html build in the build/pages folder to be committed to GitHub Pages for hosting online. Once it pushed to Github folder it will be live at `<https://yourGithubUsername.github.io/yourRepositoryName/>`_
     *   :kbd:`make clean latexpdf` does same as above items but prior to build generation it deletes the :file:`\build` folder
 
 .. note::

@@ -284,10 +284,6 @@ Sphinx Diagram Directives (Mermaid Diagrams)
       
 * Requirement Diagram
 
-  .. todo::
-  
-    FIXME: Need to fix rendered
-
   * Syntax
 
   .. code-block::
@@ -297,34 +293,46 @@ Sphinx Diagram Directives (Mermaid Diagrams)
         :align: center
         :caption: requirement_diagram_example
 
-        requirementDiagram
-            requirement test_req {
-                id: 1
-                text: "The system shall be able to send an email."
-            }
-            functionalRequirement test_func_req {
-                id: 2
-                text: "The system shall be able to send an email with an attachment."
-            }
-            test_req --> test_func_req
+      requirementDiagram
+
+        requirement test_req {
+        id: 1
+        text: the test text.
+        risk: high
+        verifymethod: test
+        }
+
+        element test_entity {
+        type: simulation
+        }
+
+        test_entity - satisfies -> test_req
 
   * Rendered
-
-  .. mermaid::
+  
+    .. mermaid::
       :name: requirement_diagram_example
       :align: center
       :caption: requirement_diagram_example
-          
+            
       requirementDiagram
-          requirement test_req {
-              id: 1
-              text: "The system shall be able to send an email."
-          }
-          functionalRequirement test_func_req {
-              id: 2
-              text: "The system shall be able to send an email with an attachment."
-          }
-          test_req --> test_func_req
+
+        requirement test_req {
+        id: 1
+        text: the test text.
+        risk: high
+        verifymethod: test
+        }
+
+        element test_entity {
+        type: simulation
+        }
+
+        test_entity - satisfies -> test_req
+
+  .. raw:: latex
+
+      \newpage
 
 * Journey Diagram
 
