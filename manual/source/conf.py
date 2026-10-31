@@ -150,7 +150,7 @@ jinja_contexts = {
                     'revisionCN': changeNotice,
                     'revisionDescriptionLine01': '',
                     'revisionDescriptionLine02': 'Initial Release',
-                    'revisionDescriptionLine03': 'HTML, GitHub, tested/working',
+                    'revisionDescriptionLine03': 'HTML, GitHub, and latexpdf tested/working',
                     'docPartNumber': doc_sw_pn_current + doc_sw_pn_dash_current,
                     'classification': classification,
                     'contractNum': contractNum,
